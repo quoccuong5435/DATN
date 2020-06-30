@@ -89,7 +89,7 @@ nav.navbar.navbar-default {
 }
 .top-nav ul li a{
     display: block;
-    padding: .5em 2em;
+    padding: .5em 1em;
     color: #BDBDBD;
 	 border: solid 1px #ECECEC;
     border-bottom: solid 1px #FFF;
@@ -110,7 +110,7 @@ nav.navbar.navbar-default {
     background: #6fd508;
 }
 #loginContainer a span{
-    padding: .5em 2em;
+    padding: .5em 0.8em;
     color: #FFF;
 }
 #loginButton {  

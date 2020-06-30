@@ -46,7 +46,7 @@
 				<div class="header-dropdown">
 					<div class="emergency-grid">
 						<ul>
-							<li>Toll Free : </li>
+							<li>Liên hệ : </li>
 							<li class="call">+1 234 567 8901</li>
 						</ul>
 					</div>
@@ -58,14 +58,8 @@
 				<div class="top-nav">
 					<span class="menu"><img src="{{ asset('source/images/menu.png') }}" alt="" /></span>
 					<ul class="nav1">
-						<li><a href="index.html">Flights</a></li>
-						<li class="active"><a href="hotels.html">Hotels</a></li>
-						<li><a href="holidays.html">Holidays</a></li>
-						<li><a href="flights-hotels.html">Flight+Hotel</a></li>
-						<li><a href="bus.html">Bus</a></li>
-						<li><a href="trains.html">Trains</a></li>
-						<li><a href="weekend.html">Weekend Getaways</a></li>
-						<li><a href="deals.html">Deals</a></li>
+						<li class="active"><a href="hotels.html">Khách sạn</a></li>
+						<li><a href="deals.html">Giảm giá</a></li>
 					</ul>
 					<div class="clearfix"> </div>
 					<!-- script-for-menu -->
@@ -80,7 +74,7 @@
 						<!-- /script-for-menu -->
 				</div>
 				<div class="dropdown-grids">
-						<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
+						<div id="loginContainer"><a href="" id="loginButton"><span>Đăng nhập</span></a>
 							<div id="loginBox">                
 								<form id="loginForm">
 									<div class="login-grids">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Slide Login Form Flat Responsive Widget Template :: w3layouts</title>
+<title>Slide Login Form Flat Responsive Widget Template</title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +32,7 @@
 <!-- main -->
 <div class="w3layouts-main"> 
 	<div class="bg-layer">
-		<h1>Sign in</h1>
+		<h1>Đăng nhập</h1>
 		<div class="header-main">
 			<div class="main-icon">
 				<span class="fa fa-eercast"></span>
@@ -41,40 +41,35 @@
 				<form action="#" method="post">
 					<div class="icon1">
 						<span class="fa fa-user"></span>
-						<input type="email" placeholder="Email Address" required=""/>
+						<input type="email" placeholder="Địa chỉ email" required=""/>
 					</div>
 					<div class="icon1">
 						<span class="fa fa-lock"></span>
-						<input type="password" placeholder="Password" required=""/>
+						<input type="password" placeholder="Mật khẩu" required=""/>
 					</div>
 					<div class="login-check">
-						 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i> Keep me logged in</label>
+						 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i> Nhớ mật khẩu</label>
 					</div>
 					<div class="bottom">
-						<button class="btn">Log In</button>
+						<button class="btn">Đăng Nhập</button>
 					</div>
 					<div class="links">
-						<p><a href="#">Forgot Password?</a></p>
-						<p class="right"><a href="#">New User? Register</a></p>
+						<p><a href="#">Quên mật khẩu?</a></p>
+						<p class="right"><a href="#">Bạn chưa có tài khoản? Đăng ký</a></p>
 						<div class="clear"></div>
 					</div>
 				</form>	
 			</div>
 			<div class="social">
 				<ul>
-					<li>or login using : </li>
+					<li>đăng nhập với: </li>
 					<li><a href="#" class="facebook"><span class="fa fa-facebook"></span></a></li>
 					<li><a href="#" class="twitter"><span class="fa fa-twitter"></span></a></li>
 					<li><a href="#" class="google"><span class="fa fa-google-plus"></span></a></li>
 				</ul>
 			</div>
 		</div>
-		
-		<!-- copyright -->
-		<div class="copyright">
-			<p>© 2019 Slide Login Form . All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
-		</div>
-		<!-- //copyright --> 
+		 
 	</div>
 </div>	
 <!-- //main -->
