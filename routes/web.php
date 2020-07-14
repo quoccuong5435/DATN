@@ -13,28 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('master');
-});
-
 Route::get('index', [
     'as'=>'trang-chu',
     'uses'=>'PageController@getIndex'
 ]);
 
-Route::get('products',[
-	'as'=>'sanpham',
-	'uses'=>'PageController@getSp'
+Route::get('hotels-list',[
+	'as'=>'hlist',
+	'uses'=>'PageController@getList'
 ]);
 
 Route::get('details',[
-	'as'=>'chitietsp',
+	'as'=>'chitiet',
 	'uses'=>'PageController@getChitiet'
 ]);
 
-Route::get('contact',[
-	'as'=>'lienhe',
-	'uses'=>'PageController@getLienhe'
+Route::get('rooms-list',[
+	'as'=>'rlist',
+	'uses'=>'PageController@getRList'
 ]);
 
 Route::get('signup',[
