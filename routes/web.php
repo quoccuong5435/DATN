@@ -70,3 +70,63 @@ Route::get('/dashboard/make-payment', function(){
 Route::get('/dashboard/refund', function(){
     return view('dashboard.refund');
 });
+
+Route::get('/admin/index', function(){
+    return view('admin.index');
+});
+
+Route::get('/admin/login', function(){
+    return view('admin.login');
+});
+
+Route::get('/admin/forgot', function(){
+    return view('admin.forgot-pass');
+});
+
+Route::get('/admin/profile', function(){
+    return view('admin.admin-profile');
+});
+
+Route::get('/admin/users', function(){
+    return view('admin.users.user-list');
+});
+
+Route::get('/admin/users/add', function(){
+    return view('admin.users.user-add');
+});
+
+Route::get('/admin/users/edit', function(){
+    return view('admin.users.user-edit');
+});
+
+Route::get('/admin/users/view', function(){
+    return view('admin.users.user-view');
+});
+
+Route::get('/admin/hotels', function(){
+    return view('admin.hotels.hotel-list');
+});
+
+Route::get('/admin/hotels/add', function(){
+    return view('admin.hotels.hotel-add');
+});
+
+Route::get('/admin/hotels/edit', function(){
+    return view('admin.hotels.hotel-edit');
+});
+
+Route::get('/admin/room-types', function(){
+    return view('admin.room-types.room-type-list');
+});
+
+Route::get('/admin/room-types/add', function(){
+    return view('admin.room-types.room-type-add');
+});
+
+Route::get('/admin/room-types/edit', function(){
+    return view('admin.room-types.room-type-edit');
+});
+
+Route::get('/admin/hotel-booking', function(){
+    return view('admin.hotel-booking.hotel-booking-list');
+});
