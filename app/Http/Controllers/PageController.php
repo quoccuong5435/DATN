@@ -28,5 +28,6 @@ class PageController extends Controller
 
 	public function getDangnhap(){
     	return view('user-pages.signin');
-    }    
+    }
+     
 }
