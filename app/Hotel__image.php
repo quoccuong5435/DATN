@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Hotel__image extends Model
+class Hotel_image extends Model
 {
-    //
+   protected $table ='hotel_image';
 }
