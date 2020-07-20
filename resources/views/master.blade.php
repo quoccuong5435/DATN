@@ -35,79 +35,7 @@
     </div>
 
     <!-- MOBILE MENU -->
-    <section>
-        <div class="ed-mob-menu">
-            <div class="ed-mob-menu-con">
-                <div class="ed-mm-left">
-                    <div class="wed-logo">
-                        <a href="main.html"><img src="{{ asset('source/images/logo.png') }}" alt="" />
-						</a>
-                    </div>
-                </div>
-                <div class="ed-mm-right">
-                    <div class="ed-mm-menu">
-                        <a href="#!" class="ed-micon"><i class="fa fa-bars"></i></a>
-                        <div class="ed-mm-inn">
-                            <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
-                            <h4>Home pages</h4>
-                            <ul>
-                                <li><a href="booking-all.html">Home page 1</a></li>
-                                <li><a href="booking-all.html">Home page 2</a></li>
-                                <li><a href="booking-tour-package.html">Home page 3</a></li>
-                                <li><a href="booking-hotel.html">Home page 4</a></li>
-                                <li><a href="booking-car-rentals.html">Home page 5</a></li>
-                                <li><a href="booking-flight.html">Home page 6</a></li>
-                                <li><a href="booking-slider.html">Home page 7</a></li>
-                            </ul>
-                            
-                            <h4>User Dashboard</h4>
-                            <ul>
-                                <li><a href="dashboard.html">My Bookings</a></li>
-                                <li><a href="db-my-profile.html">My Profile</a></li>
-                                <li><a href="db-my-profile-edit.html">My Profile edit</a></li>
-                                <li><a href="db-travel-booking.html">Tour Packages</a></li>
-                                <li><a href="db-hotel-booking.html">Hotel Bookings</a></li>
-                                <li><a href="db-event-booking.html">Event bookings</a></li>
-                                <li><a href="db-payment.html">Make Payment</a></li>
-                                <li><a href="db-refund.html">Cancel Bookings</a></li>
-                                <li><a href="db-all-payment.html">Prient E-Tickets</a></li>
-                                <li><a href="db-event-details.html">Event booking details</a></li>
-                                <li><a href="db-hotel-details.html">Hotel booking details</a></li>
-                                <li><a href="db-travel-details.html">Travel booking details</a></li>
-                            </ul>
-                            <h4>Other pages:1</h4>
-                            <ul>
-                                <li><a href="tour-details.html">Travel details</a></li>
-                                <li><a href="hotel-details.html">Hotel details</a></li>
-                                <li><a href="all-package.html">All package</a></li><li><a href="hotels-list.html">All hotels</a></li>
-                                <li><a href="booking.html">Booking page</a></li>
-                            </ul>
-                            <h4 class="ed-dr-men-mar-top">User login pages</h4>
-                            <ul>
-                                <li><a href="register.html">Register</a></li>
-                                <li><a href="login.html">Login and Sign in</a></li>
-                                <li><a href="forgot-pass.html">Forgot pass</a></li>
-                            </ul>
-                            <h4>Other pages:2</h4>
-                            <ul>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="testimonials.html">Testimonials</a></li>
-                                <li><a href="events.html">Events</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="tips.html">Tips Before Travel</a></li>
-                                <li><a href="price-list.html">Price List</a></li>
-                                <li><a href="discount.html">Discount</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="sitemap.html">Site map</a></li>
-                                <li><a href="404.html">404 Page</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
     <!--HEADER SECTION-->
     <section>
         <!-- TOP BAR -->
@@ -117,7 +45,7 @@
                     <div class="col-md-12">
                         <div class="ed-com-t1-left">
                             <ul>
-                                <li><a href="#">Contact: Lake Road, Suite 180 Farmington Hills, U.S.A.</a>
+                                <li><a href="#">Liên hệ: 103 .</a>
                                 </li>
                                 <li><a href="#">Phone: +101-1231-1231</a>
                                 </li>
@@ -125,7 +53,7 @@
                         </div>
                         <div class="ed-com-t1-right">
                             <ul>
-                                <li><a href="login.html">Sign In</a>
+                                <li><a href="{{ route('dangnhap') }}">Sign In</a>
                                 </li>
                                 <li><a href="register.html">Sign Up</a>
                                 </li>
@@ -157,9 +85,9 @@
                         </div>
                         <div class="main-menu">
                             <ul>
-                                <li><a href="main.html">Home</a>
+                                <li><a href="{{ route('trang-chu') }}">Home</a>
                                 </li>
-                                <li><a href="hotels-list.html">Hotels</a></li>
+                                <li><a href="{{ route('hlist') }}">Hotels</a></li>
                                 <li><a href="dashboard.html">Profile</a>
                                 </li>
                                 <li><a href="contact.html">Contact us</a>

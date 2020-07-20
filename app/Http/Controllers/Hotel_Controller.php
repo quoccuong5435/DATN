@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Hotel;
+use App\Hotel_info;
+use App\Hotel_info_detail;
+use App\Room;
 use Illuminate\Http\Request;
 
 class Hotel_Controller extends Controller
@@ -13,7 +16,10 @@ class Hotel_Controller extends Controller
      */
     public function index()
     {
-        //
+        $list_hotel=Hotel::all();
+        $list_hotel_info=Hotel_info::all();
+        $list_hotel_detail=Hotel_info_detail::all();
+        return view('user-pages.hotels-list',compact('list_hotel','list_hotel_detail','list_hotel_info'));
     }
 
     /**
@@ -45,7 +51,10 @@ class Hotel_Controller extends Controller
      */
     public function show($id)
     {
-        //
+        $list_hotels=Hotel::find($id);
+        $list_room=Room::all();
+        return view('user-pages.details',compact('list_hotels','list_room'));
+    
     }
 
     /**

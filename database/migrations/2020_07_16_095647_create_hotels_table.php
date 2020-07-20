@@ -18,7 +18,7 @@ class CreateHotelsTable extends Migration
             $table->string('name_hotel');
             $table->string('avatar_hotel');
             $table->integer('phone_hotel');
-            $table->integer('email_hotel');
+            $table->string('email_hotel');
             $table->string('address_hotel');
             $table->integer('rate_hotel');
             $table->integer('score_hotel');

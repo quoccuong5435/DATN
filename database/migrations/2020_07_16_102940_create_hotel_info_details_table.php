@@ -18,6 +18,7 @@ class CreateHotelInfoDetailsTable extends Migration
             $table->unsignedInteger('hotel_id');
             $table->unsignedInteger('hotel_info_id');
             $table->string('description');
+            $table->string('tinh');
             $table->integer('status');
             $table->timestamps();
         });

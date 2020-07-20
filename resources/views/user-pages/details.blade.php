@@ -4,15 +4,15 @@
 	<section>
 		<div class="rows inner_banner inner_banner_2">
 			<div class="container">
-				<h2><span>Universal luxury Grand Hotel</span></h2>
-				<ul>
+				<h2><span>{{$list_hotels->name_hotel}}</span></h2>
+				{{-- <ul>
 					<li><a href="#inner-page-title">Home</a>
 					</li>
 					<li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>
 					<li><a href="#inner-page-title" class="bread-acti">Hotel Booking</a>
 					</li>
-				</ul>
-				<p>Location: 28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A.</p>
+				</ul> --}}
+				<p>{{$list_hotels->address_hotel}}</p>
 			</div>
 		</div>
 	</section>
@@ -128,17 +128,19 @@
 						<h3>ROOMS & AVAILABILITIES</h3>
 						<div class="tr-room-type">
 							<ul>
+								@foreach($list_room as $dsroom)
 								<li>
 									<div class="tr-room-type-list">
 										<div class="col-md-3 tr-room-type-list-1"><img src="{{ asset('source/images/rooms/01.jpg') }}" alt="" />
 										</div>
 										<div class="col-md-6 tr-room-type-list-2">
-											<h4>Ultra Deluxe</h4>
-											<p><b>Amenities: </b>Television, Wi-Fi, Hair dryer, Towels, Dining, Music, GYM and more.. </p> <span><b>Includes</b> : Free Parking, Breakfast, VAT</span> <span><b>Maxinum </b> : 4 Persons</span> </div>
-										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Price Per Night</span> <span class="hot-list-p3-2">$940</span> <a href="booking.html" class="hot-page2-alp-quot-btn spec-btn-text">Book Now</a> </div>
+											<h4>{{$dsroom->room_name}}</h4>
+											<p><b>Amenities: </b>Television, Wi-Fi, Hair dryer, Towels, Dining, Music, GYM and more.. </p> <span><b>Includes</b> : Free Parking, Breakfast, VAT</span> <span><b>Maxinum </b> :{{$dsroom->num_of_people}}</span> </div>
+										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Price Per Night</span> <span class="hot-list-p3-2">{{$dsroom->price_room}}</span> <a href="booking.html" class="hot-page2-alp-quot-btn spec-btn-text">Book Now</a> </div>
 									</div>
 								</li>
-								<li>
+								@endforeach
+								{{-- <li>
 									<div class="tr-room-type-list">
 										<div class="col-md-3 tr-room-type-list-1"><img src="{{ asset('source/images/rooms/02.jpg') }}" alt="" />
 										</div>
@@ -167,7 +169,7 @@
 											<p><b>Amenities: </b>Television, Wi-Fi, Hair dryer, Towels, Dining, Music, GYM and more.. </p> <span><b>Includes</b> : Free Parking, Breakfast, VAT</span> <span><b>Maxinum </b> : 4 Persons</span> </div>
 										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Price Per Night</span> <span class="hot-list-p3-2">$420</span> <a href="booking.html" class="hot-page2-alp-quot-btn spec-btn-text">Book Now</a> </div>
 									</div>
-								</li>
+								</li> --}}
 							</ul>
 						</div>
 					</div>

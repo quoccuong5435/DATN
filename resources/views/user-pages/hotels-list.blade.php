@@ -265,36 +265,40 @@
 					</div>
 					<!--END LEFT LISTINGS-->
 					<!--RIGHT LISTINGS-->
+					
 					<div class="col-md-9 hot-page2-alp-con-right">
 						<div class="hot-page2-alp-con-right-1">
+							@foreach($list_hotel as $dshotel)
 							<!--LISTINGS-->
 							<div class="row">
 								<!--LISTINGS START-->
 								<div class="hot-page2-alp-r-list">
 									<div class="col-md-3 hot-page2-alp-r-list-re-sp">
 										<a href="javascript:void(0);">
-											<div class="hotel-list-score">4.5</div>
+											<div class="hotel-list-score">{{$dshotel->score_hotel}}</div>
 											<div class="hot-page2-hli-1"> <img src="{{ asset('source/images/hotels/l1.jpg') }}" alt=""> </div>
-											<div class="hom-hot-av-tic hom-hot-av-tic-list"> Available Rooms: 42 </div>
+											<div class="hom-hot-av-tic hom-hot-av-tic-list"> Phòng còn: 42 </div>
 										</a>
 									</div>
 									<div class="col-md-6">
-										<div class="hot-page2-alp-ri-p2"> <a href="hotel-details.html"><h3>Universal luxury Grand Hotel</h3></a>
+										<div class="hot-page2-alp-ri-p2"> <a href="hotel-details.html"><h3>{{$dshotel->name_hotel}}</h3></a>
 											<ul>
-												<li>28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A.</li>
-												<li>+101-1231-1231, +61 6541-4561-12</li>
+												<li>{{$dshotel->address_hotel}}</li>
+
+												<li>{{$dshotel->phone_hotel}}</li>
 											</ul>
 										</div>
 									</div>
 									<div class="col-md-3">
 										<div class="hot-page2-alp-ri-p3">
-											<div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Price Per Night</span> <span class="hot-list-p3-2">$650</span><span class="hot-list-p3-4">
-												<a href="hotel-details.html" class="hot-page2-alp-quot-btn">Book Now</a>
+											<div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Giá mỗi đêm</span> <span class="hot-list-p3-2">$650</span><span class="hot-list-p3-4">
+												<a href="{{ route('chitiet',($dshotel->id)) }}" class="hot-page2-alp-quot-btn">Xem Phòng</a>
 											</span> </div>
 									</div>
 								</div>
+								@endforeach
 								<!--END LISTINGS-->
-								<!--LISTINGS START-->
+					{{-- 			<!--LISTINGS START-->
 								<div class="hot-page2-alp-r-list">
 									<div class="col-md-3 hot-page2-alp-r-list-re-sp">
 										<a href="javascript:void(0);">
@@ -797,7 +801,7 @@
 							</div>
 						</div>
 					</div>
-					<!--END RIGHT LISTINGS-->
+					<!--END RIGHT LISTINGS--> --}}
 				</div>
 			</div>
 		</div>

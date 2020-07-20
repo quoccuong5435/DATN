@@ -13,7 +13,7 @@ class Booking_Controller extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**

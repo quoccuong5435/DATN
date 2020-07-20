@@ -13,32 +13,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('index', [
+Route::get('/', [
     'as'=>'trang-chu',
     'uses'=>'PageController@getIndex'
 ]);
 
-Route::get('hotels-list',[
+Route::get('/hotels-list',[
 	'as'=>'hlist',
-	'uses'=>'PageController@getList'
+	'uses'=>'Hotel_Controller@index'
 ]);
 
-Route::get('details',[
+Route::get('/details/{id}',[
 	'as'=>'chitiet',
-	'uses'=>'PageController@getChitiet'
+	'uses'=>'Hotel_Controller@show'
 ]);
 
-Route::get('rooms-list',[
+Route::get('/rooms-list',[
 	'as'=>'rlist',
-	'uses'=>'PageController@getRList'
+	'uses'=>'Hotel_Controller@s'
 ]);
 
-Route::get('signup',[
+Route::get('/signup',[
 	'as'=>'dangky',
 	'uses'=>'PageController@getDangky'
 ]);
 
-Route::get('signin',[
+Route::get('/signin',[
 	'as'=>'dangnhap',
 	'uses'=>'PageController@getDangnhap'
 ]);

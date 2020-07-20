@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Hotel_image extends Model
 {
-    protected $table =''
+    protected $table ='hotel_image';
 }
