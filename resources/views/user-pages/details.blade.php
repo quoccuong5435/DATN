@@ -22,10 +22,10 @@
 			<div class="container">
 				<div class="banner_book_1">
 					<ul>
-						<li class="dl1">Location : Illunois,USA</li>
-						<li class="dl2">Price : $500</li>
-						<li class="dl3">Duration : One Night</li>
-						<li class="dl4"><a href="booking.html">Book Now</a> </li>
+						<li class="dl1">Vị trí : Illunois,USA</li>
+						<li class="dl2">Giá : $500</li>
+						<li class="dl3">Thời hạn : One Night</li>
+						<li class="dl4"><a href="booking.html">Đặt ngay</a> </li>
 					</ul>
 				</div>
 			</div>
@@ -41,13 +41,13 @@
 						<h2>Universal luxury Grand Hotel <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span><span class="tour_rat">4.5</span></h2> </div>
 					<!--====== TOUR DESCRIPTION ==========-->
 					<div class="tour_head1 hotel-com-color">
-						<h3>About GRAND HOTEL</h3>
+						<h3>Về GRAND HOTEL</h3>
 						<p>Discover two of South America’s greatest cities, Rio de Janeiro and Buenos Aires, at a leisurely pace. A major highlight on this journey is a visit to Iguassu Falls in between your two city stays. It truly is one of the most spectacular sights on Earth. See the impressive falls from both the Brazilian and Argentine sides.</p>
 						<p>Brazil’s view takes you through clouds of mist and the opportunity to see these 275 falls, spanning nearly two miles! Argentina’s side allows you to walk along the boardwalk network and embark on a jungle train through the forest for unforgettable views. Hear the deafening roar and admire the brilliant rainbows created by the clouds of spray, and take in the majesty of this wonder of the world. From vibrant cities to scenic beauty, this vacation to Rio de Janeiro, Iguassu Falls, and Buenos Aires will leave you with vacation memories you’ll cherish for life.</p>
 					</div>
 					<!--====== ROOMS: HOTEL BOOKING ==========-->
 					<div class="tour_head1 hotel-book-room">
-						<h3>Photo Gallery</h3>
+						<h3>Hình ảnh</h3>
 						<div id="myCarousel1" class="carousel slide" data-ride="carousel">
 							<!-- Indicators -->
 							<ol class="carousel-indicators carousel-indicators-1">
@@ -89,7 +89,7 @@
 					</div>
 					<!--====== ABOUT THE TOUR ==========-->
 					<div class="tour_head1">
-						<h3>special features</h3>
+						<h3>Đặc điểm nổi bật</h3>
 						<table>
 							<tr>
 								<th>Places covered</th>
@@ -125,7 +125,7 @@
 					</div>
 					<!--====== HOTEL ROOM TYPES ==========-->
 					<div class="tour_head1">
-						<h3>ROOMS & AVAILABILITIES</h3>
+						<h3>Tiện ích phòng</h3>
 						<div class="tr-room-type">
 							<ul>
 								@foreach($list_room as $dsroom)
@@ -136,7 +136,7 @@
 										<div class="col-md-6 tr-room-type-list-2">
 											<h4>{{$dsroom->room_name}}</h4>
 											<p><b>Amenities: </b>Television, Wi-Fi, Hair dryer, Towels, Dining, Music, GYM and more.. </p> <span><b>Includes</b> : Free Parking, Breakfast, VAT</span> <span><b>Maxinum </b> :{{$dsroom->num_of_people}}</span> </div>
-										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Price Per Night</span> <span class="hot-list-p3-2">{{$dsroom->price_room}}</span> <a href="booking.html" class="hot-page2-alp-quot-btn spec-btn-text">Book Now</a> </div>
+										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Giá mỗi đêm</span> <span class="hot-list-p3-2">{{$dsroom->price_room}}</span> <a href="booking.html" class="hot-page2-alp-quot-btn spec-btn-text">Đặt ngay</a> </div>
 									</div>
 								</li>
 								@endforeach
@@ -175,7 +175,7 @@
 					</div>
 					<!--====== AMENITIES ==========-->
 					<div class="tour_head1 hot-ameni">
-						<h3>Hotel Amenities</h3>
+						<h3>Tiện ích khách sạn</h3>
 						<ul>
 							<li><i class="fa fa-check" aria-hidden="true"></i> Airport transportation (surcharge)</li>
 							<li><i class="fa fa-check" aria-hidden="true"></i> Number of floors - 9 </li>
@@ -203,14 +203,13 @@
 					</div>
 					<!--====== TOUR LOCATION ==========-->
 					<div class="tour_head1 tout-map map-container">
-						<h3>Location</h3>
+						<h3>Vị trí</h3>
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6290415.157581651!2d-93.99661009218904!3d39.661150926343694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b2d386f6e2619%3A0x7f15825064115956!2sIllinois%2C+USA!5e0!3m2!1sen!2sin!4v1467884030780" allowfullscreen></iframe>
 					</div>
 					<div>
 						<div class="dir-rat">
 							<div class="dir-rat-inn dir-rat-title">
-								<h3>Write Your Rating Here</h3>
-								<p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text</p>
+								<h3>Viết đánh giá</h3>
 								<fieldset class="rating">
 									<input type="radio" id="star5" name="rating" value="5" />
 									<label class="full" for="star5" title="Awesome - 5 stars"></label>
@@ -237,18 +236,18 @@
 							<div class="dir-rat-inn">
 								<form class="dir-rat-form">
 									<div class="form-group col-md-6 pad-left-o">
-										<input type="text" class="form-control" id="email11" placeholder="Enter Name"> </div>
+										<input type="text" class="form-control" id="email11" placeholder="Nhập tên"> </div>
 									<div class="form-group col-md-6 pad-left-o">
-										<input type="number" class="form-control" id="email12" placeholder="Enter Mobile"> </div>
+										<input type="number" class="form-control" id="email12" placeholder="Nhập số điện thoại"> </div>
 									<div class="form-group col-md-6 pad-left-o">
-										<input type="email" class="form-control" id="email13" placeholder="Enter Email id"> </div>
+										<input type="email" class="form-control" id="email13" placeholder="Nhập địa chỉ email"> </div>
 									<div class="form-group col-md-6 pad-left-o">
-										<input type="text" class="form-control" id="email14" placeholder="Enter your City"> </div>
+										<input type="text" class="form-control" id="email14" placeholder="Nhập địa chỉ"> </div>
 									<div class="form-group col-md-12 pad-left-o">
-										<textarea placeholder="Write your message"></textarea>
+										<textarea placeholder="Nhập tin nhắn"></textarea>
 									</div>
 									<div class="form-group col-md-12 pad-left-o">
-										<input type="submit" value="SUBMIT" class="link-btn"> </div>
+										<input type="submit" value="Gửi" class="link-btn"> </div>
 								</form>
 							</div>
 							<!--COMMENT RATING-->
@@ -344,7 +343,7 @@
 					</div>
 					<!--====== PACKAGE SHARE ==========-->
 					<div class="tour_right head_right tour_social tour-ri-com">
-						<h3>Share This Package</h3>
+						<h3>Chia sẻ khách sạn</h3>
 						<ul>
 							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
 							<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
@@ -355,7 +354,7 @@
 					</div>
 					<!--====== HELP PACKAGE ==========-->
 					<div class="tour_right head_right tour_help tour-ri-com">
-						<h3>Help & Support</h3>
+						<h3>Hỗ trợ</h3>
 						<div class="tour_help_1">
 							<h4 class="tour_help_1_call">Call Us Now</h4>
 							<h4><i class="fa fa-phone" aria-hidden="true"></i> 10-800-123-000</h4> </div>

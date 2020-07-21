@@ -4927,7 +4927,7 @@
 }
  .tr-regi-form {
      margin: 0 auto;
-     width: 50%;
+     width: 40%;
      background: #fff;
      padding: 45px 50px 50px 50px;
      margin-top: 70px;
@@ -7377,7 +7377,7 @@
 }
  .ed-com-t1-right ul li a{
      color: #fff;
-     padding: 7px 12px;
+     padding: 7px 8px;
      line-height: 30px;
      font-size: 12px;
 }
@@ -7818,7 +7818,7 @@
      padding: 0px;
 }
  .package-form label,select,input{
-    font-size:13px !important;
+    font-size:17px !important;
 }
  .tour-alp-ri-p3{
     padding-top:20px;

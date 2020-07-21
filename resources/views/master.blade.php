@@ -47,15 +47,15 @@
                             <ul>
                                 <li><a href="#">Liên hệ: 103 .</a>
                                 </li>
-                                <li><a href="#">Phone: +101-1231-1231</a>
+                                <li><a href="#">Điện thoại: +101-1231-1231</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="ed-com-t1-right">
                             <ul>
-                                <li><a href="{{ route('dangnhap') }}">Sign In</a>
+                                <li><a href="{{ route('dangnhap') }}">Đăng nhập</a>
                                 </li>
-                                <li><a href="register.html">Sign Up</a>
+                                <li><a href="register.html">Đăng ký</a>
                                 </li>
                             </ul>
                         </div>
@@ -85,12 +85,12 @@
                         </div>
                         <div class="main-menu">
                             <ul>
-                                <li><a href="{{ route('trang-chu') }}">Home</a>
+                                <li><a href="{{ route('trang-chu') }}">Trang chủ</a>
                                 </li>
-                                <li><a href="{{ route('hlist') }}">Hotels</a></li>
-                                <li><a href="dashboard.html">Profile</a>
+                                <li><a href="{{ route('hlist') }}">Khách sạn</a></li>
+                                <li><a href="dashboard.html">Thông tin</a>
                                 </li>
-                                <li><a href="contact.html">Contact us</a>
+                                <li><a href="contact.html">Liên hệ</a>
                                 </li>
                             </ul>
                         </div>
@@ -108,14 +108,14 @@
 						<form class="tourz-search-form">
 							<div class="input-field">
 								<input type="text" id="select-city" class="autocomplete">
-								<label for="select-city">Enter city</label>
+								<label for="select-city">Nhập thành phố</label>
 							</div>
 							<div class="input-field">
 								<input type="text" id="select-search" class="autocomplete">
-								<label for="select-search" class="search-hotel-type">Search over a million tour and travels, sight seeings, hotels and more</label>
+								<label for="select-search" class="search-hotel-type">Tìm kiếm khách sạn giá tốt</label>
 							</div>
 							<div class="input-field">
-								<input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn"> </div>
+								<input type="submit" value="Tìm" class="waves-effect waves-light tourz-sear-btn"> </div>
 						</form>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
 			<div class="container tips_1">
 				<!-- TIPS BEFORE TRAVEL -->
 				<div class="col-md-4 col-sm-6 col-xs-12">
-					<h3>Tips Before Travel</h3>
+					<h3>Tips Du Lịch</h3>
 					<div class="tips_left tips_left_1">
 						<h5>Bring copies of your passport</h5>
 						<p>Aliquam pretium id justo eget tristique. Aenean feugiat vestibulum blandit.</p>
@@ -151,12 +151,12 @@
 				<!-- CUSTOMER TESTIMONIALS -->
 				<div class="col-md-8 col-sm-6 col-xs-12 testi-2">
 					<!-- TESTIMONIAL TITLE -->
-					<h3>Customer Testimonials</h3>
+					<h3>Đánh giá của khách hàng</h3>
 					<div class="testi">
 						<h4>John William</h4>
 						<p>Ut sed sem quis magna ultricies lacinia et sed tortor. Ut non tincidunt nisi, non elementum lorem. Aliquam gravida sodales</p> <address>Illinois, United States of America</address> </div>
 					<!-- ARRANGEMENTS & HELPS -->
-					<h3>Arrangement & Helps</h3>
+					<h3>Sắp xếp & hỗ trợ</h3>
 					<div class="arrange">
 						<ul>
 							<!-- LOCATION MANAGER -->
@@ -202,7 +202,7 @@
 					</div>
 					<!-- FOOTER MOST POPULAR VACATIONS -->
 					<div class="col-md-6 col-sm-12 col-xs-12 foot-spec footer_places">
-						<h4><span>Most Popular</span> Vacations</h4>
+						<h4><span>Những địa điểm </span> Du lịch nổi tiếng</h4>
 						<ul>
 							<li><a href="tour-details.html">Angkor Wat</a> </li>
 							<li><a href="tour-details.html">Buckingham Palace</a> </li>
@@ -235,16 +235,16 @@
 						<div>
 							<div class="row">
 								<div class="col-sm-3 foot-spec foot-com">
-									<h4><span>Holiday</span> Tour & Travels</h4>
-									<p>World's leading tour and travels Booking website,Over 30,000 packages worldwide.</p>
+									<h4><span>Khách sạn</span> & Du lịch</h4>
+									<p> Đại lý đặt phòng khách sạn hàng đầu Đông Nam Á với hơn 200.000 khách sạn đối tác</p>
 								</div>
 								<div class="col-sm-3 foot-spec foot-com">
-									<h4><span>Address</span> & Contact Info</h4>
+									<h4><span>Địa chỉ</span> & Thông tin liên hệ</h4>
 									<p>28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A. Landmark : Next To Airport</p>
-									<p> <span class="strong">Phone: </span> <span class="highlighted">+101-1231-1231</span> </p>
+									<p> <span class="strong">Điện thoại: </span> <span class="highlighted">+101-1231-1231</span> </p>
 								</div>
 								<div class="col-sm-3 col-md-3 foot-spec foot-com">
-									<h4><span>SUPPORT</span> & HELP</h4>
+									<h4>Hỗ trợ</h4>
 									<ul class="two-columns">
 										<li> <a href="#">About Us</a> </li>
 										<li> <a href="#">FAQ</a> </li>
@@ -259,8 +259,7 @@
 									</ul>
 								</div>
 								<div class="col-sm-3 foot-social foot-spec foot-com">
-									<h4><span>Follow</span> with us</h4>
-									<p>Join the thousands of other There are many variations of passages of Lorem Ipsum available</p>
+									<h4><span>Theo dõi chúng tôi trên</h4>
 									<ul>
 										<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
 										<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
@@ -280,7 +279,7 @@
 	<section>
 		<div class="rows copy">
 			<div class="container">
-				<p>Copyrights © 2017 Company Name. All Rights Reserved</p>
+				<p>Copyrights © 2020 The Travel. All Rights Reserved</p>
 			</div>
 		</div>
 	</section>

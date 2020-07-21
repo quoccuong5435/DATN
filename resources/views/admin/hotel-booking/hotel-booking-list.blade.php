@@ -4,9 +4,9 @@
 	<div class="sb2-2">
                 <div class="sb2-2-2">
                     <ul>
-                        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ</a>
                         </li>
-                        <li class="active-bre"><a href="#"> Hotel Booking Enquiry</a>
+                        <li class="active-bre"><a href="#"> Danh sách đặt phòng khách sạn</a>
                         </li>
                     </ul>
                 </div>
@@ -15,20 +15,19 @@
                         <div class="col-md-12">
                             <div class="box-inn-sp">
                                 <div class="inn-title">
-                                    <h4>Hotel Booking Enquiry</h4>
-                                    <p>Airtport Hotels The Right Way To Start A Short Break Holiday</p>
+                                    <h4>Danh sách đặt phòng khách sạn</h4>
                                     <a class="dropdown-button drop-down-meta" href="#" data-activates="dr-users"><i class="material-icons">more_vert</i></a>
                                     <ul id="dr-users" class="dropdown-content">
-                                        <li><a href="#!">Add New</a>
+                                        <li><a href="#!">Thêm mới</a>
                                         </li>
-                                        <li><a href="#!">Edit</a>
+                                        <li><a href="#!">Sửa</a>
                                         </li>
-                                        <li><a href="#!">Update</a>
+                                        <li><a href="#!">Cập nhật   </a>
                                         </li>
                                         <li class="divider"></li>
-                                        <li><a href="#!"><i class="material-icons">delete</i>Delete</a>
+                                        <li><a href="#!"><i class="material-icons">delete</i>Xóa</a>
                                         </li>
-                                        <li><a href="#!"><i class="material-icons">subject</i>View All</a>
+                                        <li><a href="#!"><i class="material-icons">subject</i>Xem tất cả</a>
                                         </li>
                                     </ul>
 
@@ -41,10 +40,11 @@
                                             <thead>
                                                 <tr>
                                                     <th>User</th>
-                                                    <th>Hotel</th>
-                                                    <th>Phone</th>
+                                                    <th>Khách sạn</th>
+                                                    <th>Di động</th>
                                                     <th>Email</th>
-                                                    <th>Message</th>
+                                                    <th>Địa chỉ</th>
+                                                    <th>Tin nhắn</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -59,7 +59,7 @@
                                                     <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><span class="list-img"><img src="images/listing/2.jpg" alt=""></span>
+                                                    <td><span class="list-img"><img src="ima    ges/listing/2.jpg" alt=""></span>
                                                     </td>
                                                     <td><a href="#"><span class="list-enq-name">Home Appliances Repair & Services</span><span class="list-enq-city">Illunois, United States</span></a>
                                                     </td>

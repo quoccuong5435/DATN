@@ -1,6 +1,6 @@
 <!--RIGHT SECTION-->
 			<div class="db-3">
-				<h4>Notifications</h4>
+				<h4>Thông Báo</h4>
 				<ul>
 					<li>
 						<a href="#!"> <img src="{{ asset('source/images/icon/dbr1.jpg') }}" alt="" />

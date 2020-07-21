@@ -4,7 +4,7 @@
 
 <!-- Mirrored from rn53themes.net/themes/demo/travelz/admin/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Jul 2020 02:51:38 GMT -->
 <head>
-    <title>Lava Material - Web Application and Website Multipurpose Admin Panel Template</title>
+    <title>The Travel</title>
     <!--== META TAGS ==-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -39,21 +39,21 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="first_name1" type="text" class="validate">
-                        <label for="first_name1">User Name</label>
+                        <label for="first_name1">Email</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="last_name" type="password" class="validate">
-                        <label for="last_name">Password</label>
+                        <label for="last_name">Mật khẩu</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <a class="waves-effect waves-light btn-large btn-log-in" href="index.html">Login</a>
+                        <a class="waves-effect waves-light btn-large btn-log-in" href="index.html">Đăng nhập</a>
                     </div>
                 </div>
-                <a href="forgot.html" class="for-pass">Forgot Password?</a>
+                <a href="forgot.html" class="for-pass">Quên mật khẩu?</a>
             </form>
         </div>
     </div>

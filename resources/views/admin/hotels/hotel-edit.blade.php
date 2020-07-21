@@ -4,26 +4,26 @@
 	<div class="sb2-2">
                 <div class="sb2-2-2">
                     <ul>
-                        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ</a>
                         </li>
-                        <li class="active-bre"><a href="#"> Edit Hotel</a>
+                        <li class="active-bre"><a href="#"> Sửa thông tin khách sạn</a>
                         </li>
                     </ul>
                 </div>
                 <div class="sb2-2-add-blog sb2-2-1">
-                    <h2>Edit Hotel Details</h2>
-                    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+                    <h2>Sửa thông tin chi tiết khách sạn</h2> </br>
+                    
 
                     <ul class="nav nav-tabs tab-list">
-                        <li class="active"><a data-toggle="tab" href="#home"><i class="fa fa-info" aria-hidden="true"></i> <span>Detail</span></a>
+                        <li class="active"><a data-toggle="tab" href="#home"><i class="fa fa-info" aria-hidden="true"></i> <span>Chi tiết</span></a>
                         </li>
-                        <li><a data-toggle="tab" href="#menu1"><i class="fa fa-bed" aria-hidden="true"></i> <span>Room Type</span></a>
+                        <li><a data-toggle="tab" href="#menu1"><i class="fa fa-bed" aria-hidden="true"></i> <span>Loại phòng</span></a>
                         </li>
-                        <li><a data-toggle="tab" href="#menu2"><i class="fa fa-picture-o" aria-hidden="true"></i> <span>Photo Gallery</span></a>
+                        <li><a data-toggle="tab" href="#menu2"><i class="fa fa-picture-o" aria-hidden="true"></i> <span>Thư viện ảnh</span></a>
                         </li>
-                        <li><a data-toggle="tab" href="#menu3"><i class="fa fa-facebook" aria-hidden="true"></i> <span>Social Media</span></a>
+                        <li><a data-toggle="tab" href="#menu3"><i class="fa fa-facebook" aria-hidden="true"></i> <span></span>Mạng xã hội</a>
                         </li>
-                        <li><a data-toggle="tab" href="#menu4"><i class="fa fa-phone" aria-hidden="true"></i> <span>Contact Info</span></a>
+                        <li><a data-toggle="tab" href="#menu4"><i class="fa fa-phone" aria-hidden="true"></i> <span>Thông tin liên hệ</span></a>
                         </li>
                     </ul>
 
@@ -31,19 +31,18 @@
                         <div id="home" class="tab-pane fade in active">
                             <div class="box-inn-sp">
                                 <div class="inn-title">
-                                    <h4>Listing Information</h4>
-                                    <p>Airtport Hotels The Right Way To Start A Short Break Holiday</p>
+                                    <h4>Danh sách thông tin</h4></br>
                                 </div>
                                 <div class="bor">
                                     <form>
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <input id="list-title" type="text" class="validate">
-                                                <label for="list-title">Listing Name</label>
+                                                <label for="list-title">Tên danh sách</label>
                                             </div>
                                             <div class="input-field col s12">
                                                 <input id="list-name" type="text" class="validate">
-                                                <label for="list-name">Contact Person</label>
+                                                <label for="list-name">Người liên hệ</label>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -54,13 +53,13 @@
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                                <label for="textarea1">Listing Descriptions:</label>
+                                                <label for="textarea1">Mô tả</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s6">
                                                 <select multiple>
-                                                    <option value="" disabled selected>Choose Category</option>
+                                                    <option value="" disabled selected>Loại</option>
                                                     <option value="1">Hotels</option>
                                                     <option value="2">Educations</option>
                                                     <option value="3">Medical</option>
@@ -72,11 +71,11 @@
                                                     <option value="3">Party</option>
                                                     <option value="3">Spa/Club</option>
                                                 </select>
-                                                <label>Select Category</label>
+                                                <label>Chọn loại</label>
                                             </div>
                                             <div class="input-field col s6">
                                                 <select multiple>
-                                                    <option value="" disabled selected>Choose Category</option>
+                                                    <option value="" disabled selected>Loại</option>
                                                     <option value="1">Hotels</option>
                                                     <option value="2">Educations</option>
                                                     <option value="3">Medical</option>
@@ -88,12 +87,12 @@
                                                     <option value="3">Party</option>
                                                     <option value="3">Spa/Club</option>
                                                 </select>
-                                                <label>Select Sub Category</label>
+                                                <label>Chọn loại</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input type="submit" class="waves-effect waves-light btn-large" value="Submit">
+                                                <input type="submit" class="waves-effect waves-light btn-large" value="Gửi">
                                             </div>
                                         </div>
                                     </form>
@@ -102,26 +101,26 @@
                         </div>
                         <div id="menu1" class="tab-pane fade">
                             <div class="inn-title">
-                                <h4>Hotel Room Details</h4>
-                                <p>Airtport Hotels The Right Way To Start A Short Break Holiday</p>
+                                <h4>Chi tiết phòng</h4>
+                                
                             </div>
                             <div class="bor">
                                 <form>
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <select multiple>
-                                                <option value="" disabled selected>Room Type</option>
+                                                <option value="" disabled selected>Loại phòng</option>
                                                 <option value="1">Deluxe</option>
                                                 <option value="2">Premium</option>
                                                 <option value="3">Premium Plus</option>
                                                 <option value="3">Non-Deluxe</option>
                                                 <option value="3">Normal</option>
                                             </select>
-                                            <label>Select Category</label>
+                                            <label>Chọn loại</label>
                                         </div>
                                         <div class="input-field col s12">
                                             <input id="t2-price" type="number" class="validate">
-                                            <label for="t2-price">Price</label>
+                                            <label for="t2-price">Giá</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -132,7 +131,7 @@
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <textarea id="textarea4" class="materialize-textarea"></textarea>
-                                            <label for="textarea4">Listing Descriptions:</label>
+                                            <label for="textarea4">Mô tả</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -143,14 +142,14 @@
                                                     <input type="file">
                                                 </div>
                                                 <div class="file-path-wrapper">
-                                                    <input class="file-path validate" type="text" placeholder="Upload room image">
+                                                    <input class="file-path validate" type="text" placeholder="Tải ảnh lên">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <input type="submit" class="waves-effect waves-light btn-large" value="Submit">
+                                            <input type="submit" class="waves-effect waves-light btn-large" value="Gửi">
                                         </div>
                                     </div>
                                 </form>
@@ -172,7 +171,7 @@
                                         </div>
                                         <div class="input-field col s12">
                                             <input id="t2-price1" type="number" class="validate">
-                                            <label for="t2-price1">Price</label>
+                                            <label for="t2-price1">Giá</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -183,7 +182,7 @@
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <textarea id="textarea2" class="materialize-textarea"></textarea>
-                                            <label for="textarea2">Listing Descriptions:</label>
+                                            <label for="textarea2">Mô tả</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -194,14 +193,14 @@
                                                     <input type="file">
                                                 </div>
                                                 <div class="file-path-wrapper">
-                                                    <input class="file-path validate" type="text" placeholder="Upload room image">
+                                                    <input class="file-path validate" type="text" placeholder="Tải ảnh lên">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <input type="submit" class="waves-effect waves-light btn-large" value="Submit">
+                                            <input type="submit" class="waves-effect waves-light btn-large" value="Gửi">
                                         </div>
                                     </div>
                                 </form>
@@ -209,8 +208,7 @@
                         </div>
                         <div id="menu2" class="tab-pane fade">
                             <div class="inn-title">
-                                <h4>Photo Gallery</h4>
-                                <p>Airtport Hotels The Right Way To Start A Short Break Holiday</p>
+                                <h4>Thư viện ảnh</h4>
                             </div>
                             <div class="bor">
                                 <form action="#">
@@ -220,12 +218,12 @@
                                             <input type="file" multiple>
                                         </div>
                                         <div class="file-path-wrapper">
-                                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                            <input class="file-path validate" type="text" placeholder="Tải lên một hay nhiều file">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <input type="submit" class="waves-effect waves-light btn-large" value="Upload">
+                                            <input type="submit" class="waves-effect waves-light btn-large" value="Tải lên">
                                         </div>
                                     </div>
 
@@ -234,8 +232,7 @@
                         </div>
                         <div id="menu3" class="tab-pane fade">
                             <div class="inn-title">
-                                <h4>Social Media</h4>
-                                <p>Airtport Hotels The Right Way To Start A Short Break Holiday</p>
+                                <h4>Mạng xã hội</h4>
                             </div>
                             <div class="bor">
                                 <form>
@@ -271,13 +268,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <input id="t4-soc6" type="text" value="http://vk.com/" class="validate">
-                                            <label for="t4-soc6">Vk Url</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input type="submit" class="waves-effect waves-light btn-large" value="Upload">
+                                            <input type="submit" class="waves-effect waves-light btn-large" value="Tải lên">
                                         </div>
                                     </div>
                                 </form>
@@ -285,29 +276,29 @@
                         </div>
                         <div id="menu4" class="tab-pane fade">
                             <div class="inn-title">
-                                <h4>Contact Info</h4>
-                                <p>Airtport Hotels The Right Way To Start A Short Break Holiday</p>
+                                <h4>Thông tin liên hệ</h4>
+
                             </div>
                             <div class="bor">
                                 <form>
                                     <div class="row">
                                         <div class="input-field col s6">
                                             <input id="t5-n1" type="text" class="validate">
-                                            <label for="t5-n1">Contact Name</label>
+                                            <label for="t5-n1">Tên liên lạc</label>
                                         </div>
                                         <div class="input-field col s6">
                                             <input id="t5-n2" type="text" class="validate">
-                                            <label for="t5-n2">Alter Contact Name</label>
+                                            <label for="t5-n2">Tên thay thế</label>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s6">
                                             <input id="t5-n3" type="number" class="validate">
-                                            <label for="t5-n3">Phone</label>
+                                            <label for="t5-n3">Di động</label>
                                         </div>
                                         <div class="input-field col s6">
                                             <input id="t5-n4" type="number" class="validate">
-                                            <label for="t5-n4">Mobile</label>
+                                            <label for="t5-n4">Số điện thoại</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -319,12 +310,12 @@
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <textarea id="t5-n6" class="materialize-textarea"></textarea>
-                                            <label for="t5-n6">Listing Descriptions:</label>
+                                            <label for="t5-n6">Mô tả</label>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <input type="submit" class="waves-effect waves-light btn-large" value="Upload">
+                                            <input type="submit" class="waves-effect waves-light btn-large" value="Tải lên">
                                         </div>
                                     </div>
                                 </form>

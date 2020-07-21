@@ -20,7 +20,7 @@
 					<div class="col-md-3 hot-page2-alp-con-left">
 						<!--PART 1 : LEFT LISTINGS-->
 						<div class="hot-page2-alp-con-left-1">
-							<h3>Suggesting Hotels</h3> </div>
+							<h3>Gợi Ý Dành Cho Bạn</h3> </div>
 						<!--PART 2 : LEFT LISTINGS-->
 						<div class="hot-page2-hom-pre hot-page2-alp-left-ner-notb">
 							<ul>
@@ -73,28 +73,28 @@
 						</div>
 						<!--PART 7 : LEFT LISTINGS-->
 						<div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-							<h4><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Room Available Check</h4>
+							<h4><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Kiểm tra còn phòng</h4>
 							<div class="hot-page2-alp-l-com1 hot-room-ava-check">
 								<form>
 									<ul>
 										<li>
-											<label>Enter Your City</label>
+											<label>Nhập tên thành phố</label>
 											<input type="text" placeholder="Enter City"> </li>
 										<li>
-											<label>Depart Date</label>
+											<label>Ngày nhận phòng</label>
 											<input type="date"> </li>
 										<li>
-											<label>Return Date</label>
+											<label>Ngày trả phòng</label>
 											<input type="date"> </li>
 										<li>
-											<input type="submit" value="SUBMIT"> </li>
+											<input type="submit" value="Kiểm tra"> </li>
 									</ul>
 								</form>
 							</div>
 						</div>
 						<!--PART 4 : LEFT LISTINGS-->
 						<div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-							<h4><i class="fa fa-map-marker" aria-hidden="true"></i> Select City & Country</h4>
+							<h4><i class="fa fa-map-marker" aria-hidden="true"></i> Các bộ lọc phổ biến</h4>
 							<div class="hot-page2-alp-l-com1 hot-page2-alp-p4">
 								<form>
 									<ul>
@@ -134,7 +134,7 @@
 						<!--END PART 4 : LEFT LISTINGS-->
 						<!--PART 5 : LEFT LISTINGS-->
 						<div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-							<h4><i class="fa fa-dollar" aria-hidden="true"></i> Select Price Range</h4>
+							<h4><i class="fa fa-dollar" aria-hidden="true"></i> Giá phòng</h4>
 							<div class="hot-page2-alp-l-com1 hot-page2-alp-p5">
 								<form>
 									<ul>
@@ -169,12 +169,12 @@
 											</div>
 										</li>
 									</ul>
-								</form> <a href="javascript:void(0);" class="hot-page2-alp-p5-btn-s">view more</a> </div>
+								</form> <a href="javascript:void(0);" class="hot-page2-alp-p5-btn-s">xem thêm</a> </div>
 						</div>
 						<!--END PART 5 : LEFT LISTINGS-->
 						<!--PART 6 : LEFT LISTINGS-->
 						<div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-							<h4><i class="fa fa-star-o" aria-hidden="true"></i> Select Ratings</h4>
+							<h4><i class="fa fa-star-o" aria-hidden="true"></i> Xếp hạng sao</h4>
 							<div class="hot-page2-alp-l-com1 hot-page2-alp-p5">
 								<form>
 									<ul>
@@ -219,47 +219,47 @@
 											</div>
 										</li>
 									</ul>
-								</form> <a href="javascript:void(0);" class="hot-page2-alp-p5-btn-s">view more</a> </div>
+								</form> <a href="javascript:void(0);" class="hot-page2-alp-p5-btn-s">xem thêm</a> </div>
 						</div>
 						<!--END PART 5 : LEFT LISTINGS-->
 						<!--PART 6 : LEFT LISTINGS-->
 						<div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-							<h4><i class="fa fa-heart-o" aria-hidden="true"></i> Hotel Amenities</h4>
+							<h4><i class="fa fa-heart-o" aria-hidden="true"></i> Tiện ích </h4>
 							<div class="hot-page2-alp-l-com1 hot-page2-alp-p5">
 								<form>
 									<ul>
 										<li>
 											<div class="checkbox checkbox-info checkbox-circle">
 												<input id="chp71" class="styled" type="checkbox" checked="">
-												<label for="chp71"> Swimming pools </label>
+												<label for="chp71"> Hồ bơi </label>
 											</div>
 										</li>
 										<li>
 											<div class="checkbox checkbox-info checkbox-circle">
 												<input id="chp72" class="styled" type="checkbox">
-												<label for="chp72"> Wi-Fi & Computer </label>
+												<label for="chp72"> Wi-Fi </label>
 											</div>
 										</li>
 										<li>
 											<div class="checkbox checkbox-info checkbox-circle">
 												<input id="chp73" class="styled" type="checkbox">
-												<label for="chp73"> Kitchen facilities </label>
+												<label for="chp73"> Khu vực bếp</label>
 											</div>
 										</li>
 										<li>
 											<div class="checkbox checkbox-info checkbox-circle">
 												<input id="chp74" class="styled" type="checkbox">
-												<label for="chp74"> Music & GYM </label>
+												<label for="chp74"> Phòng GYM </label>
 											</div>
 										</li>
 										<li>
 											<div class="checkbox checkbox-info checkbox-circle">
 												<input id="chp75" class="styled" type="checkbox">
-												<label for="chp75"> Dining </label>
+												<label for="chp75"> Bể bơi </label>
 											</div>
 										</li>
 									</ul>
-								</form> <a href="javascript:void(0);" class="hot-page2-alp-p5-btn-s">view more</a> </div>
+								</form> <a href="javascript:void(0);" class="hot-page2-alp-p5-btn-s">xem thêm</a> </div>
 						</div>
 						<!--END PART 7 : LEFT LISTINGS-->
 					</div>

@@ -187,13 +187,13 @@
 			<div class="container">
 				<!-- TITLE & DESCRIPTION -->
 				<div class="spe-title">
-					<h2>Hotels <span>booking open now! </span> </h2>
+					<h2><span>Đặt phòng</span> ngay nào! </h2>
 					<div class="title-line">
 						<div class="tl-1"></div>
 						<div class="tl-2"></div>
 						<div class="tl-3"></div>
 					</div>
-					<p>Trang web đặt phòng khách sạn hàng đầu thế giới, hơn 30.000 phòng khách sạn trên toàn thế giới. Đặt phòng khách sạn và tận hưởng kỳ nghỉ của bạn với kinh nghiệm đặc biệt</p>
+					<p>Trang web đặt phòng khách sạn hàng đầu thế giới, hơn 30.000 phòng khách sạn trên toàn thế giới. Đặt phòng khách sạn và tận hưởng kỳ nghỉ của bạn với trải nghiệm đặc biệt</p>
 				</div>
 				<!-- HOTEL GRID -->
 				<div class="to-ho-hotel">
@@ -262,10 +262,10 @@
 	<section>
 		<div class="tb-space tour-consul">
 			<div class="container">
-				<div class="col-md-6"> <span class="to-con-1">Get in touch with us</span>
+				<div class="col-md-6"> <span class="to-con-1">Liên lạc với chúng tôi</span>
 					<h2>Nhận ưu đãi du lịch tốt nhất</h2>
-					<p>Get best travel deals for hotels, holidays, trains.Donec eget odio a nunc lacinia rhoncus. Vivamus dignissim magna quis nisl fermentum porttitor. Maecenas venenatis mattis dui at pharetra.Nullam rutrum odio eu viverra accumsan. Nam orci elit, scelerisque eget dui non, sagittis tristique metus. Fusce nec nulla dapibus, fringilla nulla eu, vehicula odio. </p> <span class="to-con-2">Help line: +001 21745 12345</span>
-					<div class="ho-con-cont"> <a href="hotels-list.html" class="to-con-3 link-btn">Book Now</a> <a href="contact.html" class="to-con-4 link-btn">Contact Now</a> </div>
+					<p>Dù bạn là ai, đang tìm kiếm điều gì, chúng tôi cũng có chỗ nghỉ hoàn hảo dành cho bạn</p> <span class="to-con-2">Help line: +001 21745 12345</span>
+					<div class="ho-con-cont"> <a href="hotels-list.html" class="to-con-3 link-btn">Đặt phòng</a> <a href="contact.html" class="to-con-4 link-btn">Liên hệ</a> </div>
 				</div>
 				<div class="col-md-6 ho-vid"> <img src="{{ asset('source/images/video.png') }}" alt=""> </div>
 			</div>
