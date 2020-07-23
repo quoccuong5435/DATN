@@ -135,17 +135,14 @@
 				<!-- TIPS BEFORE TRAVEL -->
 				<div class="col-md-4 col-sm-6 col-xs-12">
 					<h3>Tips Du Lịch</h3>
-					<div class="tips_left tips_left_1">
-						<h5>Bring copies of your passport</h5>
-						<p>Aliquam pretium id justo eget tristique. Aenean feugiat vestibulum blandit.</p>
+					<div class="tips_left tips_left_1"></br>
+						<h5>Mang theo bản sao hộ chiếu</h5>
 					</div>
-					<div class="tips_left tips_left_2">
-						<h5>Register with your embassy</h5>
-						<p>Mauris efficitur, ante sit amet rhoncus malesuada, orci justo sollicitudin.</p>
+					<div class="tips_left tips_left_2"></br>
+						<h5>Đăng ký với đại sứ quán</h5>
 					</div>
-					<div class="tips_left tips_left_3">
-						<h5>Always have local cash</h5>
-						<p>Donec et placerat ante. Etiam et velit in massa. </p>
+					<div class="tips_left tips_left_3"></br>
+						<h5>Luôn có tiền mặt địa phương</h5></br>
 					</div>
 				</div>
 				<!-- CUSTOMER TESTIMONIALS -->

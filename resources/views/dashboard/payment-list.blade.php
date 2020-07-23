@@ -7,17 +7,17 @@
 	<!--CENTER SECTION-->
 			<div class="db-2">
 				<div class="db-2-com db-2-main">
-					<h4>All Payment</h4>
+					<h4>Tất cả các giao dịch</h4>
 					<div class="db-2-main-com db-2-main-com-table">
 						<table class="responsive-table">
 							<thead>
 								<tr>
-									<th>No</th>
-									<th>Package</th>
-									<th>Start Date</th>
-									<th>Price</th>
-									<th>Payment</th>
-									<th>Invoice</th>
+									<th>STT</th>
+									<th>Khách sạn</th>
+									<th>Ngày bắt đầu</th>
+									<th>Giá</th>
+									<th>Thanh toán</th>
+									<th>Hóa đơn</th>
 								</tr>
 							</thead>
 							<tbody>

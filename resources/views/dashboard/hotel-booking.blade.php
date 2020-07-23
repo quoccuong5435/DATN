@@ -7,18 +7,18 @@
 	<!--CENTER SECTION-->
 			<div class="db-2">
 				<div class="db-2-com db-2-main">
-					<h4>Travel Booking</h4>
+					<h4>Danh sách phòng đã đặt</h4>
 					<div class="db-2-main-com db-2-main-com-table">
 						<table class="responsive-table">
 							<thead>
 								<tr>
-									<th>No</th>
-									<th>Package</th>
-									<th>Duration</th>
-									<th>Start Date</th>
-									<th>Price</th>
-									<th>Payment</th>
-									<th>More</th>
+									<th>STT</th>
+									<th>Khách sạn</th>
+									<th>Thời gian</th>
+									<th>Ngày bắt đầu</th>
+									<th>Giá</th>
+									<th>Thanh toán</th>
+									<th>Thêm</th>
 								</tr>
 							</thead>
 							<tbody>
