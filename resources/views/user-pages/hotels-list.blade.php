@@ -268,10 +268,10 @@
 					
 					<div class="col-md-9 hot-page2-alp-con-right">
 						<div class="hot-page2-alp-con-right-1">
-							@foreach($list_hotel as $dshotel)
 							<!--LISTINGS-->
 							<div class="row">
 								<!--LISTINGS START-->
+								@foreach($list_hotel as $dshotel)
 								<div class="hot-page2-alp-r-list">
 									<div class="col-md-3 hot-page2-alp-r-list-re-sp">
 										<a href="javascript:void(0);">

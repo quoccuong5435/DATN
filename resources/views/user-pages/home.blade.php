@@ -264,7 +264,7 @@
 			<div class="container">
 				<div class="col-md-6"> <span class="to-con-1">Liên lạc với chúng tôi</span>
 					<h2>Nhận ưu đãi du lịch tốt nhất</h2>
-					<p>Dù bạn là ai, đang tìm kiếm điều gì, chúng tôi cũng có chỗ nghỉ hoàn hảo dành cho bạn</p> <span class="to-con-2">Help line: +001 21745 12345</span>
+					<p>Dù bạn là ai, đang tìm kiếm điều gì, chúng tôi luôn có chỗ nghỉ hoàn hảo dành cho bạn</p> <span class="to-con-2">Help line: +001 21745 12345</span>
 					<div class="ho-con-cont"> <a href="hotels-list.html" class="to-con-3 link-btn">Đặt phòng</a> <a href="contact.html" class="to-con-4 link-btn">Liên hệ</a> </div>
 				</div>
 				<div class="col-md-6 ho-vid"> <img src="{{ asset('source/images/video.png') }}" alt=""> </div>

@@ -17,11 +17,11 @@ class CreateHotelsTable extends Migration
             $table->increments('id');
             $table->string('name_hotel');
             $table->string('avatar_hotel');
-            $table->integer('phone_hotel');
+            $table->string('phone_hotel');
             $table->string('email_hotel');
             $table->string('address_hotel');
             $table->integer('rate_hotel');
-            $table->integer('score_hotel');
+            $table->float('score_hotel');
             $table->integer('status');
             $table->timestamps();
         });

@@ -17,7 +17,7 @@ class CreateBookingsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('hotel_id');
             $table->unsignedInteger('user_id');
-            $table->integer('count_rooms');
+            $table->integer('num_of_rooms');
             $table->datetime('date_from');
             $table->unsignedInteger('booking_status_id');
             $table->datetime('date_to');
