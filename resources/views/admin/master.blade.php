@@ -117,9 +117,9 @@
                                     </li>
                                     <li><a href="{{route('hotel-add')}}">Thêm khách sạn</a>
                                     </li>
-                                    <li><a href="hotel-room-type-all.html">Danh sách phòng</a>
+                                    <li><a href="hotel-room-type-all.html">Danh sách loại phòng</a>
                                     </li>
-                                    <li><a href="hotel-room-type-add.html">Thêm phòng</a>
+                                    <li><a href="hotel-room-type-add.html">Thêm loại phòng</a>
                                     </li>
                                 </ul>
                             </div>

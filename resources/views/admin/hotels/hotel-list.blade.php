@@ -56,7 +56,7 @@
                                                     <td><span class="list-img">quoccuong5435</span>
                                                     </td>
                                                     <td><a href="#"><span class="list-enq-name">{{$dshotel->name_hotel}}</span>
-                                                        @for( $i=0; $i<$dshotel->rate_hotel;$i++)<span class="fa fa-star"></span>
+                                                        @for( $i=0; $i<$dshotel->rate_hotel;$i++)<span style="color: #feba02;" class="fa fa-star"></span>
                                                         @endfor
                                                         @if($dshotel->score_hotel >=8)
                                                             &emsp;&emsp;&emsp;

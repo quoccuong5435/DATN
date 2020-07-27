@@ -4,23 +4,22 @@
 	<div class="sb2-2">
                 <div class="sb2-2-2">
                     <ul>
-                        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ</a>
                         </li>
-                        <li class="active-bre"><a href="#"> Room Types</a>
+                        <li class="active-bre"><a href="#"> Danh sách loại phòng</a>
                         </li>
                     </ul>
                 </div>
                 <div class="sb2-2-1">
-                    <h2>All Room Types</h2>
-                    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+                    <h2>Danh sách tất cả loại phòng</h2>
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Package Categories</th>
-                                <th>Date</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Tên loại phòng</th>
+                                <th>Ngày</th>
+                                <th>Sửa</th>
+                                <th>Xóa</th>
                             </tr>
                         </thead>
                         <tbody>
