@@ -53,22 +53,22 @@
                                                 @foreach($list_hotel as $dshotel)
                                                 @csrf
                                                 <tr>
-                                                    <td><span class="list-img">quoccuong5435</span>
+                                                    <td><span class="list-img">{{$dshotel->id}}</span>
                                                     </td>
                                                     <td><a href="#"><span class="list-enq-name">{{$dshotel->name_hotel}}</span>
                                                         @for( $i=0; $i<$dshotel->rate_hotel;$i++)<span class="fa fa-star"></span>
                                                         @endfor
                                                         @if($dshotel->score_hotel >=8)
-                                                            &emsp;&emsp;&emsp;
-                                                        <span> Xuất sắc:{{$dshotel->score_hotel}}</span></a>
+                                                          <br>  
+                                                        <span> Xuất sắc: {{$dshotel->score_hotel}}</span></a>
                                                         @elseif($dshotel->score_hotel >=7)
-                                                         &emsp;&emsp;&emsp;
-                                                        <span> Rất tốt:{{$dshotel->score_hotel}}</span></a>
+                                                         <br>
+                                                        <span> Rất tốt: {{$dshotel->score_hotel}}</span></a>
                                                         @else
-                                                         &emsp;&emsp;&emsp;
-                                                        <span> Tốt:{{$dshotel->score_hotel}}</span></a>
+                                                         <br>
+                                                        <span> Tốt: {{$dshotel->score_hotel}}</span></a>
                                                     @endif
-                                                   
+                                                            {{$dshotel->avatar_hotel}}
                                                     </td>
                                                     <td>{{$dshotel->phone_hotel}}</td>
                                                     <td>{{$dshotel->email_hotel}}</td>
