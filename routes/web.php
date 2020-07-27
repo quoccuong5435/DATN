@@ -115,6 +115,14 @@ Route::get('/admin/hotels/add',[
     'as'=>'hotel-add',
     'uses'=>'Hotel_Controller@admin_hotel_add'
 ]);
+Route::get('/admin/hotels/add',[
+    'as'=>'hotel-add',
+    'uses'=>'Hotel_Controller@admin_hotel_add'
+]);
+Route::post('/admin/hotels/add',[
+    'as'=>'hotel-add-send',
+    'uses'=>'Hotel_Controller@add_hotel'
+]);
 
 Route::get('/admin/hotels/edit', function(){
     return view('admin.hotels.hotel-edit');
