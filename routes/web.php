@@ -106,10 +106,15 @@ Route::get('/admin/users/view', function(){
 Route::get('/admin/hotels', function(){
     return view('admin.hotels.hotel-list');
 });
+Route::get('admin/hotel',[
+    'as'=>'hotel',
+    'uses'=>'Hotel_Controller@admin_hotel'
+]);
 
-Route::get('/admin/hotels/add', function(){
-    return view('admin.hotels.hotel-add');
-});
+Route::get('/admin/hotels/add',[
+    'as'=>'hotel-add',
+    'uses'=>'Hotel_Controller@admin_hotel_add'
+]);
 
 Route::get('/admin/hotels/edit', function(){
     return view('admin.hotels.hotel-edit');

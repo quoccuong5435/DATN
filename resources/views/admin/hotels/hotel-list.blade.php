@@ -18,7 +18,7 @@
                                     <h4>Danh sách khách sạn</h4>
                                     <a class="dropdown-button drop-down-meta" href="#" data-activates="dr-users"><i class="material-icons">more_vert</i></a>
                                     <ul id="dr-users" class="dropdown-content">
-                                        <li><a href="#!">Thêm mới</a>
+                                        <li><a href="{{route('hotel-add')}}">Thêm mới</a>
                                         </li>
                                         <li><a href="#!">Sửa</a>
                                         </li>
@@ -46,18 +46,33 @@
                                                     <th>Địa chỉ</th>
                                                     <th>Xem</th>
                                                     <th>Sửa</th>
-                                                    <th>Xóa</th>
+                                                    <th>Khóa</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($list_hotel as $dshotel)
+                                                @csrf
                                                 <tr>
-                                                    <td><span class="list-img"><img src="images/listing/1.jpg" alt=""></span>
+                                                    <td><span class="list-img">quoccuong5435</span>
                                                     </td>
-                                                    <td><a href="#"><span class="list-enq-name">Domestic Help Services</span><span class="list-enq-city">Illunois, United States</span></a>
+                                                    <td><a href="#"><span class="list-enq-name">{{$dshotel->name_hotel}}</span>
+                                                        @for( $i=0; $i<$dshotel->rate_hotel;$i++)<span class="fa fa-star"></span>
+                                                        @endfor
+                                                        @if($dshotel->score_hotel >=8)
+                                                            &emsp;&emsp;&emsp;
+                                                        <span> Xuất sắc:{{$dshotel->score_hotel}}</span></a>
+                                                        @elseif($dshotel->score_hotel >=7)
+                                                         &emsp;&emsp;&emsp;
+                                                        <span> Rất tốt:{{$dshotel->score_hotel}}</span></a>
+                                                        @else
+                                                         &emsp;&emsp;&emsp;
+                                                        <span> Tốt:{{$dshotel->score_hotel}}</span></a>
+                                                    @endif
+                                                   
                                                     </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
+                                                    <td>{{$dshotel->phone_hotel}}</td>
+                                                    <td>{{$dshotel->email_hotel}}</td>
+                                                    <td>{{$dshotel->address_hotel}}</td>
                                                     <td>
                                                         <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     </td>
@@ -65,261 +80,10 @@
                                                         <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     </td>
                                                     <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                        <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/2.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Home Appliances Repair & Services</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/3.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Packers and Movers</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/4.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Security System Dealers</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/5.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Skin Care & Treatment</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/1.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Domestic Help Services</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/2.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Home Appliances Repair & Services</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/3.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Packers and Movers</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/4.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Security System Dealers</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/5.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Skin Care & Treatment</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/1.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Domestic Help Services</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/2.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Home Appliances Repair & Services</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/3.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Packers and Movers</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/4.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Security System Dealers</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/5.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Skin Care & Treatment</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
+                                            @endforeach
                                             </tbody>
                                         </table>
                                     </div>

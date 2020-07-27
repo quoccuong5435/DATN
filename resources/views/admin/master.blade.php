@@ -113,13 +113,13 @@
                         <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-h-square" aria-hidden="true"></i> Quản lý khách sạn</a>
                             <div class="collapsible-body left-sub-menu">
                                 <ul>
-                                    <li><a href="hotel-all.html">Danh sách khách sạn</a>
+                                    <li><a href="{{route('hotel')}}">Danh sách khách sạn</a>
                                     </li>
-                                    <li><a href="hotel-add.html">Thêm khách sạn</a>
+                                    <li><a href="{{route('hotel-add')}}">Thêm khách sạn</a>
                                     </li>
-                                    <li><a href="hotel-room-type-all.html">Danh sách loại phòng</a>
+                                    <li><a href="hotel-room-type-all.html">Danh sách phòng</a>
                                     </li>
-                                    <li><a href="hotel-room-type-add.html">Thêm loại phòng</a>
+                                    <li><a href="hotel-room-type-add.html">Thêm phòng</a>
                                     </li>
                                 </ul>
                             </div>

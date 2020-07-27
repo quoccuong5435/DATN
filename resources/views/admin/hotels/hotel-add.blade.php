@@ -16,7 +16,7 @@
                     <ul class="nav nav-tabs tab-list">
                         <li class="active"><a data-toggle="tab" href="#home"><i class="fa fa-info" aria-hidden="true"></i> <span>Chi tiết</span></a>
                         </li>
-                        <li><a data-toggle="tab" href="#menu1"><i class="fa fa-bed" aria-hidden="true"></i> <span>Loại phòng</span></a>
+                        <li><a data-toggle="tab" href="#menu1"><i class="fa fa-bed" aria-hidden="true"></i> <span> Phòng</span></a>
                         </li>
                         <li><a data-toggle="tab" href="#menu2"><i class="fa fa-picture-o" aria-hidden="true"></i> <span>Thư viện ảnh</span></a>
                         </li>
@@ -154,56 +154,7 @@
                                 </form>
                             </div>
 
-                            <div class="bor">
-                                <form>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <select multiple>
-                                                <option value="" disabled selected>Loại phòng</option>
-                                                <option value="1">Deluxe</option>
-                                                <option value="2">Premium</option>
-                                                <option value="3">Premium Plus</option>
-                                                <option value="3">Non-Deluxe</option>
-                                                <option value="3">Normal</option>
-                                            </select>
-                                            <label>Chọn loại</label>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <input id="t2-price1" type="number" class="validate">
-                                            <label for="t2-price1">Giá</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <div class="chips chips-placeholder"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <textarea id="textarea2" class="materialize-textarea"></textarea>
-                                            <label for="textarea2">Mô tả</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <div class="file-field input-field">
-                                                <div class="btn">
-                                                    <span>File</span>
-                                                    <input type="file">
-                                                </div>
-                                                <div class="file-path-wrapper">
-                                                    <input class="file-path validate" type="text" placeholder="Tải ảnh lên">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input type="submit" class="waves-effect waves-light btn-large" value="Gửi">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                            
                         </div>
                         <div id="menu2" class="tab-pane fade">
                             <div class="inn-title">

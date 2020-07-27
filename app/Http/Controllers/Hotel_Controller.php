@@ -27,9 +27,15 @@ class Hotel_Controller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function admin_hotel()
     {
-        //
+        $list_hotel= Hotel::all();
+        return view('admin.hotels.hotel-list',compact('list_hotel'));
+    }
+    public function admin_hotel_add()
+    {
+        $list_hotel= Hotel::all();
+        return view('admin.hotels.hotel-add',compact('list_hotel'));
     }
 
     /**
@@ -38,9 +44,17 @@ class Hotel_Controller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function add_hotel(Request $request)
     {
-        //
+        $hotel= new Hotel;
+        $hotel->name_hotel =$request->name_hotel;
+        $hotel->phone_hotel= $request->phone_hotel;
+        $hotel->email_hotel= $request->email_hotel;
+        $hotel->rate_hotel = $request->rate_hotel;
+        $hotel->score_hotel = $request->score_hotel;
+        $hotel->avatar_hotel= $request->avatar_hotel;
+        $hotel->address_hotel =$request->address_hotel;
+        $hotel->save();
     }
 
     /**

@@ -34,7 +34,7 @@ $(document).ready(function() {
     //MATERIAL CHIP PLACEHOLDER
     $('.chips-placeholder').material_chip({
         placeholder: 'Enter a tag',
-        secondaryPlaceholder: '+Amini (press enter)',
+        secondaryPlaceholder: '+Tag(Enter)',
     });
 
     //MATERIAL CHIP AUTO-COMPLETE
