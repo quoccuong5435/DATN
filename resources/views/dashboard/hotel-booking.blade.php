@@ -18,7 +18,7 @@
 									<th>Ngày bắt đầu</th>
 									<th>Giá</th>
 									<th>Thanh toán</th>
-									<th>Thêm</th>
+									<th>Chi tiết</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -30,7 +30,7 @@
 									<td>$784</td>
 									<td><span class="db-done">Done</span>
 									</td>
-									<td><a href="db-hotel-details.html" class="db-done">view more</a>
+									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
 									</td>
 								</tr>
 								<tr>
@@ -41,7 +41,7 @@
 									<td>$1058</td>
 									<td><span class="db-not-done">Done</span>
 									</td>
-									<td><a href="db-hotel-details.html" class="db-done">view more</a>
+									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
 									</td>
 								</tr>
 								<tr>
@@ -52,7 +52,7 @@
 									<td>$862</td>
 									<td><span class="db-not-done">Done</span>
 									</td>
-									<td><a href="db-hotel-details.html" class="db-done">view more</a>
+									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
 									</td>
 								</tr>
 								<tr>
@@ -63,7 +63,7 @@
 									<td>$2355</td>
 									<td><span class="db-not-done">Done</span>
 									</td>
-									<td><a href="db-hotel-details.html" class="db-done">view more</a>
+									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
 									</td>
 								</tr>
 								<tr>
@@ -74,7 +74,7 @@
 									<td>$1542</td>
 									<td><span class="db-not-done">Done</span>
 									</td>
-									<td><a href="db-hotel-details.html" class="db-done">view more</a>
+									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
 									</td>
 								</tr>
 								<tr>
@@ -85,7 +85,7 @@
 									<td>$2142</td>
 									<td><span class="db-not-done">Done</span>
 									</td>
-									<td><a href="db-hotel-details.html" class="db-done">view more</a>
+									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
 									</td>
 								</tr>
 								<tr>
@@ -96,7 +96,7 @@
 									<td>$2350</td>
 									<td><span class="db-not-done">Done</span>
 									</td>
-									<td><a href="db-hotel-details.html" class="db-done">view more</a>
+									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
 									</td>
 								</tr>
 							</tbody>

@@ -74,10 +74,10 @@
                                                     <td>{{$dshotel->email_hotel}}</td>
                                                     <td>{{$dshotel->address_hotel}}</td>
                                                     <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                        <a href="{{ route('edit-hotel') }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     </td>
                                                     <td>
-                                                        <a href="hotel-edit.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                        <a href="{{ route('edit-hotel') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     </td>
                                                     <td>
                                                         <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>

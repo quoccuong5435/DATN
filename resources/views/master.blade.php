@@ -55,7 +55,7 @@
                             <ul>
                                 <li><a href="{{ route('dangnhap') }}">Đăng nhập</a>
                                 </li>
-                                <li><a href="register.html">Đăng ký</a>
+                                <li><a href="{{ route('dangky') }}">Đăng ký</a>
                                 </li>
                             </ul>
                         </div>
@@ -80,7 +80,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="wed-logo">
-                            <a href="main.html"><img src="{{ asset('source/images/logo.png') }}" alt="" />
+                            <a href="{{ route('trang-chu') }}"><img src="{{ asset('source/images/logo.png') }}" alt="" />
                             </a>
                         </div>
                         <div class="main-menu">
@@ -88,7 +88,7 @@
                                 <li><a href="{{ route('trang-chu') }}">Trang chủ</a>
                                 </li>
                                 <li><a href="{{ route('hlist') }}">Khách sạn</a></li>
-                                <li><a href="dashboard.html">Thông tin</a>
+                                <li><a href="{{ route('dashboard') }}">Thông tin</a>
                                 </li>
                                 <li><a href="contact.html">Liên hệ</a>
                                 </li>

@@ -5,13 +5,13 @@
 		<div class="container">
 			<div class="row inner_banner inner_banner_3 bg-none">
 				<div class="hot-page2-alp-tit">
-					<h1>Hotel & Restaurants in Vancouver </h1>
+					<h1>Khách sạn ở Vancouver </h1>
 					<ul>
-						<li><a href="#inner-page-title">Home</a> </li>
+						<li><a href="#inner-page-title">Khách sạn</a> </li>
 						<li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>
 						<li><a href="#inner-page-title" class="bread-acti">Hotels & Restaurants</a> </li>
 					</ul>
-					<p>World's leading Hotel Booking website,Over 30,000 Hotel rooms worldwide. </p>
+					
 				</div>
 			</div>
 			<div class="row">
@@ -129,7 +129,7 @@
 											</div>
 										</li>
 									</ul>
-								</form> <a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s">view more</a> </div>
+								</form> <a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s">xem thêm</a> </div>
 						</div>
 						<!--END PART 4 : LEFT LISTINGS-->
 						<!--PART 5 : LEFT LISTINGS-->

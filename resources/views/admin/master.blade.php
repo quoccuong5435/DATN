@@ -49,14 +49,6 @@
                     <a href="#"><i class="fa fa-search"></i></a>
                 </form>
             </div>
-            <!--== NOTIFICATION ==-->
-            <div class="col-md-2 tab-hide">
-                <div class="top-not-cen">
-                    <a class='waves-effect btn-noti' href='#'><i class="fa fa-commenting-o" aria-hidden="true"></i><span>5</span></a>
-                    <a class='waves-effect btn-noti' href='#'><i class="fa fa-envelope-o" aria-hidden="true"></i><span>5</span></a>
-                    <a class='waves-effect btn-noti' href='#'><i class="fa fa-tag" aria-hidden="true"></i><span>5</span></a>
-                </div>
-            </div>
             <!--== MY ACCCOUNT ==-->
             <div class="col-md-2 col-sm-3 col-xs-6">
                 <!-- Dropdown Trigger -->
@@ -67,9 +59,9 @@
                 <ul id='top-menu' class='dropdown-content top-menu-sty'>
                     <li><a href="setting.html" class="waves-effect"><i class="fa fa-cogs" aria-hidden="true"></i>Cài đặt</a>
                     </li>
-                    <li><a href="hotel-all.html" class="waves-effect"><i class="fa fa-building-o" aria-hidden="true"></i> Quản lý khách sạn</a>
+                    <li><a href="{{route('hotel')}}" class="waves-effect"><i class="fa fa-building-o" aria-hidden="true"></i> Quản lý khách sạn</a>
                     </li>
-                    <li><a href="user-add.html" class="waves-effect"><i class="fa fa-user-plus" aria-hidden="true"></i> Thêm tài khoản</a>
+                    <li><a href="{{route('add-user')}}" class="waves-effect"><i class="fa fa-user-plus" aria-hidden="true"></i> Thêm người dùng</a>
                     </li>
                     <li><a href="#" class="waves-effect"><i class="fa fa-undo" aria-hidden="true"></i> Backup Data</a>
                     </li>
@@ -98,14 +90,14 @@
                 <!--== LEFT MENU ==-->
                 <div class="sb2-13">
                     <ul class="collapsible" data-collapsible="accordion">
-                        <li><a href="index.html" class="menu-active"><i class="fa fa-bar-chart" aria-hidden="true"></i> Thống kê</a>
+                        <li><a href="{{route('index')}}" class="menu-active"><i class="fa fa-bar-chart" aria-hidden="true"></i> Thống kê</a>
                         </li>
                         <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-user" aria-hidden="true"></i> Quản lý người dùng</a>
                             <div class="collapsible-body left-sub-menu">
                                 <ul>
-                                    <li><a href="user-all.html">Danh sách người dùng</a>
+                                    <li><a href="{{route('user')}}">Danh sách người dùng</a>
                                     </li>
-                                    <li><a href="user-add.html">Thêm người dùng</a>
+                                    <li><a href="{{route('add-user')}}">Thêm người dùng</a>
                                     </li>
                                 </ul>
                             </div>
@@ -117,14 +109,14 @@
                                     </li>
                                     <li><a href="{{route('hotel-add')}}">Thêm khách sạn</a>
                                     </li>
-                                    <li><a href="hotel-room-type-all.html">Danh sách loại phòng</a>
+                                    <li><a href="{{route('roomtypes')}}">Danh sách loại phòng</a>
                                     </li>
-                                    <li><a href="hotel-room-type-add.html">Thêm loại phòng</a>
+                                    <li><a href="{{route('add-roomtype')}}">Thêm loại phòng</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="hotel-booking-all.html" class="collapsible-header"><i class="fa fa-ticket" aria-hidden="true"></i> Danh sách đặt phòng khách sạn</a>
+                        <li><a href="{{route('hotel-booking')}}" class="collapsible-header"><i class="fa fa-ticket" aria-hidden="true"></i> Danh sách đặt phòng khách sạn</a>
                         </li>
                         <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-rss" aria-hidden="true"></i> Blog</a>
                             <div class="collapsible-body left-sub-menu">
@@ -136,7 +128,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="login.html" target="_blank"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập</a>
+                        <li><a href="login.html" target="_blank"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng xuất</a>
                         </li>
                     </ul>
                 </div>

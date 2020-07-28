@@ -158,7 +158,7 @@
 						<div class="v_place_img"><img src="{{ asset('source/images/t2.png') }}" alt="Tour Booking" title="Tour Booking" /> </div>
 						<div class="b_pack rows">
 							<div class="col-md-8 col-sm-8">
-								<h4><a href="tour-details.html">South India<span class="v_pl_name">(India)</span></a></h4> </div>
+								<h4><a href="{{ route('hlist') }}">South India<span class="v_pl_name">(India)</span></a></h4> </div>
 							<div class="col-md-4 col-sm-4 pack_icon">
 								<ul>
 									<li>
@@ -204,7 +204,7 @@
 								<div class="hot-page2-hli-3"> <img src="{{ asset('source/images/hci1.png') }}" alt=""> </div>
 								<div class="hom-hot-av-tic"> Available Tickets: 42 </div> <img src="{{ asset('source/images/hotels/1.jpg') }}" alt=""> </div>
 							<div class="to-ho-hotel-con-23">
-								<div class="to-ho-hotel-con-2"> <a href="hotel-details.html"><h4>GTC Grand Chola</h4></a> </div>
+								<div class="to-ho-hotel-con-2"> <a href="{{ route('rlist') }}"><h4>GTC Grand Chola</h4></a> </div>
 								<div class="to-ho-hotel-con-3">
 									<ul>
 										<li>City: illunois,united states
@@ -217,7 +217,7 @@
 						</div>
 					</div>
 					<!-- HOTEL GRID -->
-					{{-- <div class="col-md-4">
+					<div class="col-md-4">
 						<div class="to-ho-hotel-con">
 							<div class="to-ho-hotel-con-1">
 								<div class="hot-page2-hli-3"> <img src="{{ asset('source/images/hci1.png') }}" alt=""> </div>
@@ -242,7 +242,7 @@
 								<div class="hot-page2-hli-3"> <img src="{{ asset('source/images/hci1.png') }}" alt=""> </div>
 								<div class="hom-hot-av-tic"> Available Tickets: 92 </div> <img src="{{ asset('source/images/hotels/3.jpg') }}" alt=""> </div>
 							<div class="to-ho-hotel-con-23">
-								<div class="to-ho-hotel-con-2"> <a href="hotel-details.html"><h4>Keep Grand Hotels</h4></a> </div>
+								<div class="to-ho-hotel-con-2"> <a href="{{ route('rlist') }}"><h4>Keep Grand Hotels</h4></a> </div>
 								<div class="to-ho-hotel-con-3">
 									<ul>
 										<li>City: illunois,united states
@@ -256,7 +256,7 @@
 					</div>
 				</div>
 			</div>
-		</div> --}}
+		</div>
 	</section>
 	<!--====== SECTION: FREE CONSULTANT ==========-->
 	<section>
@@ -265,7 +265,7 @@
 				<div class="col-md-6"> <span class="to-con-1">Liên lạc với chúng tôi</span>
 					<h2>Nhận ưu đãi du lịch tốt nhất</h2>
 					<p>Dù bạn là ai, đang tìm kiếm điều gì, chúng tôi luôn có chỗ nghỉ hoàn hảo dành cho bạn</p> <span class="to-con-2">Help line: +001 21745 12345</span>
-					<div class="ho-con-cont"> <a href="hotels-list.html" class="to-con-3 link-btn">Đặt phòng</a> <a href="contact.html" class="to-con-4 link-btn">Liên hệ</a> </div>
+					<div class="ho-con-cont"> <a href="{{ route('hlist') }}" class="to-con-3 link-btn">Đặt phòng</a> <a href="contact.html" class="to-con-4 link-btn">Liên hệ</a> </div>
 				</div>
 				<div class="col-md-6 ho-vid"> <img src="{{ asset('source/images/video.png') }}" alt=""> </div>
 			</div>

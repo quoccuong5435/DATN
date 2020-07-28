@@ -1,4 +1,4 @@
-@extends('admin.master')
+    @extends('admin.master')
 @section('main-content')
 
 	<div class="sb2-2">
@@ -27,7 +27,7 @@
                                 <td>1</td>
                                 <td>Package Name Here</td>
                                 <td>24 may, 2017</td>
-                                <td><a href="hotel-room-type-edit.html" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <td><a href="{{ route('edit-roomtype') }}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                 </td>
                                 <td><a href="#" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                                 </td>
@@ -36,79 +36,7 @@
                                 <td>2</td>
                                 <td>Package Name Here</td>
                                 <td>24 may, 2017</td>
-                                <td><a href="hotel-room-type-edit.html" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                </td>
-                                <td><a href="#" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Package Name Here</td>
-                                <td>24 may, 2017</td>
-                                <td><a href="hotel-room-type-edit.html" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                </td>
-                                <td><a href="#" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Package Name Here</td>
-                                <td>24 may, 2017</td>
-                                <td><a href="hotel-room-type-edit.html" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                </td>
-                                <td><a href="#" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Package Name Here</td>
-                                <td>24 may, 2017</td>
-                                <td><a href="hotel-room-type-edit.html" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                </td>
-                                <td><a href="#" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Package Name Here</td>
-                                <td>24 may, 2017</td>
-                                <td><a href="hotel-room-type-edit.html" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                </td>
-                                <td><a href="#" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>Package Name Here</td>
-                                <td>24 may, 2017</td>
-                                <td><a href="hotel-room-type-edit.html" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                </td>
-                                <td><a href="#" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>Package Name Here</td>
-                                <td>24 may, 2017</td>
-                                <td><a href="hotel-room-type-edit.html" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                </td>
-                                <td><a href="#" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>Package Name Here</td>
-                                <td>24 may, 2017</td>
-                                <td><a href="hotel-room-type-edit.html" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                </td>
-                                <td><a href="#" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>Package Name Here</td>
-                                <td>24 may, 2017</td>
-                                <td><a href="hotel-room-type-edit.html" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                <td><a href="{{ route('edit-roomtype') }}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                 </td>
                                 <td><a href="#" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                                 </td>

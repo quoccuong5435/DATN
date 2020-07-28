@@ -47,7 +47,7 @@
                             <input type="submit" value="Tạo tài khoản" class="waves-effect waves-light btn-large full-btn"> </div>
                     </div>
                 </form>
-                <p>Bạn đã có tài khoản ? <a href="login.html">Đăng nhập</a>
+                <p>Bạn đã có tài khoản ? <a href="{{ route('dangnhap') }}">Đăng nhập</a>
                 </p>
             </div>
         </div>

@@ -25,7 +25,7 @@
 							<input type="submit" value="submit" class="waves-effect waves-light btn-large full-btn"> </div>
 					</div>
 				</form>
-				<p><a href="forgot-pass.html">Quên mật khẩu</a> | Bạn chưa có tài khoản ? <a href="register.html">Đăng ký</a>
+				<p><a href="forgot-pass.html">Quên mật khẩu</a> | Bạn chưa có tài khoản ? <a href="{{ route('dangky') }}">Đăng ký</a>
 				</p>
 				<div class="soc-login">
 					<h4>Đăng nhập với</h4>

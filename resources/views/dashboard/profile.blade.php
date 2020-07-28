@@ -50,7 +50,7 @@
 							</tbody>
 						</table>
 						<div class="db-mak-pay-bot">
-							<a href="db-my-profile-edit.html" class="waves-effect waves-light btn-large">Sửa hồ sơ</a> </div>
+							<a href="{{ route('db-editprofile') }}" class="waves-effect waves-light btn-large">Sửa hồ sơ</a> </div>
 					</div>
 				</div>
 			</div>

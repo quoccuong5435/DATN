@@ -45,35 +45,39 @@ Route::get('/signin',[
 
 Route::get('/dashboard', function(){
     return view('dashboard.main');
-});
+})->name('dashboard');
 
 Route::get('/dashboard/hotel-booking', function(){
     return view('dashboard.hotel-booking');
-});
+})->name('db-hotelbooking');
+
+Route::get('/dashboard/hotel-booking/details', function(){
+    return view('dashboard.hotel-booking-details');
+})->name('db-hoteldetails');
 
 Route::get('/dashboard/my-profile', function(){
     return view('dashboard.profile');
-});
+})->name('db-profile');
 
 Route::get('/dashboard/my-profile/edit', function(){
     return view('dashboard.edit-profile');
-});
+})->name('db-editprofile');
 
 Route::get('/dashboard/payment-list', function(){
     return view('dashboard.payment-list');
-});
+})->name('db-payment');
 
 Route::get('/dashboard/make-payment', function(){
     return view('dashboard.payment');
-});
+})-> name('db-makepayment');
 
 Route::get('/dashboard/refund', function(){
     return view('dashboard.refund');
-});
+})->name('db-refund');
 
 Route::get('/admin/index', function(){
     return view('admin.index');
-});
+})->name('index');
 
 Route::get('/admin/login', function(){
     return view('admin.login');
@@ -89,19 +93,19 @@ Route::get('/admin/profile', function(){
 
 Route::get('/admin/users', function(){
     return view('admin.users.user-list');
-});
+})->name('user');
 
 Route::get('/admin/users/add', function(){
     return view('admin.users.user-add');
-});
+})->name('add-user');
 
 Route::get('/admin/users/edit', function(){
     return view('admin.users.user-edit');
-});
+})->name('edit-user');
 
 Route::get('/admin/users/view', function(){
     return view('admin.users.user-view');
-});
+})->name('view-user');
 
 Route::get('/admin/hotels', function(){
     return view('admin.hotels.hotel-list');
@@ -124,22 +128,22 @@ Route::post('/admin/hotels/add',[
     'uses'=>'Hotel_Controller@add_hotel'
 ]);
 
-Route::get('/admin/hotels/edit', function(){
+Route::get('/admin/hotels/edit', function(){    
     return view('admin.hotels.hotel-edit');
-});
+})->name('edit-hotel');
 
 Route::get('/admin/room-types', function(){
     return view('admin.room-types.room-type-list');
-});
+})->name('roomtypes');
 
 Route::get('/admin/room-types/add', function(){
     return view('admin.room-types.room-type-add');
-});
+})->name('add-roomtype');
 
 Route::get('/admin/room-types/edit', function(){
     return view('admin.room-types.room-type-edit');
-});
+})->name('edit-roomtype');
 
 Route::get('/admin/hotel-booking', function(){
     return view('admin.hotel-booking.hotel-booking-list');
-});
+})->name('hotel-booking');
