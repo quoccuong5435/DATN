@@ -107,6 +107,7 @@ Route::get('/admin/users/view', function(){
     return view('admin.users.user-view');
 })->name('view-user');
 
+//Begin Admin Hotel
 Route::get('/admin/hotels', function(){
     return view('admin.hotels.hotel-list');
 });
@@ -119,18 +120,22 @@ Route::get('/admin/hotels/add',[
     'as'=>'hotel-add',
     'uses'=>'Hotel_Controller@admin_hotel_add'
 ]);
-Route::get('/admin/hotels/add',[
-    'as'=>'hotel-add',
-    'uses'=>'Hotel_Controller@admin_hotel_add'
-]);
+
 Route::post('/admin/hotels/add',[
     'as'=>'hotel-add-send',
     'uses'=>'Hotel_Controller@add_hotel'
 ]);
 
-Route::get('/admin/hotels/edit', function(){    
-    return view('admin.hotels.hotel-edit');
-})->name('edit-hotel');
+Route::get('/admin/hotels/edit/{id}',[
+    'as'=>'edit_hotel',
+    'uses'=>'Hotel_Controller@edit'
+]);
+Route::post('/admin/hotels/edit/{id}',[
+    'as'=>'edit_hotel_send',
+    'uses'=>'Hotel_Controller@update'
+]);
+// End 
+
 
 Route::get('/admin/room-types', function(){
     return view('admin.room-types.room-type-list');
