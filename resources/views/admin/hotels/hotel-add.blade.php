@@ -20,10 +20,6 @@
                         </li>
                         <li><a data-toggle="tab" href="#menu2"><i class="fa fa-picture-o" aria-hidden="true"></i> <span>Thư viện ảnh</span></a>
                         </li>
-                        <li><a data-toggle="tab" href="#menu3"><i class="fa fa-facebook" aria-hidden="true"></i> <span>Mạng xã hội</span></a>
-                        </li>
-                        <li><a data-toggle="tab" href="#menu4"><i class="fa fa-phone" aria-hidden="true"></i> <span>Thông tin liên hệ</span></a>
-                        </li>
                     </ul>
 
                     <div class="tab-content">
@@ -38,19 +34,19 @@
                                         @csrf
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="name_hotel" name="name_hotel" type="text" class="validate">
+                                                <input id="name_hotel" name="name_hotel" type="text" class="validate" required>
                                                 <label for="list-title">Tên</label>
                                             </div>
                                             <div class="input-field col s12">
-                                                <input id="address_hotel" name="address_hotel" type="text" class="validate">
+                                                <input id="address_hotel" name="address_hotel" type="text" class="validate" required>
                                                 <label for="list-name">Address</label>
                                             </div>
                                             <div class="input-field col s12">
-                                                <input id="email_hotel" name="email_hotel" type="email" class="validate">
+                                                <input id="email_hotel" name="email_hotel" type="email" class="validate" required>
                                                 <label for="list-name">Email</label>
                                             </div>
                                             <div class="input-field col s12">
-                                                <input id="phone_hotel" name="phone_hotel" type="number" class="validate">
+                                                <input id="phone_hotel" name="phone_hotel" type="number" class="validate" required>
                                                 <label for="list-name">Phone</label>
                                             </div>
                                             
@@ -67,7 +63,7 @@
                                         </div> --}}
                                         <div class="row">
                                             <div class="input-field col s6" >
-                                                <select id="rate_hotel" name="rate_hotel">
+                                                <select id="rate_hotel" name="rate_hotel" required>
                                                     <option value="" disabled selected>Hạng sao</option>
                                                     <option value="1">Khách sạn 1 sao</option>
                                                     <option value="2">Khách sạn 2 sao</option>
@@ -78,14 +74,14 @@
                                                 <label>Loại khách sạn</label>
                                             </div>
                                             <div class="input-field col s6" >
-                                                 <input id="list-name" type="number" min="1" max="10"  class="validate" id="score_hotel" name="score_hotel">
+                                                 <input id="list-name" type="number" min="1" max="10"  class="validate" id="score_hotel" name="score_hotel" step="0.1" required>
                                                 <label>Điểm đánh giá</label>
                                             </div>
                                         </div>
                                          <div class="file-field input-field">
                                         <div class="btn">
                                             <span>File</span>
-                                            <input type="file" id="avatar_hotel" name="avatar_hotel" >
+                                            <input type="file" id="avatar_hotel" name="avatar_hotel" required >
                                         </div>
                                         <div class="file-path-wrapper">
                                             <input class="file-path validate" id="avatar_hotel" name="avatar_hotel" type="text" placeholder="Tải lên một hoặc nhiểu file">
@@ -106,29 +102,20 @@
                                 <h4>Thông tin chi tiết khách sạn</h4>
                             </div>
                             <div class="bor">
-                                <form>
+                                <form action="{{-- {{route('room_add')}} --}}" method="" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <select multiple>
+                                            <select>
                                                 <option value="" disabled selected>Loại phòng</option>
-                                                <option value="1">Deluxe</option>
-                                                <option value="2">Premium</option>
-                                                <option value="3">Premium Plus</option>
-                                                <option value="3">Non-Deluxe</option>
-                                                <option value="3">Normal</option>
+                                                <option value="Deluxe">Deluxe </option>
+                                                <option value="Premium">Premium</option>
+                                                <option value="Normal">Normal</option>
                                             </select>
                                             <label>Chọn loại</label>
                                         </div>
-                                        <div class="input-field col s12">
-                                            <input id="t2-price" type="number" class="validate">
-                                            <label for="t2-price">Giá</label>
-                                        </div>
+                                        
                                     </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <div class="chips chips-placeholder"></div>
-                                        </div>
-                                    </div>
+                                   
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <textarea id="textarea3" class="materialize-textarea"></textarea>
@@ -183,96 +170,8 @@
                                 </form>
                             </div>
                         </div>
-                        <div id="menu3" class="tab-pane fade">
-                            <div class="inn-title">
-                                <h4>Mạng xã hội</h4>
-                            </div>
-                            <div class="bor">
-                                <form>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="t4-soc1" type="text" value="http://facebook.com/" class="validate">
-                                            <label for="t4-soc1">Facebook Url</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="t4-soc2" type="text" value="http://google.com/gplus" class="validate">
-                                            <label for="t4-soc2">Google Plus Url</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="t4-soc3" type="text" value="http://twitter.com/" class="validate">
-                                            <label for="t4-soc3">Twitter Url</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="t4-soc4" type="text" value="http://Linkedin.com/" class="validate">
-                                            <label for="t4-soc4">Linkedin Url</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="t4-soc5" type="text" class="validate">
-                                            <label for="t4-soc5">WhatsApp Number</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input type="submit" class="waves-effect waves-light btn-large" value="Tải lên">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div id="menu4" class="tab-pane fade">
-                            <div class="inn-title">
-                                <h4>Thông tin liên hệ</h4>
-                            </div>
-                            <div class="bor">
-                                <form>
-                                    <div class="row">
-                                        <div class="input-field col s6">
-                                            <input id="t5-n1" type="text" class="validate">
-                                            <label for="t5-n1">Tên</label>
-                                        </div>
-                                        <div class="input-field col s6">
-                                            <input id="t5-n2" type="text" class="validate">
-                                            <label for="t5-n2">Tên thay thế</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s6">
-                                            <input id="t5-n3" type="number" class="validate">
-                                            <label for="t5-n3">Di động</label>
-                                        </div>
-                                        <div class="input-field col s6">
-                                            <input id="t5-n4" type="number" class="validate">
-                                            <label for="t5-n4">Số điện thoại</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="t5-n5" type="email" class="validate">
-                                            <label for="t5-n5">Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <textarea id="t5-n6" class="materialize-textarea"></textarea>
-                                            <label for="t5-n6">Mô tả</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input type="submit" class="waves-effect waves-light btn-large" value="Tải lên">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                      
+                       
                     </div>
                 </div>
             </div>

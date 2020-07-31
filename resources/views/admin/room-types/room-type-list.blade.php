@@ -1,4 +1,4 @@
-    @extends('admin.master')
+@extends('admin.master')
 @section('main-content')
 
 	<div class="sb2-2">
@@ -23,29 +23,20 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($list_room_type as $lroom_type)
                             <tr>
-                                <td>1</td>
-                                <td>Package Name Here</td>
-                                <td>24 may, 2017</td>
+                                <td>{{$lroom_type->id}}</td>
+                                <td>{{$lroom_type->room_type}}</td>
+                                <td>{{$lroom_type->created_at}}</td>
                                 <td><a href="{{ route('edit-roomtype') }}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                 </td>
                                 <td><a href="#" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Package Name Here</td>
-                                <td>24 may, 2017</td>
-                                <td><a href="{{ route('edit-roomtype') }}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                </td>
-                                <td><a href="#" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
-        </div>
-    </div>
-
+     
 @endsection
