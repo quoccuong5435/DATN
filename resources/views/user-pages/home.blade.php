@@ -22,22 +22,6 @@
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
-									<input type="text"  class="validate" name="name" required>
-									<label>Nhập tên khách hàng</label>
-								</div>
-							</div>
-							<div class="row">
-								<div class="input-field col s6">
-									<input type="number"  class="validate" name="phone" required>
-									<label>Nhập số điện thoại</label>
-								</div>
-								<div class="input-field col s6">
-									<input type="email"  class="validate" name="email" required>
-									<label>Nhập email</label>
-								</div>
-							</div>
-							<div class="row">
-								<div class="input-field col s12">
 									<input type="text" id="select-city" class="autocomplete" name="city">
 									<label for="select-city">Nhập địa điểm du lịch  hoặc khách sạn </label>
 								</div>
@@ -45,11 +29,11 @@
 							<div class="row">
 								<div class="input-field col s6">
 									<input type="text" id="from" name="checkin" readonly>
-									<label for="from">Nhận phòng </label>
+									<label for="from">Ngày nhận phòng </label>
 								</div>
 								<div class="input-field col s6">
 									<input type="text" id="to" name="checkout" readonly>
-									<label for="to">Trả phòng</label>
+									<label for="to">Ngày trả phòng</label>
 								</div>
 							</div>
 							<div class="row">

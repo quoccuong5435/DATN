@@ -37,7 +37,7 @@ class Hotel_Controller extends Controller
         $list_hotel= Hotel::all();
         return view('admin.hotels.hotel-add',compact('list_hotel'));
     }
-
+   
     /**
      * Store a newly created resource in storage.
      *
