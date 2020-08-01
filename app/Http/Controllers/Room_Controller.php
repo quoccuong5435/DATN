@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Room;
+use App\Room_image;
+use App\Room_status;
+use App\Room_type;
 
 class Room_Controller extends Controller
 {
@@ -13,7 +17,8 @@ class Room_Controller extends Controller
      */
     public function index()
     {
-        //
+        $list_room_type= Room_type::all();
+        return view('admin.room-types.room-add',compact('list_room_type'));
     }
 
     /**
@@ -23,7 +28,7 @@ class Room_Controller extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.room-types.room-type-add');
     }
 
     /**
@@ -32,9 +37,14 @@ class Room_Controller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function add_room_type(Request $request)
     {
-        //
+        $room_type= new Room_type;
+        $room_type->room_type = $request->room_type;
+        $room_type->room_type_description = $request->room_type_description;
+        $room_type->status = 1;
+        $room_type->save();
+        return redirect()->route('roomtypes');
     }
 
     /**
@@ -43,9 +53,10 @@ class Room_Controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function list_room_type()
     {
-        //
+        $list_room_type = Room_type::all();
+        return view('admin.room-types.room-type-list',compact('list_room_type'));
     }
 
     /**

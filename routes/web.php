@@ -75,7 +75,7 @@ Route::get('/dashboard/refund', function(){
     return view('dashboard.refund');
 })->name('db-refund');
 
-Route::get('/admin/index', function(){
+Route::get('/admin', function(){
     return view('admin.index');
 })->name('index');
 
@@ -107,6 +107,7 @@ Route::get('/admin/users/view', function(){
     return view('admin.users.user-view');
 })->name('view-user');
 
+//Begin Admin Hotel
 Route::get('/admin/hotels', function(){
     return view('admin.hotels.hotel-list');
 });
@@ -119,26 +120,46 @@ Route::get('/admin/hotels/add',[
     'as'=>'hotel-add',
     'uses'=>'Hotel_Controller@admin_hotel_add'
 ]);
-Route::get('/admin/hotels/add',[
-    'as'=>'hotel-add',
-    'uses'=>'Hotel_Controller@admin_hotel_add'
-]);
+
 Route::post('/admin/hotels/add',[
     'as'=>'hotel-add-send',
     'uses'=>'Hotel_Controller@add_hotel'
 ]);
 
-Route::get('/admin/hotels/edit', function(){    
-    return view('admin.hotels.hotel-edit');
-})->name('edit-hotel');
+Route::get('/admin/hotels/edit/{id}',[
+    'as'=>'edit_hotel',
+    'uses'=>'Hotel_Controller@edit'
+]);
+Route::post('/admin/hotels/edit/{id}',[
+    'as'=>'edit_hotel_send',
+    'uses'=>'Hotel_Controller@update'
+]);
+Route::get('/admin/room-types/list_room',
+[
+    'as'=>'list_room',
+    'uses'=>'Room_Controller@index'
+]);
+Route::post('/admin/room-types/add',
+[
+    'as'=>'roomtypes_add_send',
+    'uses'=>'Room_Controller@add_room_type'
+]);
+Route::get('/admin/room-types/add',
+[
+    'as'=>'add-roomtype',
+    'uses'=>'Room_Controller@create'
+]);
+// End 
+Route::get('/admin/room-types',[
+    'as'=>'roomtypes',
+    'uses'=>'Room_Controller@list_room_type'
+]);
 
-Route::get('/admin/room-types', function(){
-    return view('admin.room-types.room-type-list');
-})->name('roomtypes');
 
-Route::get('/admin/room-types/add', function(){
-    return view('admin.room-types.room-type-add');
-})->name('add-roomtype');
+
+// Route::get('/admin/room-types/add', function(){
+//     return view('admin.room-types.room-type-add');
+// })->name('add-roomtype');
 
 Route::get('/admin/room-types/edit', function(){
     return view('admin.room-types.room-type-edit');

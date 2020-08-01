@@ -99,7 +99,8 @@ class Hotel_Controller extends Controller
      */
     public function edit($id)
     {
-        //
+        $list_hotel=Hotel::find($id);
+        return view('admin.hotels.hotel-edit',compact('list_hotel'));
     }
 
     /**
@@ -111,7 +112,34 @@ class Hotel_Controller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $hotel= Hotel::find($id);
+        $getImages = '';
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
+        $hotel->name_hotel =$request->name_hotel;
+        $hotel->phone_hotel= $request->phone_hotel;
+        $hotel->email_hotel= $request->email_hotel;
+        $hotel->rate_hotel = $request->rate_hotel;
+        $hotel->score_hotel = $request->score_hotel;
+        if($request->hasFile('avatar_hotel')){
+            $this->validate($request, 
+                [
+                    'avatar_hotel' => 'mimes:jpg,jpeg,png,gif|max:2048',
+                ],          
+                [
+                    'avatar_hotel.mimes' => 'Chỉ chấp nhận ảnh đại diện với đuôi ( jpg, jpeg, png, gif )',
+                    'avatar_hotel.max' => 'Ảnh đại diện không được vượt quá 4MB'
+                ]
+            );
+            $avatar_hotel = $request->file('avatar_hotel');
+            $getImages = date('H-i-s_d-m-Y', time()).'_'.$avatar_hotel->getClientOriginalName();
+            $destinationPath = public_path('images/avatar_hotel');
+            $avatar_hotel->move($destinationPath, $getImages);
+        }
+        $hotel->avatar_hotel = $getImages;
+        $hotel->address_hotel =$request->address_hotel;
+        $hotel->status = 1;
+        $hotel->save();
+        return redirect()->route('hotel');
     }
 
     /**

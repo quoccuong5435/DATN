@@ -50,10 +50,13 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+
                                                 @foreach($list_hotel as $dshotel)
                                                 @csrf
                                                 <tr>
-                                                    <td><span class="list-img">{{$dshotel->id}}</span>
+
+                                                    <td> 
+                                                        <span class="list-imgs"><img src="{{asset('images/avatar_hotel')}}/{{$dshotel->avatar_hotel}}"   style="height: 400px, width:400px; "></span>
                                                     </td>
                                                     <td><a href="#"><span class="list-enq-name">{{$dshotel->name_hotel}}</span>
                                                         @for( $i=0; $i<$dshotel->rate_hotel;$i++)<span style="color: #feba02;" class="fa fa-star"></span>
@@ -68,16 +71,17 @@
                                                          <br>
                                                         <span> Tốt: {{$dshotel->score_hotel}}</span></a>
                                                     @endif
-                                                            {{$dshotel->avatar_hotel}}
+                                                           
                                                     </td>
+
                                                     <td>{{$dshotel->phone_hotel}}</td>
                                                     <td>{{$dshotel->email_hotel}}</td>
                                                     <td>{{$dshotel->address_hotel}}</td>
                                                     <td>
-                                                        <a href="{{ route('edit-hotel') }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                        <a href="{{ route('edit_hotel',($dshotel->id)) }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     </td>
                                                     <td>
-                                                        <a href="{{ route('edit-hotel') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                        <a href="{{ route('edit_hotel',($dshotel->id)) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     </td>
                                                     <td>
                                                         <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>

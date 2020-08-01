@@ -22,7 +22,7 @@ class CreateRoomsTable extends Migration
             $table->integer('num_of_people');
             $table->string('avatar_room');
             $table->string('description_room');
-            $table->string('type_room');
+            $table->string('type_bed');
             $table->string('room_name');
             $table->integer('price_room');
             $table->integer('status');

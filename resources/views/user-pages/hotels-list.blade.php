@@ -281,7 +281,7 @@
 										</a>
 									</div>
 									<div class="col-md-6">
-										<div class="hot-page2-alp-ri-p2"> <a href="hotel-details.html"><h3>{{$dshotel->name_hotel}}</h3></a>
+										<div class="hot-page2-alp-ri-p2"> <a href="{{ route('chitiet',($dshotel->id)) }}"><h3>{{$dshotel->name_hotel}}</h3></a>
 											<ul>
 												<li>{{$dshotel->address_hotel}}</li>
 

@@ -12,11 +12,18 @@
                 </div>
                 <div class="sb2-2-add-blog sb2-2-1">
                     <h2>Thêm mới loại phòng</h2>
-                    <form>
+                    <form action="{{route('roomtypes_add_send')}}" method="POST">
+                        @csrf
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="list-title" type="text" value="" class="validate">
+                                <input id="room_type" name="room_type"   type="text" value="" class="validate">
                                 <label for="list-title">Nhập loại phòng</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="room_type_description" name="room_type_description" type="text" value="" class="validate">
+                                <label for="list-title">Mô tả phòng</label>
                             </div>
                         </div>
                         <div class="row">

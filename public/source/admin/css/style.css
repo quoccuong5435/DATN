@@ -665,6 +665,11 @@ a:hover {
     height: 30px;
     border-radius: 50px;
 }
+.list-img {} .list-imgs img {
+    width: 60px;
+    height: 60px;
+    
+}
 .list-enq-name {
     display: block;
     font-weight: 700;
