@@ -5242,7 +5242,7 @@ textarea.materialize-textarea + label:after {
     cursor: text;
     transition: .2s ease-out;
     text-align: initial;
-    font-size: 14px;
+    font-size: 17px;
     font-family: 'Quicksand', sans-serif;
 }
 .input-field label:not(.label-icon).active {

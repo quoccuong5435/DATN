@@ -2,16 +2,16 @@
 @section('main-content')
 <!--====== BANNER ==========-->
 	<section>
-		<div class="rows inner_banner inner_banner_2">
+		<div class="rows inner_banner inner_banner_2" style="background: url('../images/avatar_hotel/{{$list_hotels->avatar_hotel}}') no-repeat center center;background-size: cover;">
 			<div class="container">
 				<h2><span>{{$list_hotels->name_hotel}}</span></h2>
-				{{-- <ul>
+				<ul>
 					<li><a href="#inner-page-title">Home</a>
 					</li>
 					<li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>
 					<li><a href="#inner-page-title" class="bread-acti">Hotel Booking</a>
 					</li>
-				</ul> --}}
+				</ul>
 				<p>{{$list_hotels->address_hotel}}</p>
 			</div>
 		</div>
@@ -38,10 +38,10 @@
 				<div class="col-md-9">
 					<!--====== TOUR TITLE ==========-->
 					<div class="tour_head">
-						<h2>Universal luxury Grand Hotel <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span><span class="tour_rat">4.5</span></h2> </div>
+						<h2>{{$list_hotels->name_hotel}} <span class="tour_star"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span><span class="tour_rat">4.5</span></h2> </div>
 					<!--====== TOUR DESCRIPTION ==========-->
 					<div class="tour_head1 hotel-com-color">
-						<h3>Về GRAND HOTEL</h3>
+						<h3>Về {{$list_hotels->name_hotel}}</h3>
 						<p>Discover two of South America’s greatest cities, Rio de Janeiro and Buenos Aires, at a leisurely pace. A major highlight on this journey is a visit to Iguassu Falls in between your two city stays. It truly is one of the most spectacular sights on Earth. See the impressive falls from both the Brazilian and Argentine sides.</p>
 						<p>Brazil’s view takes you through clouds of mist and the opportunity to see these 275 falls, spanning nearly two miles! Argentina’s side allows you to walk along the boardwalk network and embark on a jungle train through the forest for unforgettable views. Hear the deafening roar and admire the brilliant rainbows created by the clouds of spray, and take in the majesty of this wonder of the world. From vibrant cities to scenic beauty, this vacation to Rio de Janeiro, Iguassu Falls, and Buenos Aires will leave you with vacation memories you’ll cherish for life.</p>
 					</div>
@@ -273,52 +273,7 @@
 									</div>
 								</div>
 							</div>
-							<!--COMMENT RATING-->
-							<div class="dir-rat-inn dir-rat-review">
-								<div class="row">
-									<div class="col-md-3 dir-rat-left"> <img src="{{ asset('source/images/reviewer/3.jpg') }}" alt="">
-										<p>Orange Fab & Weld <span>19th January, 2017</span> </p>
-									</div>
-									<div class="col-md-9 dir-rat-right">
-										<div class="dir-rat-star"> <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i> </div>
-										<p>Michael & his team have been helping us with our eqiupment finance for the past 5 years - I think that says a quite a lot.. Michael is always ready to go the extra mile, always available, always helpfull that goes the same for his team that work with him - definatley our first phone call.</p>
-										<ul>
-											<li><a href="#"><span>Like</span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><span>Dis-Like</span><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><span>Report</span> <i class="fa fa-flag-o" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><span>Comments</span> <i class="fa fa-commenting-o" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><span>Share Now</span>  <i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!--COMMENT RATING-->
-							<div class="dir-rat-inn dir-rat-review">
-								<div class="row">
-									<div class="col-md-3 dir-rat-left"> <img src="{{ asset('source/images/reviewer/1.jpg') }}" alt="">
-										<p>Orange Fab & Weld <span>19th January, 2017</span> </p>
-									</div>
-									<div class="col-md-9 dir-rat-right">
-										<div class="dir-rat-star"> <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i> </div>
-										<p>Michael & his team have been helping us with our eqiupment finance for the past 5 years - I think that says a quite a lot.. Michael is always ready to go the extra mile, always available, always helpfull that goes the same for his team that work with him - definatley our first phone call.</p>
-										<ul>
-											<li><a href="#"><span>Like</span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><span>Dis-Like</span><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><span>Report</span> <i class="fa fa-flag-o" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><span>Comments</span> <i class="fa fa-commenting-o" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><span>Share Now</span>  <i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
-											<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
-										</ul>
-									</div>
-								</div>
-							</div>
+							
 						</div>
 					</div>
 				</div>

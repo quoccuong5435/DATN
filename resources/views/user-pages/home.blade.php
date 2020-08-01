@@ -10,7 +10,7 @@
 					<div class="v2-ho-se-ri">
 						<h5>Tour du lịch và du lịch hàng đầu thế giới</h5>
 						<h1><b>Booking Now</b>!</h1>
-						<p>Trải nghiệm các gói du lịch và du lịch thú vị khác nhau và Đặt phòng khách sạn, tìm các gói kỳ nghỉ, tìm kiếm các khách sạn và sự kiện giá rẻ</p>
+						<p>Trải nghiệm chuyến du lịch thú vị và đặt phòng khách sạn, tận hưởng kỳ nghỉ, tìm kiếm các khách sạn giá rẻ.</p>
 						
 					</div>						
 					</div>	

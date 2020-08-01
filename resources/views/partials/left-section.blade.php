@@ -23,9 +23,6 @@
 						<li>
 							<a href="{{ route('db-payment') }}"><img src="{{ asset('source/images/icon/dbl9.png') }}" alt="" /> Thanh toán</a>
 						</li>
-						<li>
-							<a href="{{ route('db-refund') }}"><img src="{{ asset('source/images/icon/dbl7.png') }}" alt="" /> Hoàn tiền</a>
-						</li>
 					</ul>
 				</div>
 			</div>
