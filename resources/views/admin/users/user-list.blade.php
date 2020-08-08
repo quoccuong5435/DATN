@@ -44,45 +44,23 @@
                                                     <th>Di động</th>
                                                     <th>Email</th>
                                                     <th>Địa chỉ</th>
-                                                    <th>Danh sách</th>
                                                     <th>Xem</th>
                                                     <th>Sửa</th>
                                                     <th>Xóa </th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($user as $info)
                                                 <tr>
-                                                    <td><span class="list-img"><img src="images/user/1.png" alt=""></span>
+                                                    <td><span class="list-img"><img src="{{asset('images/user/user.png')}}" alt=""></span>
                                                     </td>
                                                     <td><a href="#"><span class="list-enq-name">Marsha Hogan</span><span class="list-enq-city">Illunois, United States</span></a>
                                                     </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
+
+                                                    <td>Chưa cập nhật thông tin cá nhân </td>
+                                                    <td>{{$info->email}}</td>
                                                     <td>Australia</td>
-                                                    <td>
-                                                        <span class="label label-primary">02</span>
-                                                    </td>
-                                                    <td>
-                                                        <a href="{{ route('view-user') }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="{{ route('edit-user') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/user/2.png" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Marsha Hogan</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+01 3214 6522</td>
-                                                    <td>chadengle@dummy.com</td>
-                                                    <td>Australia</td>
-                                                    <td>
-                                                        <span class="label label-primary">02</span>
-                                                    </td>
+                                                    
                                                     <td>
                                                         <a href="{{ route('view-user') }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     </td>
@@ -94,6 +72,7 @@
                                                     </td>
                                                 </tr>
                                                 
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>

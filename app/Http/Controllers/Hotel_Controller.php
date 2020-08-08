@@ -6,7 +6,7 @@ use App\Hotel_info;
 use App\Hotel_info_detail;
 use App\Room;
 use Illuminate\Http\Request;
-
+use DB;
 class Hotel_Controller extends Controller
 {
     /**
@@ -32,12 +32,24 @@ class Hotel_Controller extends Controller
         $list_hotel= Hotel::all();
         return view('admin.hotels.hotel-list',compact('list_hotel'));
     }
+    
     public function admin_hotel_add()
     {
         $list_hotel= Hotel::all();
         return view('admin.hotels.hotel-add',compact('list_hotel'));
     }
-   
+   public function search(Request $request)
+   {
+        $search = $request->get('search');
+        $list_hotel = DB::table('hotel')
+                    ->where('phone_hotel', 'like', '%'.$search.'%')
+                    ->orWhere('name_hotel', 'like', '%'.$search.'%')
+                    ->orWhere('email_hotel', 'like', '%'.$search.'%')
+                    ->orWhere('address_hotel', 'like', '%'.$search.'%')
+                    ->get();
+
+        return view('admin.hotels.hotel-search',compact('list_hotel','search'));
+   }
     /**
      * Store a newly created resource in storage.
      *

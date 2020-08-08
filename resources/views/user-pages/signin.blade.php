@@ -7,16 +7,34 @@
 		<div class="tr-register">
 			<div class="tr-regi-form">
 				<h4>Đăng nhập</h4>
-				<form class="col s12">
+				<form action="{{route('dangnhap-send')}}" method="POST" class="col s12">
+					@csrf
+					 @if(Session::has('thongbao'))
+                            <div class="alert alert-danger">
+                                {{Session::get('thongbao')}}
+                            </div>
+                                   
+
+                            
+                        @endif
+                        @if(count($errors)>0)
+                            <div class="alert alert-danger">
+                                @foreach($errors->all() as $fail)
+                               {{$fail}} <br>
+                               
+                                @endforeach
+                            </div>
+                                
+                                @endif
 					<div class="row">
 						<div class="input-field col s12">
-							<input type="text" class="validate">
+							<input type="email" name="email" class="validate">
 							<label>Email</label>
 						</div>
 					</div>
 					<div class="row">
 						<div class="input-field col s12">
-							<input type="password" class="validate">
+							<input type="password" name="password" class="validate">
 							<label>Mật khẩu</label>
 						</div>
 					</div>

@@ -140,36 +140,7 @@
 									</div>
 								</li>
 								@endforeach
-								{{-- <li>
-									<div class="tr-room-type-list">
-										<div class="col-md-3 tr-room-type-list-1"><img src="{{ asset('source/images/rooms/02.jpg') }}" alt="" />
-										</div>
-										<div class="col-md-6 tr-room-type-list-2">
-											<h4>Premium Rooms(EXECUTIVE)</h4>
-											<p><b>Amenities: </b>Television, Wi-Fi, Hair dryer, Towels, Dining, Music, GYM and more.. </p> <span><b>Includes</b> : Free Parking, Breakfast, VAT</span> <span><b>Maxinum </b> : 4 Persons</span> </div>
-										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Price Per Night</span> <span class="hot-list-p3-2">$720</span> <a href="booking.html" class="hot-page2-alp-quot-btn spec-btn-text">Book Now</a> </div>
-									</div>
-								</li>
-								<li>
-									<div class="tr-room-type-list">
-										<div class="col-md-3 tr-room-type-list-1"><img src="{{ asset('source/images/rooms/03.jpg') }}" alt="" />
-										</div>
-										<div class="col-md-6 tr-room-type-list-2">
-											<h4>EXECUTIVE DELUXE MARINA BAY VIEW</h4>
-											<p><b>Amenities: </b>Television, Wi-Fi, Hair dryer, Towels, Dining, Music, GYM and more.. </p> <span><b>Includes</b> : Free Parking, Breakfast, VAT</span> <span><b>Maxinum </b> : 4 Persons</span> </div>
-										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Price Per Night</span> <span class="hot-list-p3-2">$560</span> <a href="booking.html" class="hot-page2-alp-quot-btn spec-btn-text">Book Now</a> </div>
-									</div>
-								</li>
-								<li>
-									<div class="tr-room-type-list">
-										<div class="col-md-3 tr-room-type-list-1"><img src="{{ asset('source/images/rooms/04.jpg') }}" alt="" />
-										</div>
-										<div class="col-md-6 tr-room-type-list-2">
-											<h4>Normal Rooms</h4>
-											<p><b>Amenities: </b>Television, Wi-Fi, Hair dryer, Towels, Dining, Music, GYM and more.. </p> <span><b>Includes</b> : Free Parking, Breakfast, VAT</span> <span><b>Maxinum </b> : 4 Persons</span> </div>
-										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Price Per Night</span> <span class="hot-list-p3-2">$420</span> <a href="booking.html" class="hot-page2-alp-quot-btn spec-btn-text">Book Now</a> </div>
-									</div>
-								</li> --}}
+								
 							</ul>
 						</div>
 					</div>

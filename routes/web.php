@@ -32,16 +32,25 @@ Route::get('/rooms-list',[
 	'as'=>'rlist',
 	'uses'=>'Hotel_Controller@s'
 ]);
-
+// đăng ký
 Route::get('/signup',[
-	'as'=>'dangky',
-	'uses'=>'PageController@getDangky'
+    'as'=>'dangky',
+    'uses'=>'User_Controller@index'
 ]);
-
+Route::post('/signup',[
+	'as'=>'dangky-send',
+	'uses'=>'User_Controller@signup'
+]);
+//end
 Route::get('/signin',[
 	'as'=>'dangnhap',
-	'uses'=>'PageController@getDangnhap'
+	'uses'=>'User_Controller@index2'
 ]);
+Route::post('/signin',[
+    'as'=>'dangnhap-send',
+    'uses'=>'User_Controller@signin'
+]);
+
 
 Route::get('/dashboard', function(){
     return view('dashboard.main');
@@ -91,9 +100,11 @@ Route::get('/admin/profile', function(){
     return view('admin.admin-profile');
 });
 
-Route::get('/admin/users', function(){
-    return view('admin.users.user-list');
-})->name('user');
+Route::get('admin/users',[
+    'as'=>'user',
+    'uses'=>'User_Controller@show'
+]);
+
 
 Route::get('/admin/users/add', function(){
     return view('admin.users.user-add');
@@ -115,6 +126,11 @@ Route::get('admin/hotel',[
     'as'=>'hotel',
     'uses'=>'Hotel_Controller@admin_hotel'
 ]);
+Route::post('admin/hotel/search',[
+    'as'=>'hotel-search',
+    'uses'=>'Hotel_Controller@search'
+]);
+
 
 Route::get('/admin/hotels/add',[
     'as'=>'hotel-add',
@@ -138,6 +154,11 @@ Route::get('/admin/room-types/list_room',
 [
     'as'=>'list_room',
     'uses'=>'Room_Controller@index'
+]);
+Route::post('/admin/room-types/list_room',
+[
+    'as'=>'add_rooms',
+    'uses'=>'Room_Controller@add_room'
 ]);
 Route::post('/admin/room-types/add',
 [
@@ -168,3 +189,6 @@ Route::get('/admin/room-types/edit', function(){
 Route::get('/admin/hotel-booking', function(){
     return view('admin.hotel-booking.hotel-booking-list');
 })->name('hotel-booking');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

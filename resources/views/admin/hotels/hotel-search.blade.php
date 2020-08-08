@@ -20,15 +20,17 @@
                                     <h4>Danh sách khách sạn</h4>
                                     <a class="dropdown-button drop-down-meta" href="#" data-activates="dr-users"><i class="material-icons">more_vert</i></a>
                                      <div class="">
-                                            <form action="{{route('hotel-search')}}" method="POST" accept-charset="utf-8">
+                                            <form action="{{route('hotel-search')}}" method="POST"  accept-charset="utf-8">
                                                 <div class="form-group">
                                                     @csrf
                                                     <span class="form-group-btn">
-                                                         <button style="float: right;"  type="">Search</button>
+                                                         <button style="float: right;" type="">Search</button>
                                                      </span>
 
-                                                     <input style="float: right;width: 35%" name="search" id="search" type="search" name="">
-                                                                                                      </div> 
+                                                     <input style="float: right;width: 35%" name="search" type="search" name="">
+                                                     <h3><span>Kết quả tìm kiếm: {{$search}}</span></h3>
+                                                     </div> 
+
                                             </form>
                                     </div>
                                     <ul id="dr-users" class="dropdown-content">
@@ -66,9 +68,9 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                    <?php $i=1 ?>
+                                                 <?php $i=1 ?>
                                                 @foreach($list_hotel as $dshotel)
-                                                @csrf
+                                                
                                                 <tr>
                                                     <td>{{$i}}</td>
                                                     <td> 

@@ -7,6 +7,7 @@ use App\Room;
 use App\Room_image;
 use App\Room_status;
 use App\Room_type;
+use App\Hotel;
 
 class Room_Controller extends Controller
 {
@@ -17,8 +18,9 @@ class Room_Controller extends Controller
      */
     public function index()
     {
+        $list_hotel= Hotel::all();
         $list_room_type= Room_type::all();
-        return view('admin.room-types.room-add',compact('list_room_type'));
+        return view('admin.room-types.room-add',compact('list_room_type','list_hotel'));
     }
 
     /**
@@ -65,9 +67,41 @@ class Room_Controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function add_room(Request $request)
     {
-        //
+        $room= new Room;
+        $getImages = '';
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
+        $room->room_name = $request->room_name;
+        $room->hotel_id = $request->hotel_id;
+        $room->room_type_id = $request->room_type_id;
+        $room->room_status_id = 1;
+        $room->num_of_rooms = $request->num_of_rooms;
+        $room->num_of_people = $request->num_of_people;
+        $room->description_room = $request->description_room;
+        $room->type_bed = $request->type_bed;
+        $room->price_room = $request->price_room;
+        $room->room_name = $request->room_name;
+        if($request->hasFile('avatar_room')){
+            $this->validate($request, 
+                [
+                    'avatar_room' => 'mimes:jpg,jpeg,png,gif|max:2048',
+                ],          
+                [
+                    'avatar_room.mimes' => 'Chỉ chấp nhận ảnh đại diện với đuôi ( jpg, jpeg, png, gif )',
+                    'avatar_room.max' => 'Ảnh đại diện không được vượt quá 4MB'
+                ]
+            );
+            $avatar_room = $request->file('avatar_room');
+            $getImages = date('H-i-s_d-m-Y', time()).'_'.$avatar_room->getClientOriginalName();
+            $destinationPath = public_path('images/avatar_room');
+            $avatar_room->move($destinationPath, $getImages);
+        }
+        $room->avatar_room = $getImages;
+        $room->status=1;
+        $room->save();
+        return  redirect()->route('list_room');
+
     }
 
     /**

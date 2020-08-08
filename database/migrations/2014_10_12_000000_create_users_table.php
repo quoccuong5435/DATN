@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('gender_user');
             $table->string('address_user');
             $table->integer('phone_user');
-            $table->integer('role_user');
+            $table->unsignedInteger('user_account_id');
             $table->integer('status');
             $table->timestamps();
         });
