@@ -53,10 +53,14 @@
                         </div>
                         <div class="ed-com-t1-right">
                             <ul>
-                                <li><a href="{{ route('dangnhap') }}">Đăng nhập</a>
-                                </li>
+                            	@if(Auth::check())
+                                <li><a href="{{ route('dangxuat') }}">Đăng xuất</a>
+                                @else
                                 <li><a href="{{ route('dangky') }}">Đăng ký</a>
                                 </li>
+                                <li><a href="{{ route('dangnhap') }}">Đăng nhập</a>
+                                </li>
+                                @endif
                             </ul>
                         </div>
                         <div class="ed-com-t1-social">
@@ -117,6 +121,7 @@
 							<div class="input-field">
 								<input type="submit" value="Tìm" class="waves-effect waves-light tourz-sear-btn"> </div>
 						</form>
+						
                         </div>
                     </div>
                 </div>

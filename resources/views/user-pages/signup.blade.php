@@ -39,8 +39,13 @@
                             <label>User Name</label>
                         </div>
                         <div class="input-field col m6 s12">
-                            <input type="email" name="email" class="validate">
+                            <input type="email" name="email_user" class="validate">
                             <label>Email</label>
+                        </div>
+                        
+                         <div class="input-field col s12">
+                            <input type="number"  name="phone_user" class="validate">
+                            <label>Phone</label>
                         </div>
                         <div class="input-field col s12">
                             <input type="password" name="password" class="validate">
@@ -49,6 +54,15 @@
                         <div class="input-field col s12">
                             <input type="password" name="re-password" class="validate">
                             <label>Re-Password</label>
+                        </div>
+                         <div class="input-field col s12">
+                            <select name="gender_user" >
+                                <option value="none" selected disabled hidden>Giới tính</option>
+                                <option value="Nam">Nam</option>
+                                <option value="Nu">Nữ</option>
+                            </select>
+                            
+                            
                         </div>
                         <div class="input-field col s12">
                             <input type="submit" value="Tạo tài khoản" class="waves-effect waves-light btn-large full-btn"> </div>

@@ -33,19 +33,19 @@ class User_Controller extends Controller
         $this->validate($request,
             [
                 
-                'email' => 'required|email|',
+                'email_user' => 'required|email|',
                 'password' => 'required|min:6|max:20',
             ],
 
             [
                 
-                'email.required' =>'Vui lòng nhập email',
-                'email.email' =>'Không đúng định dạng email',
+                'email_user.required' =>'Vui lòng nhập email',
+                'email_user.email' =>'Không đúng định dạng email',
                 'password.required' =>'Vui lòng nhập password',
                 'password.min' =>'Mật khẩu ít nhất 6 kí tự',
                 'password.max' =>'Mật khẩu không quá 20 kí tự',
             ]);
-        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+        if(Auth::attempt(['email_user' => $request->email_user, 'password' => $request->password])){
             return redirect()->route('trang-chu');
         }
         else {
@@ -65,10 +65,13 @@ class User_Controller extends Controller
         $this->validate($request,
             [
                 
-                'email' => 'required|email|unique:user_account,email',
-                'username' => 'required|max:16|unique:user_account',
+                'email_user' => 'required|email|unique:user,email_user',
+                'username' => 'required|max:16|unique:user',
                 'password' => 'required|min:6|max:20',
-                're-password' => 'required|same:password'
+                're-password' => 'required|same:password',
+                'phone_user' => 'required|max:10',
+
+
             ],
 
             [
@@ -83,14 +86,20 @@ class User_Controller extends Controller
                 're-password.same' =>'Mật khẩu không giống nhau',
                 'password.min' =>'Mật khẩu ít nhất 6 kí tự',
                 'password.max' =>'Mật khẩu không quá 20 kí tự',
+                'phone_user.required' =>'Vui lòng nhập số điện thoại',
+                'phone_user.max' =>'Số điện thoại không quá 10 kí tự',
             ])
         ;
-            $user = new  User_account();
+            $user = new  User();
             $user->username= $request->username;
-            $user->email= $request->email;
+            $user->fullname_user= $request->username;
+            $user->email_user= $request->email_user;
             $user->password=  Hash::make($request->password);
+            $user->phone_user= $request->phone_user;
+            $user->gender_user= $request->gender_user;
+            $user->address_user= null;
             $user->status  =1;
-            $user->role  =1;
+            $user->role_user =1;
             $user->save();
 
             return redirect()->back()->with('thanhcong',"Đã tạo tạo khoản thành công");
@@ -108,7 +117,7 @@ class User_Controller extends Controller
      */
     public function show()
     {
-        $user=  User_account::all();
+        $user=  User::all();
         return view('admin.users.user-list',compact('user'));
     }
 
@@ -118,9 +127,10 @@ class User_Controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function logout()
     {
-        //
+        Auth::logout();
+        return redirect()->route('dangnhap');
     }
 
     /**

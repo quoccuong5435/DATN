@@ -18,6 +18,7 @@ class CreateServiceRoomsTable extends Migration
             $table->string('name_service');
             $table->integer('service_price');
             $table->unsignedInteger('service_type_id');
+            $table->unsignedInteger('hotel_id');
             $table->integer('status');
             $table->timestamps();
         });

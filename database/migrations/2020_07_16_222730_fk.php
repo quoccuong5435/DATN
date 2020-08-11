@@ -26,8 +26,8 @@ class Fk extends Migration
             $table->foreign('user_id')->references('id')->on('user');
             $table->foreign('booking_status_id')->references('id')->on('booking_status');
         });
-           Schema::table('user', function (Blueprint $table) {
-            $table->foreign('user_account_id')->references('id')->on('user_account');
+           Schema::table('service_room', function (Blueprint $table) {
+            $table->foreign('hotel_id')->references('id')->on('hotel');
         });
             Schema::table('hotel_image', function (Blueprint $table) {
             $table->foreign('hotel_id')->references('id')->on('hotel');

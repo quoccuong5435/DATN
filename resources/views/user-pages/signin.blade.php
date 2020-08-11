@@ -28,7 +28,7 @@
                                 @endif
 					<div class="row">
 						<div class="input-field col s12">
-							<input type="email" name="email" class="validate">
+							<input type="email" name="email_user" class="validate">
 							<label>Email</label>
 						</div>
 					</div>

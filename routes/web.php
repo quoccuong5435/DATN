@@ -33,7 +33,7 @@ Route::get('/rooms-list',[
 	'uses'=>'Hotel_Controller@s'
 ]);
 // đăng ký
-Route::get('singup',[
+Route::get('/signup',[
     'as'=>'dangky',
     'uses'=>'User_Controller@index'
 ]);
