@@ -16,11 +16,10 @@
                         <div class="col-md-12">
                             <div class="box-inn-sp">
                                 <div class="inn-title">
-                                       
-                                    <h4>Danh sách khách sạn</h4>
-                                    <a class="dropdown-button drop-down-meta" href="#" data-activates="dr-users"><i class="material-icons">more_vert</i></a>
-                                     <div class="">
-                                            <form action="{{route('hotel-search')}}" method="POST" accept-charset="utf-8">
+                                    <div><h4>Danh sách khách sạn</h4></div>
+
+                                    <div>
+                                        <form action="{{route('hotel-search')}}" method="POST" accept-charset="utf-8">
                                                 <div class="form-group">
                                                     @csrf
                                                     <span class="form-group-btn">
@@ -28,24 +27,10 @@
                                                      </span>
 
                                                      <input style="float: right;width: 35%" name="search" id="search" type="search" name="">
-                                                                                                      </div> 
+                                                
+                                                </div> 
                                             </form>
                                     </div>
-                                    <ul id="dr-users" class="dropdown-content">
-                                        <li><a href="{{route('hotel-add')}}">Thêm mới</a>
-                                        </li>
-                                        <li><a href="#!">Sửa</a>
-                                        </li>
-                                        <li><a href="#!">Cập nhật</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li><a href="#!"><i class="material-icons">delete</i>Xóa</a>
-                                        </li>
-                                        <li><a href="#!"><i class="material-icons">subject</i>Xem tất cả</a>
-                                        </li>
-                                    </ul>
-
-                                    <!-- Dropdown Structure -->
 
                                 </div>
                                 <div class="tab-inn">
@@ -55,7 +40,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>STT</th>
-                                                    <th>User</th>
+                                                    <th>Avatar</th>
                                                     <th>Khách sạn</th>
                                                     <th>Di động</th>
                                                     <th>Email</th>
