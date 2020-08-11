@@ -33,9 +33,13 @@ Route::get('/rooms-list',[
 	'uses'=>'Hotel_Controller@s'
 ]);
 // đăng ký
-Route::get('/signup',[
+Route::get('singup',[
     'as'=>'dangky',
     'uses'=>'User_Controller@index'
+]);
+Route::get('/logout',[
+    'as'=>'dangxuat',
+    'uses'=>'User_Controller@logout'
 ]);
 Route::post('/signup',[
 	'as'=>'dangky-send',
