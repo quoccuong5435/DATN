@@ -118,8 +118,8 @@
                                    
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <textarea id="textarea3" class="materialize-textarea"></textarea>
                                             <label for="textarea3">Mô tả</label>
+                                            <textarea id="textarea3" class="materialize-textarea"></textarea>
                                         </div>
                                     </div>
                                     <div class="row">

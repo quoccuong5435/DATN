@@ -25,7 +25,7 @@
 
     <title>Load More Data in Laravel using Ajax</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{{ asset('source/admin/css/bootstrap.min.css') }}"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
@@ -123,16 +123,6 @@
                             </div>
                         </li>
                         <li><a href="{{route('hotel-booking')}}" class="collapsible-header"><i class="fa fa-ticket" aria-hidden="true"></i> Danh sách đặt phòng khách sạn</a>
-                        </li>
-                        <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-rss" aria-hidden="true"></i> Blog</a>
-                            <div class="collapsible-body left-sub-menu">
-                                <ul>
-                                    <li><a href="blog-all.html">Danh sách Blog</a>
-                                    </li>
-                                    <li><a href="blog-add.html">Thêm Blog</a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
                         <li><a href="login.html" target="_blank"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng xuất</a>
                         </li>

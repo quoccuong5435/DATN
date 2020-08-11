@@ -16,23 +16,7 @@
                             <div class="box-inn-sp">
                                 <div class="inn-title">
                                     <h4>Danh sách thông tin chi tiết người dùng</h4>
-                                    <a class="dropdown-button drop-down-meta" href="#" data-activates="dr-users"><i class="material-icons">more_vert</i></a>
-                                    <ul id="dr-users" class="dropdown-content">
-                                        <li><a href="user-add.html">Thêm mới</a>
-                                        </li>
-                                        <li><a href="user-edit.html">Sửa</a>
-                                        </li>
-                                        <li><a href="#!">Cập nhật</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li><a href="#!"><i class="material-icons">delete</i>Xóa</a>
-                                        </li>
-                                        <li><a href="user-view.html"><i class="material-icons">subject</i>Xem tất cả</a>
-                                        </li>
-                                    </ul>
-
-                                    <!-- Dropdown Structure -->
-
+                                    
                                 </div>
                                 <div class="tab-inn">
                                     <div class="table-responsive table-desi">
