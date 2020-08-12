@@ -84,30 +84,7 @@
 								</div>
 							</div>								
 
-							{{-- <div class="row">
-								<div class="input-field col s6">
-									<select name="minprice">
-										<option value="" disabled selected>Giá </option>
-										<option value="$200">$200</option>
-										<option value="$500">$500</option>
-										<option value="$1000">$1000</option>
-										<option value="$5000">$5000</option>
-										<option value="$10,000">$10,000</option>
-										<option value="$50,000">$50,000</option>
-									</select>
-								</div>
-								<div class="input-field col s6">
-									<select name="maxprice">
-										<option value="" disabled selected>Max Price</option>
-										<option value="$200">$200</option>
-										<option value="$500">$500</option>
-										<option value="$1000">$1000</option>
-										<option value="$5000">$5000</option>
-										<option value="$10,000">$10,000</option>
-										<option value="$50,000">$50,000</option>
-									</select>
-								</div>								
-							</div>	 --}}							
+											
 							<div class="row">
 								<div class="input-field col s12">
 									<input type="submit" value="Tìm kiếm phòng" class="waves-effect waves-light tourz-sear-btn v2-ser-btn">
@@ -138,35 +115,30 @@
 				<div>
 				
 					<!-- TOUR PLACE 3 -->
-					<div class="col-md-4 col-sm-6 col-xs-12 b_packages">
-						<div class="v_place_img"><img src="{{ asset('source/images/t2.png') }}" alt="Tour Booking" title="Tour Booking" /> </div>
+					
+					
+						@foreach($place as $list)
+						<div class="col-md-4 col-sm-6 col-xs-12 b_packages">
+						<div class="v_place_img"><img src="{{ asset('/images/gallery/') }}/{{$list->avatar_place}}" alt="Tour Booking" title="Tour Booking" /> </div>
 						<div class="b_pack rows">
-							<div class="col-md-8 col-sm-8">
-								<h4><a href="{{ route('hlist') }}">South India<span class="v_pl_name">(India)</span></a></h4> </div>
-							<div class="col-md-4 col-sm-4 pack_icon">
-								<ul>
-									<li>
-										<a href="#"><img src="{{ asset('source/images/clock.png') }}" alt="Date" title="Tour Timing" /> </a>
-									</li>
-									<li>
-										<a href="#"><img src="{{ asset('source/images/info.png') }}" alt="Details" title="View more details" /> </a>
-									</li>
-									<li>
-										<a href="#"><img src="{{ asset('source/images/price.png') }}" alt="Price" title="Price" /> </a>
-									</li>
-									<li>
-										<a href="#"><img src="{{ asset('source/images/map.png') }}" alt="Location" title="Location" /> </a>
-									</li>
-								</ul>
-							</div>
+							<div class="col-md-12 col-sm-12">
+								@csrf
+								<h4>{{$list->name_place}}<span class="v_pl_name"></span>
+									<a style="float: right;" href="{{ route('hotel_list',($list->id)) }}"><button   class="btn-success" > Tìm phòng</button></a></a></h4> </div>
+								
 						</div>
 					</div>
+					@endforeach
+					
+					
+					
+			
 					
 	</section>
 	<!--====== HOME HOTELS ==========-->
 
 	<!--====== HOME HOTELS ==========-->
-	<section>
+	{{-- <section>
 		<div class="rows tb-space pad-top-o pad-bot-redu">
 			<div class="container">
 				<!-- TITLE & DESCRIPTION -->
@@ -241,7 +213,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --}}
 	<!--====== SECTION: FREE CONSULTANT ==========-->
 	<section>
 		<div class="tb-space tour-consul">
@@ -249,7 +221,7 @@
 				<div class="col-md-6"> <span class="to-con-1">Liên lạc với chúng tôi</span>
 					<h2>Nhận ưu đãi du lịch tốt nhất</h2>
 					<p>Dù bạn là ai, đang tìm kiếm điều gì, chúng tôi luôn có chỗ nghỉ hoàn hảo dành cho bạn</p> <span class="to-con-2">Help line: +001 21745 12345</span>
-					<div class="ho-con-cont"> <a href="{{ route('hlist') }}" class="to-con-3 link-btn">Đặt phòng</a> <a href="contact.html" class="to-con-4 link-btn">Liên hệ</a> </div>
+					<div class="ho-con-cont"> <a href="" class="to-con-3 link-btn">Đặt phòng</a> <a href="contact.html" class="to-con-4 link-btn">Liên hệ</a> </div>
 				</div>
 				<div class="col-md-6 ho-vid"> <img src="{{ asset('source/images/video.png') }}" alt=""> </div>
 			</div>

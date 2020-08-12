@@ -91,7 +91,7 @@
                             <ul>
                                 <li><a href="{{ route('trang-chu') }}">Trang chủ</a>
                                 </li>
-                                <li><a href="{{ route('hlist') }}">Khách sạn</a></li>
+                                <li><a href="">Khách sạn</a></li>
                                 <li><a href="{{ route('dashboard') }}">Thông tin</a>
                                 </li>
                                 <li><a href="contact.html">Liên hệ</a>

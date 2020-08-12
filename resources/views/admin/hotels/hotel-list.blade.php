@@ -51,11 +51,11 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                    <?php $i=1 ?>
+                                                    <?php $z=1 ?>
                                                 @foreach($list_hotel as $dshotel)
                                                 @csrf
                                                 <tr>
-                                                    <td>{{$i}}</td>
+                                                    <td>{{$dshotel->id}}</td>
                                                     <td> 
                                                         <span class="list-imgs"><img src="{{asset('images/avatar_hotel')}}/{{$dshotel->avatar_hotel}}"   style="height: 400px, width:400px; "></span>
                                                     </td>
@@ -79,7 +79,7 @@
                                                     <td>{{$dshotel->email_hotel}}</td>
                                                     <td>{{$dshotel->address_hotel}}</td>
                                                     <td>
-                                                        <a href="{{ route('edit_hotel',($dshotel->id)) }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                        <a href="{{ route('info_hotel',($dshotel->id)) }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     </td>
                                                     <td>
                                                         <a href="{{ route('edit_hotel',($dshotel->id)) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
@@ -90,8 +90,15 @@
                                                 {{-- </tr> --}}
                                             @endforeach
                                             </tbody>
+
                                         </table>
+                                        
+                                            
+                                        
                                     </div>
+                                    
+                                    <span>{{$list_hotel->links()}}</span>
+                                        
                                 </div>
                             </div>
                         </div>

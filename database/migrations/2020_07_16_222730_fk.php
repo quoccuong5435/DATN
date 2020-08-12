@@ -32,6 +32,9 @@ class Fk extends Migration
             Schema::table('hotel_image', function (Blueprint $table) {
             $table->foreign('hotel_id')->references('id')->on('hotel');
         });
+        Schema::table('hotel', function (Blueprint $table) {
+            $table->foreign('place_id')->references('id')->on('places');
+        });
             Schema::table('hotel_info_detail', function (Blueprint $table) {
             $table->foreign('hotel_id')->references('id')->on('hotel');
             $table->foreign('hotel_info_id')->references('id')->on('hotel_info');

@@ -4,16 +4,22 @@ namespace App\Http\Controllers;
 use App\Hotel;
 use App\Hotel_info;
 use App\Hotel_info_detail;
+use App\Hotel_image;
 use App\Room;
+use App\Place;
 use Illuminate\Http\Request;
 use DB;
 class Hotel_Controller extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+
+    // Userpage
+    public function home()
+    {
+        $list_hotel=Hotel::all();
+        $place=Place::all();
+        return view('user-pages.home',compact('list_hotel','place'));
+    }
     public function index()
     {
         $list_hotel=Hotel::all();
@@ -22,21 +28,38 @@ class Hotel_Controller extends Controller
         return view('user-pages.hotels-list',compact('list_hotel','list_hotel_detail','list_hotel_info'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+     public function show($id)
+    {
+        $list_hotels=Hotel::find($id);
+        $list_room=Room::all();
+        return view('user-pages.details',compact('list_hotels','list_room'));
+    
+    }
+
+    public function list_hotel_place($id)
+    {
+        
+        $place=Place::find($id);
+        $list_hotel=DB::table('hotel')->where('place_id','=',$id)->get();
+        return view('user-pages.hotels-list',compact('list_hotel','place'));
+    
+    }
+
+
+    // Admin
+    
     public function admin_hotel()
     {
-        $list_hotel= Hotel::all();
+        $list_hotel= Hotel::paginate(10);
+        $place=Place::all();
         return view('admin.hotels.hotel-list',compact('list_hotel'));
     }
     
     public function admin_hotel_add()
     {
         $list_hotel= Hotel::all();
-        return view('admin.hotels.hotel-add',compact('list_hotel'));
+        $place=Place::all();
+        return view('admin.hotels.hotel-add',compact('list_hotel','place'));
     }
    public function search(Request $request)
    {
@@ -50,12 +73,8 @@ class Hotel_Controller extends Controller
 
         return view('admin.hotels.hotel-search',compact('list_hotel','search'));
    }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
+  
     public function add_hotel(Request $request)
     {
 
@@ -67,6 +86,7 @@ class Hotel_Controller extends Controller
         $hotel->email_hotel= $request->email_hotel;
         $hotel->rate_hotel = $request->rate_hotel;
         $hotel->score_hotel = $request->score_hotel;
+        $hotel->place_id = $request->place_id;
         if($request->hasFile('avatar_hotel')){
             $this->validate($request, 
                 [
@@ -89,39 +109,23 @@ class Hotel_Controller extends Controller
         return redirect()->route('hotel');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $list_hotels=Hotel::find($id);
-        $list_room=Room::all();
-        return view('user-pages.details',compact('list_hotels','list_room'));
-    
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
+   
+   
     public function edit($id)
     {
         $list_hotel=Hotel::find($id);
         return view('admin.hotels.hotel-edit',compact('list_hotel'));
     }
+     public function info($id)
+    {
+        $list_hotel=Hotel::find($id);
+        $list_img=DB::table('hotel_image')->where('hotel_id' ,'=', $id)->get();
+        
+        return view('admin.hotels.hotel-info',compact('list_hotel','list_img'));
+    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, $id)
     {
         $hotel= Hotel::find($id);
@@ -154,12 +158,7 @@ class Hotel_Controller extends Controller
         return redirect()->route('hotel');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function destroy($id)
     {
         //

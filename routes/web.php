@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [
     'as'=>'trang-chu',
-    'uses'=>'PageController@getIndex'
+    'uses'=>'Hotel_Controller@home'
 ]);
 
-Route::get('/hotels-list',[
-	'as'=>'hlist',
-	'uses'=>'Hotel_Controller@index'
+Route::get('/hotels-list/{id}',[
+	'as'=>'hotel_list',
+	'uses'=>'Hotel_Controller@list_hotel_place'
 ]);
 
 Route::get('/details/{id}',[
@@ -149,6 +149,10 @@ Route::post('/admin/hotels/add',[
 Route::get('/admin/hotels/edit/{id}',[
     'as'=>'edit_hotel',
     'uses'=>'Hotel_Controller@edit'
+]);
+Route::get('/admin/hotels/info/{id}',[
+    'as'=>'info_hotel',
+    'uses'=>'Hotel_Controller@info'
 ]);
 Route::post('/admin/hotels/edit/{id}',[
     'as'=>'edit_hotel_send',

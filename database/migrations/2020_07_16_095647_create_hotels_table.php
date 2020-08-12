@@ -23,6 +23,7 @@ class CreateHotelsTable extends Migration
             $table->integer('rate_hotel');
             $table->float('score_hotel');
             $table->integer('status');
+            $table->unsignedInteger('place_id');
             $table->timestamps();
         });
     }
