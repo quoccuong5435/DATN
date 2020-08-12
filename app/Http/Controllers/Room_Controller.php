@@ -75,7 +75,7 @@ class Room_Controller extends Controller
         $room->room_name = $request->room_name;
         $room->hotel_id = $request->hotel_id;
         $room->room_type_id = $request->room_type_id;
-        $room->room_status_id = 1;
+        $room->room_status_id =1;
         $room->num_of_rooms = $request->num_of_rooms;
         $room->num_of_people = $request->num_of_people;
         $room->description_room = $request->description_room;
@@ -100,7 +100,7 @@ class Room_Controller extends Controller
         $room->avatar_room = $getImages;
         $room->status=1;
         $room->save();
-        return  redirect()->route('list_room');
+        return  redirect()->back('list_room');
 
     }
 

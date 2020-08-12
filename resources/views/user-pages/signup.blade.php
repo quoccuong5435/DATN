@@ -38,6 +38,14 @@
                             <input type="text" name="username" class="validate">
                             <label>User Name</label>
                         </div>
+                        <div class="input-field col  s12">
+                            <input type="text" name="fullname_user" class="validate">
+                            <label>Full Name</label>
+                        </div>
+                        <div class="input-field col  s12">
+                            <input type="text" name="address_user" class="validate">
+                            <label>Địa chỉ</label>
+                        </div>
                         <div class="input-field col m6 s12">
                             <input type="email" name="email_user" class="validate">
                             <label>Email</label>

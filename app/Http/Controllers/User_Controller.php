@@ -70,6 +70,8 @@ class User_Controller extends Controller
                 'password' => 'required|min:6|max:20',
                 're-password' => 'required|same:password',
                 'phone_user' => 'required|max:10',
+                'address_user' => 'required',
+                'fullname_user' => 'required',
 
 
             ],
@@ -92,12 +94,12 @@ class User_Controller extends Controller
         ;
             $user = new  User();
             $user->username= $request->username;
-            $user->fullname_user= $request->username;
+            $user->fullname_user= $request->fullname_user;
             $user->email_user= $request->email_user;
             $user->password=  Hash::make($request->password);
             $user->phone_user= $request->phone_user;
             $user->gender_user= $request->gender_user;
-            $user->address_user= null;
+            $user->address_user= $request->address_user;
             $user->status  =1;
             $user->role_user =1;
             $user->save();

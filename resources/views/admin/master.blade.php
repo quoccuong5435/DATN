@@ -119,6 +119,8 @@
                                     </li>
                                     <li><a href="{{route('add-roomtype')}}">Thêm loại phòng</a>
                                     </li>
+                                    <li><a href="{{route('list_room')}}">Thêm phòng</a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>

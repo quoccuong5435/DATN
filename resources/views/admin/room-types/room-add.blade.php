@@ -89,7 +89,7 @@
                                                     <input type="file" name="avatar_room" id="avatar_room">
                                                 </div>
                                                 <div class="file-path-wrapper">
-                                                    <input class="file-path validate" type="text" placeholder="Tải ảnh lên">
+                                                    <input class="file-path validate" name="avatar_room" type="text" placeholder="Tải ảnh lên">
                                                 </div>
                                             </div>
                                         </div>

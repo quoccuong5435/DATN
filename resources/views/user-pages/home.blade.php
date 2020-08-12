@@ -20,7 +20,7 @@
 							
 							<div class="row">
 								<div class="input-field col s12">
-									<input type="text" id="select-city" class="autocomplete" name="city">
+									<input type="text" id="select-city" name="search" class="autocomplete" name="city">
 									<label for="select-city">Nhập địa điểm du lịch  hoặc khách sạn </label>
 								</div>
 							</div>
@@ -44,43 +44,22 @@
 										<option value="4">4</option>
 										<option value="5">5</option>
 										<option value="6">6</option>
-									</select>
-								</div>
-								<div class="input-field col s6">
-									<select name="roomtype">
-										<option value="" disabled selected>Loại phòng</option>
-										<option value="Ultra Premium">Ultra Premium</option>
-										<option value="Ultra Deluxe">Ultra Deluxe</option>
-										<option value="Premium">Premium</option>
-										<option value="Deluxe">Deluxe</option>
-										<option value="Normal">Normal</option>
-									</select>
-								</div>
-							</div>
-							<div class="row">
-								<div class="input-field col s6">
+									</select></div>
+								
+									<div class="input-field col s6">
 									<select name="noofadults">
-										<option value="" disabled selected>Người lớn</option>
+										<option value="" disabled selected>Số người</option>
 										<option value="1">1</option>
 										<option value="2">2</option>
 										<option value="3">3</option>
 										<option value="4">4</option>
 										<option value="5">5</option>
-										<option value="6">6</option>
+										
 									</select>
 								</div>
-								<div class="input-field col s6">
-									<select name="noofchildrens">
-										<option value="" disabled selected>Trẻ em</option>
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>											
-									</select>
-								</div>
-							</div>								
+								
+							</div>
+															
 
 											
 							<div class="row">
