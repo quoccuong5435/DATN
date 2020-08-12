@@ -45,10 +45,8 @@
                     <div class="col-md-12">
                         <div class="ed-com-t1-left">
                             <ul>
-                                <li><a href="#">Liên hệ: 103 .</a>
-                                </li>
-                                <li><a href="#">Điện thoại: +101-1231-1231</a>
-                                </li>
+                                
+
                             </ul>
                         </div>
                         <div class="ed-com-t1-right">
@@ -64,14 +62,6 @@
                             </ul>
                         </div>
                         <div class="ed-com-t1-social">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                </li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                </li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -91,7 +81,6 @@
                             <ul>
                                 <li><a href="{{ route('trang-chu') }}">Trang chủ</a>
                                 </li>
-                                <li><a href="">Khách sạn</a></li>
                                 <li><a href="{{ route('dashboard') }}">Thông tin</a>
                                 </li>
                                 <li><a href="contact.html">Liên hệ</a>
@@ -183,51 +172,7 @@
 			</div>
 		</div>
 	</section>
-	<!--====== FOOTER 1 ==========-->
-	<section>
-		<div class="rows">
-			<div class="footer1 home_title tb-space">
-				<div class="pla1 container">
-					<!-- FOOTER OFFER 1 -->
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="disco">
-							<h3>30%<span>OFF</span></h3>
-							<h4>Eiffel Tower,Rome</h4>
-							<p>valid only for 24th Dec</p> <a href="booking.html">Book Now</a> </div>
-					</div>
-					<!-- FOOTER OFFER 2 -->
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="disco1 disco">
-							<h3>42%<span>OFF</span></h3>
-							<h4>Colosseum,Burj Al Arab</h4>
-							<p>valid only for 18th Nov</p> <a href="booking.html">Book Now</a> </div>
-					</div>
-					<!-- FOOTER MOST POPULAR VACATIONS -->
-					<div class="col-md-6 col-sm-12 col-xs-12 foot-spec footer_places">
-						<h4><span>Những địa điểm </span> Du lịch nổi tiếng</h4>
-						<ul>
-							<li><a href="tour-details.html">Angkor Wat</a> </li>
-							<li><a href="tour-details.html">Buckingham Palace</a> </li>
-							<li><a href="tour-details.html">High Line</a> </li>
-							<li><a href="tour-details.html">Sagrada Família</a> </li>
-							<li><a href="tour-details.html">Statue of Liberty </a> </li>
-							<li><a href="tour-details.html">Notre Dame de Paris</a> </li>
-							<li><a href="tour-details.html">Taj Mahal</a> </li>
-							<li><a href="tour-details.html">The Louvre</a> </li>
-							<li><a href="tour-details.html">Tate Modern, London</a> </li>
-							<li><a href="tour-details.html">Gothic Quarter</a> </li>
-							<li><a href="tour-details.html">Table Mountain</a> </li>
-							<li><a href="tour-details.html">Bayon</a> </li>
-							<li><a href="tour-details.html">Great Wall of China</a> </li>
-							<li><a href="tour-details.html">Hermitage Museum</a> </li>
-							<li><a href="tour-details.html">Yellowstone</a> </li>
-							<li><a href="tour-details.html">Musée d'Orsay</a> </li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+
 	<!--====== FOOTER 2 ==========-->
 	<section>
 		<div class="rows">
@@ -242,8 +187,8 @@
 								</div>
 								<div class="col-sm-3 foot-spec foot-com">
 									<h4><span>Địa chỉ</span> & Thông tin liên hệ</h4>
-									<p>28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A. Landmark : Next To Airport</p>
-									<p> <span class="strong">Điện thoại: </span> <span class="highlighted">+101-1231-1231</span> </p>
+									<p>65 Huỳnh Thúc Kháng, P.Bến Nghé, Q.1. TP.HCM</p>
+									<p> <span class="strong">Điện thoại: </span> <span class="highlighted">032145678</span> </p>
 								</div>
 								<div class="col-sm-3 col-md-3 foot-spec foot-com">
 									<h4>Hỗ trợ</h4>

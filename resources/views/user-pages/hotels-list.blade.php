@@ -19,12 +19,12 @@
 					<!--LEFT LISTINGS-->
 					<div class="col-md-3 hot-page2-alp-con-left">
 						<!--PART 1 : LEFT LISTINGS-->
-						<div class="hot-page2-alp-con-left-1">
+						<!-- <div class="hot-page2-alp-con-left-1">
 							<h3>Gợi Ý Dành Cho Bạn</h3> </div>
-						<!--PART 2 : LEFT LISTINGS-->
+						
 						<div class="hot-page2-hom-pre hot-page2-alp-left-ner-notb">
 							<ul>
-								<!--LISTINGS-->
+								
 								<li>
 									<a href="#">
 										<div class="hot-page2-hom-pre-1 hot-page2-alp-cl-1-1"> <img src="{{ asset('source/images/hotels/1.jpg') }}" alt=""> </div>
@@ -33,7 +33,7 @@
 										<div class="hot-page2-hom-pre-3 hot-page2-alp-cl-1-3"> <span>4.2</span> </div>
 									</a>
 								</li>
-								<!--LISTINGS-->
+								
 								<li>
 									<a href="#">
 										<div class="hot-page2-hom-pre-1 hot-page2-alp-cl-1-1"> <img src="{{ asset('source/images/hotels/2.jpg') }}" alt=""> </div>
@@ -42,7 +42,7 @@
 										<div class="hot-page2-hom-pre-3 hot-page2-alp-cl-1-3"> <span>4.4</span> </div>
 									</a>
 								</li>
-								<!--LISTINGS-->
+								
 								<li>
 									<a href="#">
 										<div class="hot-page2-hom-pre-1 hot-page2-alp-cl-1-1"> <img src="{{ asset('source/images/hotels/3.jpg') }}" alt=""> </div>
@@ -51,7 +51,7 @@
 										<div class="hot-page2-hom-pre-3 hot-page2-alp-cl-1-3"> <span>5.0</span> </div>
 									</a>
 								</li>
-								<!--LISTINGS-->
+								
 								<li>
 									<a href="#">
 										<div class="hot-page2-hom-pre-1 hot-page2-alp-cl-1-1"> <img src="{{ asset('source/images/hotels/4.jpg') }}" alt=""> </div>
@@ -60,7 +60,7 @@
 										<div class="hot-page2-hom-pre-3 hot-page2-alp-cl-1-3"> <span>3.0</span> </div>
 									</a>
 								</li>
-								<!--LISTINGS-->
+								
 								<li>
 									<a href="#">
 										<div class="hot-page2-hom-pre-1 hot-page2-alp-cl-1-1"> <img src="{{ asset('source/images/hotels/8.jpg') }}" alt=""> </div>
@@ -70,7 +70,7 @@
 									</a>
 								</li>
 							</ul>
-						</div>
+						</div> -->
 						<!--PART 7 : LEFT LISTINGS-->
 						<div class="hot-page2-alp-l3 hot-page2-alp-l-com">
 							<h4><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Kiểm tra còn phòng</h4>

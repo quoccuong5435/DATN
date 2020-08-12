@@ -17,9 +17,7 @@
 					<div class="col-md-6">
 					<div class="">
 						<form class="contact__form v2-search-form" method="post" action="http://rn53themes.net/themes/demo/travelz/mail/hotelbooking.php">
-							<div class="alert alert-success contact__msg" style="display: none" role="alert">
-								Thank you message
-							</div>
+							
 							<div class="row">
 								<div class="input-field col s12">
 									<input type="text" id="select-city" class="autocomplete" name="city">
@@ -104,13 +102,13 @@
 			<div class="container">
 				<!-- TITLE & DESCRIPTION -->
 				<div class="spe-title">
-					<h3>ĐIỂM ĐẾN PHỔ BIẾN VIỆT NAM</h3>
+					<h3 style="color: #727070;">ĐIỂM ĐẾN PHỔ BIẾN VIỆT NAM</h3>
 					<div class="title-line">
 						<div class="tl-1"></div>
 						<div class="tl-2"></div>
 						<div class="tl-3"></div>
 					</div>
-					<p>Khám phá và trải nghiệm những danh lam thắng cảnh.</p>
+					<p style="color: #727070;">Khám phá và trải nghiệm những danh lam thắng cảnh.</p>
 				</div>
 				<div>
 				
@@ -123,11 +121,14 @@
 						<div class="b_pack rows">
 							<div class="col-md-12 col-sm-12">
 								@csrf
-								<h4>{{$list->name_place}}<span class="v_pl_name"></span>
-									<a style="float: right;" href="{{ route('hotel_list',($list->id)) }}"><button   class="btn-success" > Tìm phòng</button></a></a></h4> </div>
-								
+								<a style="text-align: center;" href="{{ route('hotel_list',($list->id)) }}">
+									<h4 style="color: #727070;" >{{$list->name_place}}<span class="v_pl_name" ></span>
+									</h4>
+								</a>
+									
 						</div>
 					</div>
+				</div>
 					@endforeach
 					
 					

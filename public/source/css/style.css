@@ -1284,7 +1284,7 @@
 /* 11.TIPS BEFORE TRAVEL 
 /*-------------------------------------------------------*/
  .tips {
-     background: url('../images/tipsbg.jpg') no-repeat center center #f0f2f2;
+     background-color: #444444 ;
      background-size: cover;
      position: relative;
      overflow: hidden;
@@ -1304,9 +1304,9 @@
 /* 11.1 TIPS BEFORE TRAVEL 
 /*-------------------------------------------------------*/
  .tips h3 {
-     background: #2ea5d3;
+     background: #ffffff;
      display: inline-block;
-     color: #ffffff;
+     color: #000;
      text-transform: uppercase;
      padding: 5px 8px 3px 8px;
      font-weight: 500;
@@ -1318,7 +1318,7 @@
      padding-bottom: 25px;
 }
  .tips_left h5 {
-     color: #0f0f0f;
+     color: #ccc;
      font-size: 18px;
 }
  .tips_left p {
@@ -1353,10 +1353,10 @@
  .testi h4 {
 }
  .testi p {
-     color: #1e2021;
+     color: #ccc;
 }
  .testi address {
-     color: #1e2021;
+     color: #ccc;
 }
  .testi a {
      background: #14A0D6;
