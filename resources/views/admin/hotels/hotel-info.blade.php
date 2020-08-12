@@ -87,13 +87,13 @@
                                         <table class="table table-hover">
                                            
                                             <thead>
-                                                <tr>
+                                                <tr>    
                                                     <th>STT</th>
                                                     <th>Avatar</th>
-                                                    <th>Khách sạn</th>
-                                                    <th>Di động</th>
-                                                    <th>Email</th>
-                                                    <th>Địa chỉ</th>
+                                                    <th>Tên Phòng</th>
+                                                    <th>Loại giường</th>
+                                                    <th>Giá phòng</th>
+                                                    <th>Số lượng phòng</th>
                                                     <th>Xem</th>
                                                     <th>Sửa</th>
                                                     <th>Khóa</th>
@@ -103,13 +103,14 @@
                                                     <?php $i=1 ?>
                                                 
                                                 @csrf
+                                                @foreach($list_room as $dsroom)
                                                 <tr>
-                                                    <td>{{$i}}</td>
+                                                    <td>{{$dsroom->id}}</td>
                                                     <td> 
-                                                        <span class="list-imgs"><img src="{{asset('images/avatar_hotel')}}/{{$list_hotel->avatar_hotel}}"   style="height: 400px, width:400px; "></span>
+                                                        <span class="list-imgs"><img src="{{asset('images/avatar_room')}}/{{$dsroom->avatar_room}}"   style="height: 400px, width:400px; "></span>
                                                     </td>
-                                                    <td><a href="#"><span class="list-enq-name">{{$list_hotel->name_hotel}}</span>
-                                                        @for( $i=0; $i<$list_hotel->rate_hotel;$i++)<span style="color: #feba02;" class="fa fa-star"></span>
+                                                    <td><a href="#"><span class="list-enq-name">{{$dsroom->room_name}}</span>
+                                                       {{--  @for( $i=0; $i<$list_hotel->rate_hotel;$i++)<span style="color: #feba02;" class="fa fa-star"></span>
                                                         @endfor
                                                         @if($list_hotel->score_hotel >=8)
                                                           <br>  
@@ -120,13 +121,13 @@
                                                         @else
                                                          <br>
                                                         <span> Tốt: {{$list_hotel->score_hotel}}</span></a>
-                                                    @endif
+                                                    @endif --}}
                                                            
                                                     </td>
 
-                                                    <td>{{$list_hotel->phone_hotel}}</td>
-                                                    <td>{{$list_hotel->email_hotel}}</td>
-                                                    <td>{{$list_hotel->address_hotel}}</td>
+                                                    <td>{{$dsroom->type_bed}}</td>
+                                                    <td>{{$dsroom->price_room}}</td>
+                                                    <td>{{$dsroom->num_of_rooms}}</td>
                                                     <td>
                                                         <a href="{{ route('info_hotel',($list_hotel->id)) }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     </td>
@@ -137,7 +138,7 @@
                                                         <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>
                                                     </td>
                                                 </tr>
-                                           
+                                           @endforeach
                                             </tbody>
                                         </table>
                                     </div>

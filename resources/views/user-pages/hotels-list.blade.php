@@ -277,7 +277,7 @@
 										<a href="javascript:void(0);">
 											<div class="hotel-list-score">{{$dshotel->score_hotel}}</div>
 											<div class="hot-page2-hli-1"> <img src="{{asset('images/avatar_hotel')}}/{{$dshotel->avatar_hotel}}" alt=""> </div>
-											<div class="hom-hot-av-tic hom-hot-av-tic-list"> Phòng còn: 42 </div>
+											<div class="hom-hot-av-tic hom-hot-av-tic-list"> </div>
 										</a>
 									</div>
 									<div class="col-md-6">
@@ -291,9 +291,9 @@
 									</div>
 									<div class="col-md-3">
 										<div class="hot-page2-alp-ri-p3">
-											<div class="hot-page2-alp-r-hot-page-rat">25%Off</div> <span class="hot-list-p3-1">Giá mỗi đêm</span> <span class="hot-list-p3-2">$650</span><span class="hot-list-p3-4">
+												<br><br><br>
 												<a href="{{ route('chitiet',($dshotel->id)) }}" class="hot-page2-alp-quot-btn">Xem Phòng</a>
-											</span> </div>
+											 </div>
 									</div>
 								</div>
 								@endforeach

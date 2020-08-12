@@ -30,9 +30,12 @@ class Hotel_Controller extends Controller
 
      public function show($id)
     {
+
         $list_hotels=Hotel::find($id);
-        $list_room=Room::all();
-        return view('user-pages.details',compact('list_hotels','list_room'));
+        $place=Place::all();
+        $list_room=DB::table('room')->where('hotel_id','=',$id)->get();
+        $list_img=DB::table('hotel_image')->where('hotel_id','=',$id)->get();
+        return view('user-pages.details',compact('list_hotels','list_room','place','list_img'));
     
     }
 
@@ -44,7 +47,18 @@ class Hotel_Controller extends Controller
         return view('user-pages.hotels-list',compact('list_hotel','place'));
     
     }
+    public function search_place(Request $request)
+    {
+        $search = $request->get('search');
+        $check_in= $request->get('checkin');
+        $check_out =$request->get('checkout');
+        $list_hotel = DB::table('hotel')
+                    ->where('address_hotel', 'like', '%'.$search.'%')
+                     ->orWhere('address_hotel', 'like', '%'.$search.'%')
+                    ->get();
+                    return view('admin.hotels.hotel-search',compact('list_hotel','search','checkin','checkout'));
 
+    }
 
     // Admin
     
@@ -120,9 +134,11 @@ class Hotel_Controller extends Controller
      public function info($id)
     {
         $list_hotel=Hotel::find($id);
+        $list_room=DB::table('room')->where('hotel_id','=',$id)->get();
+        
         $list_img=DB::table('hotel_image')->where('hotel_id' ,'=', $id)->get();
         
-        return view('admin.hotels.hotel-info',compact('list_hotel','list_img'));
+        return view('admin.hotels.hotel-info',compact('list_hotel','list_img','list_room'));
     }
 
     
@@ -136,7 +152,7 @@ class Hotel_Controller extends Controller
         $hotel->email_hotel= $request->email_hotel;
         $hotel->rate_hotel = $request->rate_hotel;
         $hotel->score_hotel = $request->score_hotel;
-        if($request->hasFile('avatar_hotel')){
+       if($request->hasFile('avatar_hotel')){
             $this->validate($request, 
                 [
                     'avatar_hotel' => 'mimes:jpg,jpeg,png,gif|max:2048',
