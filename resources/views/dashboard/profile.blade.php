@@ -9,7 +9,7 @@
 				<div class="db-2-com db-2-main">
 					<h4>Hồ Sơ Của Tôi</h4>
 					<div class="db-2-main-com db-2-main-com-table">
-						<table class="responsive-table">
+						<table style="color: #000; " class="responsive-table">
 							<tbody>
 								<tr>
 									<td>Tên</td>

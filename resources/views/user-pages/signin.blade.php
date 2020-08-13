@@ -5,7 +5,7 @@
 <!--DASHBOARD-->
 	<section>
 		<div class="tr-register">
-			<div class="tr-regi-form">
+			<div style="color: #333;" class="tr-regi-form">
 				<h4>Đăng nhập</h4>
 				<form action="{{route('dangnhap-send')}}" method="POST" class="col s12">
 					@csrf

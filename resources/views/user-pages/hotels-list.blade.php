@@ -278,7 +278,6 @@
 										<a href="javascript:void(0);">
 											<div class="hotel-list-score">{{$dshotel->score_hotel}}</div>
 											<div class="hot-page2-hli-1"> <img src="{{asset('images/avatar_hotel')}}/{{$dshotel->avatar_hotel}}" alt=""> </div>
-											<div class="hom-hot-av-tic hom-hot-av-tic-list"> </div>
 										</a>
 									</div>
 									<div class="col-md-6">

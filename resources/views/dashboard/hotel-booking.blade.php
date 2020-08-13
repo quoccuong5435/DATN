@@ -9,7 +9,7 @@
 				<div class="db-2-com db-2-main">
 					<h4>Danh sách phòng đã đặt</h4>
 					<div class="db-2-main-com db-2-main-com-table">
-						<table class="responsive-table">
+						<table style="color: #333;" class="responsive-table">
 							<thead>
 								<tr>
 									<th>STT</th>

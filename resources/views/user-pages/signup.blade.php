@@ -7,7 +7,7 @@
         
                             
         <div class="tr-register">
-            <div class="tr-regi-form">
+            <div style="color: #333;" class="tr-regi-form">
                 @if(Session::has('thanhcong'))
                             <div class="alert alert-success">
                                 {{Session::get('thanhcong')}}

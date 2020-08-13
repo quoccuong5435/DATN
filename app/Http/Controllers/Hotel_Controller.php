@@ -7,6 +7,7 @@ use App\Hotel_info_detail;
 use App\Hotel_image;
 use App\Room;
 use App\Place;
+use App\Service_room;
 use Illuminate\Http\Request;
 use DB;
 class Hotel_Controller extends Controller
@@ -33,9 +34,13 @@ class Hotel_Controller extends Controller
 
         $list_hotels=Hotel::find($id);
         $place=Place::all();
+        $list_hotel_detail=Hotel_info_detail::find($id);
+        $service_room=Service_room::find($id);
         $list_room=DB::table('room')->where('hotel_id','=',$id)->get();
         $list_img=DB::table('hotel_image')->where('hotel_id','=',$id)->get();
-        return view('user-pages.details',compact('list_hotels','list_room','place','list_img'));
+        $service_room=DB::table('service_room')->where('hotel_id','=',$id)->get();
+ 
+        return view('user-pages.details',compact('list_hotels','list_room','place','list_img','list_hotel_detail','service_room'));
     
     }
 
