@@ -6,6 +6,7 @@
 			<div class="row inner_banner inner_banner_3 bg-none">
 				<div class="hot-page2-alp-tit">
 					<h1>Khách sạn ở {{$place->name_place}} </h1>
+
 					<ul>
 						<li><a href="#inner-page-title">Khách sạn</a> </li>
 						<li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>

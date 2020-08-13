@@ -16,8 +16,10 @@
 					</div>	
 					<div class="col-md-6">
 					<div class="">
+
 						<form class="contact__form v2-search-form" method="post" action="http://rn53themes.net/themes/demo/travelz/mail/hotelbooking.php">
 							
+
 							<div class="row">
 								<div class="input-field col s12">
 									<input type="text" id="" name="search" class="" name="city">
@@ -110,9 +112,12 @@
 				</div>
 					@endforeach
 					
-					
-					
+					<div>
+						
+						
 			
+					</div>
+					
 					
 	</section>
 	<!--====== HOME HOTELS ==========-->
