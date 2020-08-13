@@ -15,9 +15,8 @@ class CreateHotelInfosTable extends Migration
     {
         Schema::create('hotel_info', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
             $table->string('policy');
-            $table->string('service');
+            $table->string('policy_description', 1500);
             $table->integer('status');
             $table->timestamps();
         });

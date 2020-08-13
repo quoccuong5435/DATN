@@ -4841,7 +4841,7 @@ button.btn-floating {
     border: 0;
     color: rgba(0, 0, 0, 0.6);
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.5rem;
     height: 3rem;
     line-height: 32px;
     outline: 0;
@@ -5238,7 +5238,7 @@ textarea.materialize-textarea + label:after {
     text-align: initial;
 }
 .input-field label:not(.label-icon).active {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     -webkit-transform: translateY(-140%);
     transform: translateY(-140%);
 }
@@ -5757,7 +5757,7 @@ select {
     height: 3rem;
     line-height: 3rem;
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: 0 0 20px 0;
     padding: 0;
     display: block;
@@ -5779,7 +5779,7 @@ select {
 .select-wrapper + label {
     position: absolute;
     top: -14px;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
 }
 select:disabled {
     color: rgba(0, 0, 0, 0.3);

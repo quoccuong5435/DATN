@@ -21,10 +21,6 @@
                         </li>
                         <li><a data-toggle="tab" href="#menu2"><i class="fa fa-picture-o" aria-hidden="true"></i> <span>Thư viện ảnh</span></a>
                         </li>
-                        <li><a data-toggle="tab" href="#menu3"><i class="fa fa-facebook" aria-hidden="true"></i> <span></span>Mạng xã hội</a>
-                        </li>
-                        <li><a data-toggle="tab" href="#menu4"><i class="fa fa-phone" aria-hidden="true"></i> <span>Thông tin liên hệ</span></a>
-                        </li>
                     </ul>
 
                     <div class="tab-content">
@@ -182,97 +178,6 @@
                                         </div>
                                     </div>
 
-                                </form>
-                            </div>
-                        </div>
-                        <div id="menu3" class="tab-pane fade">
-                            <div class="inn-title">
-                                <h4>Mạng xã hội</h4>
-                            </div>
-                            <div class="bor">
-                                <form>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="t4-soc1" type="text" value="http://facebook.com/" class="validate">
-                                            <label for="t4-soc1">Facebook Url</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="t4-soc2" type="text" value="http://google.com/gplus" class="validate">
-                                            <label for="t4-soc2">Google Plus Url</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="t4-soc3" type="text" value="http://twitter.com/" class="validate">
-                                            <label for="t4-soc3">Twitter Url</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="t4-soc4" type="text" value="http://Linkedin.com/" class="validate">
-                                            <label for="t4-soc4">Linkedin Url</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="t4-soc5" type="text" class="validate">
-                                            <label for="t4-soc5">WhatsApp Number</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input type="submit" class="waves-effect waves-light btn-large" value="Tải lên">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div id="menu4" class="tab-pane fade">
-                            <div class="inn-title">
-                                <h4>Thông tin liên hệ</h4>
-
-                            </div>
-                            <div class="bor">
-                                <form>
-                                    <div class="row">
-                                        <div class="input-field col s6">
-                                            <input id="t5-n1" type="text" class="validate">
-                                            <label for="t5-n1">Tên liên lạc</label>
-                                        </div>
-                                        <div class="input-field col s6">
-                                            <input id="t5-n2" type="text" class="validate">
-                                            <label for="t5-n2">Tên thay thế</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s6">
-                                            <input id="t5-n3" type="number" class="validate">
-                                            <label for="t5-n3">Di động</label>
-                                        </div>
-                                        <div class="input-field col s6">
-                                            <input id="t5-n4" type="number" class="validate">
-                                            <label for="t5-n4">Số điện thoại</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input id="t5-n5" type="email" class="validate">
-                                            <label for="t5-n5">Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <textarea id="t5-n6" class="materialize-textarea"></textarea>
-                                            <label for="t5-n6">Mô tả</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input type="submit" class="waves-effect waves-light btn-large" value="Tải lên">
-                                        </div>
-                                    </div>
                                 </form>
                             </div>
                         </div>

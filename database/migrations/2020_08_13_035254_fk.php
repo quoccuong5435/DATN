@@ -53,6 +53,7 @@ class Fk extends Migration
         });
     }
 
+
     /**
      * Reverse the migrations.
      *

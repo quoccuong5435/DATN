@@ -20,9 +20,6 @@
 						<li>
 							<a href="{{ route('db-profile') }}"><img src="{{ asset('source/images/icon/dbl6.png') }}" alt="" /> Hồ sơ của tôi</a>
 						</li>
-						<li>
-							<a href="{{ route('db-payment') }}"><img src="{{ asset('source/images/icon/dbl9.png') }}" alt="" /> Thanh toán</a>
-						</li>
 					</ul>
 				</div>
 			</div>

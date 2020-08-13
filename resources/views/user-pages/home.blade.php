@@ -20,7 +20,7 @@
 							
 							<div class="row">
 								<div class="input-field col s12">
-									<input type="text" id="select-city" name="search" class="autocomplete" name="city">
+									<input type="text" id="" name="search" class="" name="city">
 									<label for="select-city">Nhập địa điểm du lịch  hoặc khách sạn </label>
 								</div>
 							</div>

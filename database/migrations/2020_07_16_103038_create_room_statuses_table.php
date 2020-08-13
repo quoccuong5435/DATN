@@ -16,8 +16,7 @@ class CreateRoomStatusesTable extends Migration
         Schema::create('room_status', function (Blueprint $table) {
             $table->increments('id');
             $table->string('room_status');
-            $table->string('active');
-            $table->string('status');
+            $table->integer('status');
             $table->timestamps();
         });
     }

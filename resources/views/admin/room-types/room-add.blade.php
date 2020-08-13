@@ -6,19 +6,14 @@
                     <ul>
                         <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ</a>
                         </li>
-                        <li class="active-bre"><a href="#"> Thêm khách sạn</a>
+                        <li class="active-bre"><a href="#"> Thêm phòng</a>
                         </li>
                     </ul>
                 </div>
                 <div class="sb2-2-add-blog sb2-2-1">
-                    <h2>Thêm thông tin chi tiết khách sạn</h2></br>
-
-                    
-                            
+                    <h2>Thêm thông tin phòng</h2></br>
+    
                         <div id="" class="">
-                            <div class="inn-title">
-                                <h4>Thông tin chi tiết khách sạn</h4>
-                            </div>
                             <div class="bor">
                                 <form action="{{route('add_rooms')}}" method="POST" enctype="multipart/form-data">
                                     @csrf
