@@ -27,6 +27,10 @@ Route::get('/details/{id}',[
 	'as'=>'chitiet',
 	'uses'=>'Hotel_Controller@show'
 ]);
+// Route::post('admin/hotel/search',[
+//     'as'=>'place-search',
+//     'uses'=>'Hotel_Controller@search_place'
+// ]);
 
 Route::get('/rooms-list',[
 	'as'=>'rlist',

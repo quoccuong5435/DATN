@@ -17,7 +17,7 @@ class Hotel_Controller extends Controller
     public function home()
     {
         $list_hotel=Hotel::all();
-        $place=Place::all();
+        $place=Place::paginate(6);
         return view('user-pages.home',compact('list_hotel','place'));
     }
     public function index()
@@ -54,9 +54,9 @@ class Hotel_Controller extends Controller
         $check_out =$request->get('checkout');
         $list_hotel = DB::table('hotel')
                     ->where('address_hotel', 'like', '%'.$search.'%')
-                     ->orWhere('address_hotel', 'like', '%'.$search.'%')
+                    
                     ->get();
-                    return view('admin.hotels.hotel-search',compact('list_hotel','search','checkin','checkout'));
+                    return view('user-pages.hotels-list',compact('list_hotel','search','checkin','checkout'));
 
     }
 

@@ -38,11 +38,11 @@
                                                 <tr>
                                                     <td><span class="list-img"><img src="{{asset('images/user/user.png')}}" alt=""></span>
                                                     </td>
-                                                    <td><a href="#"><span class="list-enq-name">Marsha Hogan</span><span class="list-enq-city">Illunois, United States</span></a>
+                                                    <td><a href="#"><span class="list-enq-name">{{$info->fullname_user}}</span><span class="list-enq-city">{{$info->address_user}}</span></a>
                                                     </td>
 
-                                                    <td>Chưa cập nhật thông tin cá nhân </td>
-                                                    <td>{{$info->email}}</td>
+                                                    <td>{{$info->phone_user}} </td>
+                                                    <td>{{$info->email_user}}</td>
                                                     <td>Australia</td>
                                                     
                                                     <td>
@@ -52,7 +52,7 @@
                                                         <a href="{{ route('edit-user') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     </td>
                                                     <td>
-                                                        <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                        <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>
                                                     </td>
                                                 </tr>
                                                 
