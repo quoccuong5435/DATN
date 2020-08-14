@@ -24,14 +24,14 @@ class Login_Rrequest extends FormRequest
     public function rules()
     {
         return [
-            'username' => 'required',
-            'password' => 'required'
+            'email_user' => 'required',
+            'password_user' => 'required'
         ];
     }
     public function message()
     {
         return [
-            'username.required' => ['Vui lòng nhập username'],
+            'email_user.required' => ['Vui lòng nhập email'],
             'password.required' => ['Vui lòng nhập password']
         ];
         

@@ -96,7 +96,7 @@
                 <!--== LEFT MENU ==-->
                 <div class="sb2-13">
                     <ul class="collapsible" data-collapsible="accordion">
-                        <li><a href="{{route('index')}}" class="menu-active"><i class="fa fa-bar-chart" aria-hidden="true"></i> Thống kê</a>
+                        <li><a href="" class="menu-active"><i class="fa fa-bar-chart" aria-hidden="true"></i> Thống kê</a>
                         </li>
                         <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-user" aria-hidden="true"></i> Quản lý người dùng</a>
                             <div class="collapsible-body left-sub-menu">
@@ -119,14 +119,19 @@
                                     </li>
                                     <li><a href="{{route('add-roomtype')}}">Thêm loại phòng</a>
                                     </li>
-                                    <li><a href="{{route('list_room')}}">Thêm phòng</a>
+                                   {{--  @if($user->role_user==0)
+                                    <li><a href="{{route('add-roomtype')}}">Test</a>
                                     </li>
+                                    @else
+                                    <li><a href="{{route('add-roomtype')}}">Test1</a>
+                                    </li>
+                                    @endif --}}
                                 </ul>
                             </div>
                         </li>
                         <li><a href="{{route('hotel-booking')}}" class="collapsible-header"><i class="fa fa-ticket" aria-hidden="true"></i> Danh sách đặt phòng khách sạn</a>
                         </li>
-                        <li><a href="login.html" target="_blank"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng xuất</a>
+                        <li><a href="{{route('dangxuat')}}" target="_blank"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng xuất</a>
                         </li>
                     </ul>
                 </div>

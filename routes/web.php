@@ -41,19 +41,41 @@ Route::get('/signup',[
     'as'=>'dangky',
     'uses'=>'User_Controller@index'
 ]);
+
+// đăng ký partner
+Route::get('/signup-partner',[
+    'as'=>'dangky-partner',
+    'uses'=>'User_Controller@partner_index'
+]);
+
+// signup partner
+Route::post('/signup-partner',[
+    'as'=>'dangky-partner-send',
+    'uses'=>'User_Controller@partner'
+]);
+
+// xữ lý dk
+Route::post('/signup',[
+    'as'=>'dangky-send',
+    'uses'=>'User_Controller@signup'
+]);
+// logout
 Route::get('/logout',[
     'as'=>'dangxuat',
     'uses'=>'User_Controller@logout'
 ]);
-Route::post('/signup',[
-	'as'=>'dangky-send',
-	'uses'=>'User_Controller@signup'
+Route::get('/logout',[
+    'as'=>'dangxuat',
+    'uses'=>'User_Controller@logout_admin'
 ]);
-//end
+
+//signin user
 Route::get('/signin',[
 	'as'=>'dangnhap',
 	'uses'=>'User_Controller@index2'
 ]);
+
+// xu ly danh nhap
 Route::post('/signin',[
     'as'=>'dangnhap-send',
     'uses'=>'User_Controller@signin'
@@ -92,13 +114,27 @@ Route::get('/dashboard/refund', function(){
     return view('dashboard.refund');
 })->name('db-refund');
 
-Route::get('/admin', function(){
-    return view('admin.index');
-})->name('index');
-
-Route::get('/admin/login', function(){
-    return view('admin.login');
+Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function() {
+   Route::get('/', [
+    'as'=>'admin',
+    'uses'=>'User_Controller@admin'
+]);
+   Route::get('/users',[
+    'as'=>'user',
+    'uses'=>'User_Controller@show'
+]);
 });
+
+
+Route::get('/admin/login', [
+    'as'=>'get_login',
+    'uses'=>'User_Controller@get_login'
+]);
+
+Route::post('/admin/login',[
+    'as'=>'signin-admin',
+    'uses'=>'User_Controller@signin_admin'
+]);
 
 Route::get('/admin/forgot', function(){
     return view('admin.forgot-pass');
@@ -162,7 +198,7 @@ Route::post('/admin/hotels/edit/{id}',[
     'as'=>'edit_hotel_send',
     'uses'=>'Hotel_Controller@update'
 ]);
-Route::get('/admin/room-types/list_room',
+Route::get('/admin/room-types/list_room/{id}',
 [
     'as'=>'list_room',
     'uses'=>'Room_Controller@index'

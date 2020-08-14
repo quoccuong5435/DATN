@@ -17,7 +17,7 @@
                             <div class="box-inn-sp">
                                 <div class="inn-title">
                                     <div><h4>Danh sách khách sạn</h4></div>
-
+                                    <a href="{{route('hotel-add')}}" title=""><button class="btn-light">Thêm khách sạn</button></a>
                                     <div>
                                         <form action="{{route('hotel-search')}}" method="POST" accept-charset="utf-8">
                                                 <div class="form-group">
@@ -55,7 +55,7 @@
                                                 @foreach($list_hotel as $dshotel)
                                                 @csrf
                                                 <tr>
-                                                    <td>{{$dshotel->id}}</td>
+                                                    <td>{{$stt++}}</td>
                                                     <td> 
                                                         <span class="list-imgs"><img src="{{asset('images/avatar_hotel')}}/{{$dshotel->avatar_hotel}}"   style="height: 400px, width:400px; "></span>
                                                     </td>

@@ -23,11 +23,13 @@
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
+                                                    <th>Avatar</th>
                                                     <th>User</th>
                                                     <th>Tên</th>
                                                     <th>Di động</th>
                                                     <th>Email</th>
                                                     <th>Địa chỉ</th>
+                                                    <th>Role</th>
                                                     <th>Xem</th>
                                                     <th>Sửa</th>
                                                     <th>Xóa </th>
@@ -38,22 +40,36 @@
                                                 <tr>
                                                     <td><span class="list-img"><img src="{{asset('images/user/user.png')}}" alt=""></span>
                                                     </td>
-                                                    <td><a href="#"><span class="list-enq-name">{{$info->fullname_user}}</span><span class="list-enq-city">{{$info->address_user}}</span></a>
+                                                    <td>{{$info->username}}</td>
+                                                    <td><a href="#"><span class="list-enq-name">{{$info->fullname_user}}</span><span class="list-enq-city"></span></a>
                                                     </td>
 
                                                     <td>{{$info->phone_user}} </td>
                                                     <td>{{$info->email_user}}</td>
-                                                    <td>Australia</td>
-                                                    
+                                                    <td>{{$info->address_user}}</td>
+                                                    @if($info->role_user==0)
+                                                    <td>Admin</td>
+                                                    @elseif($info->role_user==2)
+                                                    <td>Partner</td>
+                                                    @else
+                                                    <td>User</td>
+                                                    @endif
                                                     <td>
                                                         <a href="{{ route('view-user') }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     </td>
                                                     <td>
                                                         <a href="{{ route('edit-user') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     </td>
+                                                    
+                                                    {{-- @if($user->role_user==2) --}}
                                                     <td>
-                                                        <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>
+                                                        <a href="#"><i class="fa fa-lock" id="2" aria-hidden="true"></i></a>
                                                     </td>
+                                                    {{-- @else
+                                                    <td>
+                                                        <a href="#"><i class="fa fa-lock" id="0" hidden aria-hidden="true"></i></a>
+                                                    </td>
+                                                    @endif --}}
                                                 </tr>
                                                 
                                                 @endforeach

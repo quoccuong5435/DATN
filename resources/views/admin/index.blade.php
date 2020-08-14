@@ -1,6 +1,7 @@
 @extends('admin.master')
 @section('main-content')
 
+ 
 	<!--== BODY INNER CONTAINER ==-->
             <div class="sb2-2">
                 <!--== breadcrumbs ==-->
@@ -14,6 +15,14 @@
                         </li>
                     </ul>
                 </div>
+                 @if(Session::has('thongbao'))
+                            <div class="alert alert-success">
+                                {{Session::get('thongbao')}}
+                            </div>
+                                   
+
+                            
+                        @endif
                 <!--== DASHBOARD INFO ==-->
                 <div class="ad-v2-hom-info">
 					<div class="ad-v2-hom-info-inn">

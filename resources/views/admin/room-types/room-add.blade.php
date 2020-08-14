@@ -12,7 +12,17 @@
                 </div>
                 <div class="sb2-2-add-blog sb2-2-1">
                     <h2>Thêm thông tin phòng</h2></br>
-    
+                        <span><a href="{{route('info_hotel',($list_hotel->id))}}" style="float: right;"><button type="" class="btn-success">Trở về</button></a></span>
+                        <br>
+                        @if(count($errors)>0)
+                            <div class="alert alert-danger">
+                                @foreach($errors->all() as $fail)
+                               {{$fail}} <br>
+                               
+                                @endforeach
+                            </div>
+                                
+                                @endif
                         <div id="" class="">
                             <div class="bor">
                                 <form action="{{route('add_rooms')}}" method="POST" enctype="multipart/form-data">
@@ -29,16 +39,15 @@
                                                 <option value="{{$list->id}}">{{$list->room_type}}</option>  
                                                 @endforeach
                                             </select>
-                                            <label>Chọn loại phòng</label>
+                                            
                                         </div>
                                         <div class="input-field col s12">
-                                            <select name="hotel_id" id="hotel_id">
-                                                <option value="" disabled selected>Thuộc khách sạn</option>
-                                                @foreach($list_hotel as $list_hotels)
-                                                <option value="{{$list_hotels->id}}">{{$list_hotels->name_hotel}}</option>  
-                                                @endforeach
-                                            </select>
-                                            <label>Thuộc khách sạn</label>
+                                            
+                                                
+                                                <input name="hotel_id" value="{{$list_hotel->id}}" class="hidden"></input>  
+                                                
+                                            
+                                            
                                         </div>
                                         <div class="input-field col s12">
                                             
@@ -72,8 +81,8 @@
                                    
                                     <div class="row">
                                         <div class="input-field col s12">
-                                            <textarea id="description_room"  name="description_room" class="materialize-textarea"></textarea>
-                                            <label for="textarea3">Mô tả</label>
+                                            <textarea id="description_room"  name="description_room" placeholder="Mô tả" class="materialize-textarea"></textarea>
+                                            
                                         </div>
                                     </div>
                                     <div class="row">
@@ -83,9 +92,7 @@
                                                     <span>File</span>
                                                     <input type="file" name="avatar_room" id="avatar_room">
                                                 </div>
-                                                <div class="file-path-wrapper">
-                                                    <input class="file-path validate" name="avatar_room" type="text" placeholder="Tải ảnh lên">
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>

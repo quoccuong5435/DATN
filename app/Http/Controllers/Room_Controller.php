@@ -16,9 +16,9 @@ class Room_Controller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $list_hotel= Hotel::all();
+        $list_hotel= Hotel::find($id);
         $list_room_type= Room_type::all();
         return view('admin.room-types.room-add',compact('list_room_type','list_hotel'));
     }
@@ -61,6 +61,7 @@ class Room_Controller extends Controller
         return view('admin.room-types.room-type-list',compact('list_room_type'));
     }
 
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -88,7 +89,7 @@ class Room_Controller extends Controller
                     'avatar_room' => 'mimes:jpg,jpeg,png,gif|max:2048',
                 ],          
                 [
-                    'avatar_room.mimes' => 'Chỉ chấp nhận ảnh đại diện với đuôi ( jpg, jpeg, png, gif )',
+                    'avatar_room.mimes' => 'Chỉ chấp nhận ảnh với đuôi ( jpg, jpeg, png, gif )',
                     'avatar_room.max' => 'Ảnh đại diện không được vượt quá 4MB'
                 ]
             );

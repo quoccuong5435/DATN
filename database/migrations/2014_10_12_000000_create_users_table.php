@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->integer('phone_user');
             $table->string('username');
             $table->string('email_user');
-            $table->string('password_user');
+            $table->string('password');
             $table->integer('status')->default(0);
             $table->integer('role_user')->default(1);
             $table->timestamps();

@@ -16,7 +16,7 @@
                         <div class="col-md-12">
                             <div class="box-inn-sp">
                                 <div class="inn-title">
-                                       
+                                       <a href="{{route('hotel-add')}}" title=""><button class="btn-light">Thêm khách sạn</button></a>
                                     <h4>Danh sách khách sạn</h4>
                                     <a class="dropdown-button drop-down-meta" href="#" data-activates="dr-users"><i class="material-icons">more_vert</i></a>
                                      <div class="">
@@ -72,7 +72,7 @@
                                                 @foreach($list_hotel as $dshotel)
                                                 
                                                 <tr>
-                                                    <td>{{$i}}</td>
+                                                    <td>{{$stt++}}</td>
                                                     <td> 
                                                         <span class="list-imgs"><img src="{{asset('images/avatar_hotel')}}/{{$dshotel->avatar_hotel}}"   style="height: 400px, width:400px; "></span>
                                                     </td>
