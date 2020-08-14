@@ -47,8 +47,8 @@
                                                 <label for="list-name">Phone</label>
                                             </div>
                                             
-                                            <div class="input-field col s12" >
-                                                <select id="place_id" name="place_id" required>
+                                            <div class=" col s12" >
+                                                <select id="place_id" name="place_id" >
                                                     <option value="" disabled selected>Địa danh</option>
                                                     @foreach($place as $list)
                                                     <option value="{{$list->id}}">{{$list->name_place}}</option>

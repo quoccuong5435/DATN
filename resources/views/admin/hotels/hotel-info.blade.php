@@ -79,7 +79,11 @@
                         <div id="menu1" class="tab-pane fade">
                             <div class="inn-title">
                                 <h4>Chi tiết phòng</h4>
-                                
+                                <span>
+                                    <a href="" >
+                                    <button type="" class="btn-success" style="float: right;">Thêm mới phòng</button>
+                                    </a>
+                                </span>
                             </div>
                             <div class="bor">
                                 <div class="tab-inn">
