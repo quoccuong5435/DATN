@@ -73,7 +73,7 @@
                         
                         <div class="input-field col s12">
                             <input type="submit" value="Tạo tài khoản" class="waves-effect waves-light btn-large full-btn"> </div>
-                         <p>Bạn đã có tài khoản ? <a href="{{ route('dangnhap') }}">Đăng nhập</a>
+                         <p>Bạn đã có tài khoản ? <a href="{{ route('get_login') }}">Đăng nhập</a>
                     </div>
                     
                 </form>
