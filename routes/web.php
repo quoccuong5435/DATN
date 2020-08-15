@@ -142,7 +142,7 @@ Route::get('/admin/forgot', function(){
 
 Route::get('/admin/profile', function(){
     return view('admin.admin-profile');
-});
+})->name('ad-profile');
 
 Route::get('admin/users',[
     'as'=>'user',

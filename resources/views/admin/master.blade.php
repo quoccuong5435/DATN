@@ -63,13 +63,11 @@
 
                 <!-- Dropdown Structure -->
                 <ul id='top-menu' class='dropdown-content top-menu-sty'>
-                    <li><a href="setting.html" class="waves-effect"><i class="fa fa-cogs" aria-hidden="true"></i>Cài đặt</a>
+                    <li><a href="{{route('ad-profile')}}" class="waves-effect"><i class="fa fa-cogs" aria-hidden="true"></i>Cài đặt</a>
                     </li>
                     <li><a href="{{route('hotel')}}" class="waves-effect"><i class="fa fa-building-o" aria-hidden="true"></i> Quản lý khách sạn</a>
                     </li>
                     <li><a href="{{route('add-user')}}" class="waves-effect"><i class="fa fa-user-plus" aria-hidden="true"></i> Thêm người dùng</a>
-                    </li>
-                    <li><a href="#" class="waves-effect"><i class="fa fa-undo" aria-hidden="true"></i> Backup Data</a>
                     </li>
                     <li class="divider"></li>
                     <li><a href="#" class="ho-dr-con-last waves-effect"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng xuất</a>

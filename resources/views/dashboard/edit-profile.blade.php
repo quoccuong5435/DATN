@@ -36,15 +36,7 @@
 									<label>Di động</label>
 								</div>
 							</div>
-							<div class="row">
-								<div class="input-field col s12">
-									<select>
-										<option value="" disabled selected>Chọn trạng thái</option>
-										<option value="1">Active</option>
-										<option value="2">Non-Active</option>
-									</select>
-								</div>
-							</div>
+							
 							<div class="row">
 								<div class="input-field col s12">
 									<input id="pay-ca" type="number" class="validate">

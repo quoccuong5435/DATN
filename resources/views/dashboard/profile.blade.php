@@ -29,7 +29,7 @@
 								<tr>
 									<td>Di động</td>
 									<td>:</td>
-									<td>+01 4561 3214</td>
+									<td>0321456789</td>
 								</tr>
 								<tr>
 									<td>Ngày sinh</td>
@@ -39,13 +39,7 @@
 								<tr>
 									<td>Địa chỉ</td>
 									<td>:</td>
-									<td>8800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A.</td>
-								</tr>
-								<tr>
-									<td>Trạng thái</td>
-									<td>:</td>
-									<td><span class="db-done">Active</span>
-									</td>
+									<td>1017/25 Trần Thị Liền, Phước Kiển, Nhà Bè </td>
 								</tr>
 							</tbody>
 						</table>
