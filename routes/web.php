@@ -125,15 +125,7 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function() {
     'uses'=>'User_Controller@show'
 ]);
 
-Route::get('/login', [
-    'as'=>'get_login',
-    'uses'=>'User_Controller@get_login'
-]);
 
-Route::post('/login',[
-    'as'=>'signin-admin',
-    'uses'=>'User_Controller@signin_admin'
-]);
 
 Route::get('/forgot', function(){
     return view('admin.forgot-pass');
@@ -212,7 +204,7 @@ Route::get('/room-types/add',
     'as'=>'add-roomtype',
     'uses'=>'Room_Controller@create'
 ]);
-// End 
+
 Route::get('/room-types',[
     'as'=>'roomtypes',
     'uses'=>'Room_Controller@list_room_type'
@@ -226,6 +218,15 @@ Route::get('/hotel-booking', function(){
 })->name('hotel-booking');
 
 });
+Route::get('admin/login', [
+    'as'=>'get_login',
+    'uses'=>'User_Controller@get_login'
+]);
+
+Route::post('admin/login',[
+    'as'=>'signin-admin',
+    'uses'=>'User_Controller@signin_admin'
+]);
 
 
 
