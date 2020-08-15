@@ -1,6 +1,7 @@
 @extends('admin.master')
 @section('main-content')
 
+ 
 	<!--== BODY INNER CONTAINER ==-->
             <div class="sb2-2">
                 <!--== breadcrumbs ==-->

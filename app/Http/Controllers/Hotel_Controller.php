@@ -68,10 +68,11 @@ class Hotel_Controller extends Controller
     // Admin
     
     public function admin_hotel()
-    {
+    {   
+        $stt=1;
         $list_hotel= Hotel::paginate(10);
         $place=Place::all();
-        return view('admin.hotels.hotel-list',compact('list_hotel'));
+        return view('admin.hotels.hotel-list',compact('list_hotel','stt'));
     }
     
     public function admin_hotel_add()
@@ -82,6 +83,7 @@ class Hotel_Controller extends Controller
     }
    public function search(Request $request)
    {
+        $stt=1;
         $search = $request->get('search');
         $list_hotel = DB::table('hotel')
                     ->where('phone_hotel', 'like', '%'.$search.'%')
@@ -90,7 +92,7 @@ class Hotel_Controller extends Controller
                     ->orWhere('address_hotel', 'like', '%'.$search.'%')
                     ->get();
 
-        return view('admin.hotels.hotel-search',compact('list_hotel','search'));
+        return view('admin.hotels.hotel-search',compact('list_hotel','search','stt'));
    }
    
   

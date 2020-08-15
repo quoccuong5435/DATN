@@ -27,7 +27,7 @@
                                 @endif
                             
                 <h4>Tạo Tài Khoản</h4>
-                <form action="{{route('dangky-send')}}" method="POST" class="col s12">
+                <form action="{{route('dangky-partner-send')}}" method="POST" class="col s12">
 
                     
 
@@ -60,9 +60,7 @@
                                 <option value="none" selected disabled hidden>Giới tính</option>
                                 <option value="Nam">Nam</option>
                                 <option value="Nu">Nữ</option>
-                            </select>
-                            
-                            
+                            </select>    
                         </div>
                         <div class="input-field col s12">
                             <input type="password" name="password" class="validate">

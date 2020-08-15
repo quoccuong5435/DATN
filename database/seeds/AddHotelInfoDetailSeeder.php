@@ -36,7 +36,7 @@ class AddHotelInfoDetailSeeder extends Seeder
          	['hotel_id'=>5,'hotel_info_id'=>3,'description'=>'Nằm tại thành phố Đà Nẵng, cách Bãi biển Mỹ Khê vài bước chân, Rosamia Da Nang Hotel có nhà hàng, chỗ đỗ xe riêng miễn phí, trung tâm thể dục và quán bar. Khách sạn 5 sao này cung cấp dịch vụ phòng, CLB trẻ em và WiFi miễn phí. Khách sạn còn có hồ bơi trong nhà, phòng xông hơi khô, chương trình giải trí buổi tối và lễ tân 24 giờ.
          	Tất cả phòng nghỉ tại đây đều được trang bị máy điều hòa, TV màn hình phẳng với truyền hình cáp, ấm đun nước, vòi sen, máy sấy tóc và bàn làm việc. Ngoài ra, phòng còn có tủ để quần áo và phòng tắm riêng.
          	Rosamia Da Nang Hotel phục vụ bữa sáng kiểu lục địa.
-         	Khách sạn cách Bãi biển Bắc Mỹ An 1,5 km và Cầu tàu Tình Yêu 3,2 km. Sân bay gần nhất là sân bay quốc tế Đà Nẵng, cách Rosamia Da Nang Hotel 6 km. Chỗ nghỉ cung cấp dịch vụ đưa đón sân bay miễn phí.','status'=>1]
+         	Khách sạn cách Bãi biển Bắc Mỹ An 1,5 km và Cầu tàu Tình Yêu 3,2 km. Sân bay gần nhất là sân bay quốc tế Đà Nẵng, cách Rosamia Da Nang Hotel 6 km. Chỗ nghỉ cung cấp dịch vụ đưa đón sân bay miễn phí.','status'=>1],
 
             ['hotel_id'=>6,'hotel_info_id'=>3,'description'=>'Kỳ nghỉ sang trọng tại Furama Resort Danang sẽ mở đầu hành trình của du khách tới các di sản được UNESCO công nhận như Kinh thành Huế, cách resort 2 giờ lái xe. Các tiện nghi đẳng cấp thế giới như hồ bơi nước ngọt, spa và 4 lựa chọn ăn uống đang chờ đón du khách tại resort này.</br>
             Furama Resort Danang tọa lạc ở phường Bắc Mỹ An. Từ đây đến thương cảng “Con đường Tơ lụa” cổ kính của Hội An mất 30 phút lái xe và Thánh Địa Mỹ Sơn cách đó chưa đến 2 giờ.

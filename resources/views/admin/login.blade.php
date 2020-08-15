@@ -41,30 +41,38 @@
                  @endforeach
             </ul>
         @endif
+         @if(Session::has('thongbao'))
+                            <div class="alert alert-success">
+                                {{Session::get('thongbao')}}
+                            </div>
+                                   
 
+                            
+                        @endif
          @if (session('status'))
              <ul>
                  <li class="text-danger"> {{ session('status') }}</li>
              </ul>
          @endif
  
-            <form>
+            <form action="{{route('signin-admin')}}" method="POST">
+                @csrf
                 <img src="{{ asset('source/admin/images/logo.png') }}" alt="" />
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="first_name1" type="text" class="validate">
+                        <input id="first_name1" name="email_user" type="text" class="validate">
                         <label for="first_name1">Email</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="last_name" type="password" class="validate">
+                        <input id="last_name" name="password" type="password" class="validate">
                         <label for="last_name">Mật khẩu</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <a class="waves-effect waves-light btn-large btn-log-in" href="index.html">Đăng nhập</a>
+                        <input type="submit" value="Đăng nhập" class="waves-effect waves-light btn-large full-btn"> </div>
                     </div>
                 </div>
                 <a href="forgot.html" class="for-pass">Quên mật khẩu?</a>

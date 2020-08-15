@@ -79,7 +79,11 @@
                         <div id="menu1" class="tab-pane fade">
                             <div class="inn-title">
                                 <h4>Chi tiết phòng</h4>
-                                
+                                <span>
+                                    <a href="{{route('list_room',($list_hotel->id))}}" >
+                                    <button type="" class="btn-success" style="float: right;">Thêm mới phòng</button>
+                                    </a>
+                                </span>
                             </div>
                             <div class="bor">
                                 <div class="tab-inn">
@@ -129,7 +133,7 @@
                                                     <td>{{$dsroom->price_room}}</td>
                                                     <td>{{$dsroom->num_of_rooms}}</td>
                                                     <td>
-                                                        <a href="{{ route('info_hotel',($list_hotel->id)) }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                        <a href="{{ route('info_hotel',($list_hotel->id)) }}" ><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     </td>
                                                     <td>
                                                         <a href="{{ route('edit_hotel',($list_hotel->id)) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>

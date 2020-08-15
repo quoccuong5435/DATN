@@ -26,6 +26,15 @@
                                     <h4>Thông tin</h4>
                                     
                                 </div>
+                                @if(count($errors)>0)
+                            <div class="alert alert-danger">
+                                @foreach($errors->all() as $fail)
+                               {{$fail}} <br>
+                               
+                                @endforeach
+                            </div>
+                                
+                                @endif
                                 <div class="bor">
                                     <form action="{{route('hotel-add-send')}}" method="POST" enctype="multipart/form-data" >
                                         @csrf
@@ -47,8 +56,8 @@
                                                 <label for="list-name">Phone</label>
                                             </div>
                                             
-                                            <div class="input-field col s12" >
-                                                <select id="place_id" name="place_id" required>
+                                            <div class=" col s12" >
+                                                <select id="place_id" name="place_id" >
                                                     <option value="" disabled selected>Địa danh</option>
                                                     @foreach($place as $list)
                                                     <option value="{{$list->id}}">{{$list->name_place}}</option>
@@ -86,10 +95,10 @@
                                          <div class="file-field input-field">
                                         <div class="btn">
                                             <span>File</span>
-                                            <input type="file" id="avatar_hotel" name="avatar_hotel" required >
+                                            <input type="file" id="avatar_hotel" name="avatar_hotel"  placeholder="Tải lên một hoặc nhiểu file"  >
                                         </div>
                                         <div class="file-path-wrapper">
-                                            <input class="file-path validate" id="avatar_hotel" name="avatar_hotel" type="text" placeholder="Tải lên một hoặc nhiểu file">
+                                            <input class="file-path validate"  type="text" >
                                         </div>
                                     </div>
                                       
