@@ -109,8 +109,7 @@
                                 <ul>
                                     <li><a href="{{route('user')}}">Danh sách người dùng</a>
                                     </li>
-                                    {{-- <li><a href="{{route('add-user')}}">Thêm người dùng</a> --}}
-                                    {{-- </li> --}}
+                                    
                                 </ul>
                             </div>
                         </li>

@@ -74,8 +74,9 @@
                     <div class="input-field col s12">
                         <input type="submit" value="Đăng nhập" class="waves-effect waves-light btn-large full-btn"> </div>
                     </div>
+                      <a href="forgot.html" class="for-pass">Quên mật khẩu?</a>
                 </div>
-                <a href="forgot.html" class="for-pass">Quên mật khẩu?</a>
+              
             </form>
         </div>
     </div>
