@@ -119,110 +119,135 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function() {
     'as'=>'admin',
     'uses'=>'User_Controller@admin'
 ]);
+
    Route::get('/users',[
     'as'=>'user',
     'uses'=>'User_Controller@show'
 ]);
-});
 
-
-Route::get('/admin/login', [
+Route::get('/login', [
     'as'=>'get_login',
     'uses'=>'User_Controller@get_login'
 ]);
 
-Route::post('/admin/login',[
+Route::post('/login',[
     'as'=>'signin-admin',
     'uses'=>'User_Controller@signin_admin'
 ]);
 
-Route::get('/admin/forgot', function(){
+Route::get('/forgot', function(){
     return view('admin.forgot-pass');
 });
-
-Route::get('/admin/profile', function(){
+Route::get('/profile', function(){
     return view('admin.admin-profile');
 })->name('ad-profile');
 
-Route::get('admin/users',[
+Route::get('/users',[
     'as'=>'user',
     'uses'=>'User_Controller@show'
 ]);
 
-
-Route::get('/admin/users/add', function(){
+Route::get('/users/add', function(){
     return view('admin.users.user-add');
 })->name('add-user');
 
-Route::get('/admin/users/edit', function(){
+Route::get('/users/edit', function(){
     return view('admin.users.user-edit');
 })->name('edit-user');
 
-Route::get('/admin/users/view', function(){
+Route::get('/users/view', function(){
     return view('admin.users.user-view');
 })->name('view-user');
 
-//Begin Admin Hotel
-Route::get('/admin/hotels', function(){
+Route::get('/hotels', function(){
     return view('admin.hotels.hotel-list');
 });
-Route::get('admin/hotel',[
+Route::get('/hotel',[
     'as'=>'hotel',
     'uses'=>'Hotel_Controller@admin_hotel'
 ]);
-Route::post('admin/hotel/search',[
+Route::post('/hotel/search',[
     'as'=>'hotel-search',
     'uses'=>'Hotel_Controller@search'
 ]);
-
-
-Route::get('/admin/hotels/add',[
+Route::get('/hotels/add',[
     'as'=>'hotel-add',
     'uses'=>'Hotel_Controller@admin_hotel_add'
 ]);
 
-Route::post('/admin/hotels/add',[
+Route::post('/hotels/add',[
     'as'=>'hotel-add-send',
     'uses'=>'Hotel_Controller@add_hotel'
 ]);
 
-Route::get('/admin/hotels/edit/{id}',[
+Route::get('/hotels/edit/{id}',[
     'as'=>'edit_hotel',
     'uses'=>'Hotel_Controller@edit'
 ]);
-Route::get('/admin/hotels/info/{id}',[
+Route::get('/hotels/info/{id}',[
     'as'=>'info_hotel',
     'uses'=>'Hotel_Controller@info'
 ]);
-Route::post('/admin/hotels/edit/{id}',[
+Route::post('/hotels/edit/{id}',[
     'as'=>'edit_hotel_send',
     'uses'=>'Hotel_Controller@update'
 ]);
-Route::get('/admin/room-types/list_room/{id}',
+Route::get('/room-types/list_room/{id}',
 [
     'as'=>'list_room',
     'uses'=>'Room_Controller@index'
 ]);
-Route::post('/admin/room-types/list_room',
+Route::post('/room-types/list_room',
 [
     'as'=>'add_rooms',
     'uses'=>'Room_Controller@add_room'
 ]);
-Route::post('/admin/room-types/add',
+Route::post('/room-types/add',
 [
     'as'=>'roomtypes_add_send',
     'uses'=>'Room_Controller@add_room_type'
 ]);
-Route::get('/admin/room-types/add',
+Route::get('/room-types/add',
 [
     'as'=>'add-roomtype',
     'uses'=>'Room_Controller@create'
 ]);
 // End 
-Route::get('/admin/room-types',[
+Route::get('/room-types',[
     'as'=>'roomtypes',
     'uses'=>'Room_Controller@list_room_type'
 ]);
+Route::get('/room-types/edit', function(){
+    return view('admin.room-types.room-type-edit');
+})->name('edit-roomtype');
+
+Route::get('/hotel-booking', function(){
+    return view('admin.hotel-booking.hotel-booking-list');
+})->name('hotel-booking');
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Begin Admin Hotel
+
+
+
 
 
 
@@ -230,13 +255,7 @@ Route::get('/admin/room-types',[
 //     return view('admin.room-types.room-type-add');
 // })->name('add-roomtype');
 
-Route::get('/admin/room-types/edit', function(){
-    return view('admin.room-types.room-type-edit');
-})->name('edit-roomtype');
 
-Route::get('/admin/hotel-booking', function(){
-    return view('admin.hotel-booking.hotel-booking-list');
-})->name('hotel-booking');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -207,7 +207,7 @@ class User_Controller extends Controller
     {
         if(Auth::check())
         {
-            return redirect()->route('admin.index');
+            return redirect()->route('admin');
         }else {
             return view('admin.login');
         }
