@@ -85,10 +85,16 @@
                 <!--== USER INFO ==-->
                 <div class="sb2-12">
                     <ul>
-                        <li><img src="{{ asset('source/admin/images/placeholder.jpg') }}" alt="">
+                        <li><img src="{{ asset(Auth::User()->avatar_user) }}" alt="">
                         </li>
                         <li>
-                            <h5>Victoria Baker <span> Santa Ana, CA</span></h5>
+                            <h5>{{Auth::User()->fullname_user}}<span> Loại tài khoản: 
+                               @if(Auth::User()->roll_user==0)
+                                Admin
+                                @else
+                                Partner
+                                @endif
+                             </span></h5>
                         </li>
                         <li></li>
                     </ul>
@@ -119,13 +125,13 @@
                                     </li>
                                     <li><a href="{{route('add-roomtype')}}">Thêm loại phòng</a>
                                     </li>
-                                   {{--  @if($user->role_user==0)
+                                    @if(Auth::User()->role_user==0)
                                     <li><a href="{{route('add-roomtype')}}">Test</a>
                                     </li>
                                     @else
                                     <li><a href="{{route('add-roomtype')}}">Test1</a>
                                     </li>
-                                    @endif --}}
+                                    @endif
                                 </ul>
                             </div>
                         </li>

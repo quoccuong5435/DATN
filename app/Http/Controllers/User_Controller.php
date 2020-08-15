@@ -238,7 +238,7 @@ class User_Controller extends Controller
     public function logout_admin()
     {
         Auth::logout();
-        return view('admin.index');
+        return view('admin.login');
     }
 
     /**
