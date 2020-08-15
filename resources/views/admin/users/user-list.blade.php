@@ -30,7 +30,7 @@
                                                     <th>Địa chỉ</th>
                                                     <th>Xem</th>
                                                     <th>Sửa</th>
-                                                    <th>Xóa </th>
+                                                    <th>Khóa </th>
                                                 </tr>
                                             </thead>
                                             <tbody>
