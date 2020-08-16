@@ -54,7 +54,6 @@
                                                     <?php $z=1 ?>
                                                 @foreach($list_hotel as $dshotel)
                                                 @csrf
-                                               
                                                 <tr>
                                                     <td>{{$stt++}}</td>
                                                     <td> 
@@ -88,8 +87,7 @@
                                                     <td>
                                                         <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>
                                                     </td>
-                                                </tr>
-                                               
+                                                {{-- </tr> --}}
                                             @endforeach
                                             </tbody>
 
@@ -99,7 +97,7 @@
                                         
                                     </div>
                                     
-                                    <span>{{$list_hotel->links()}}</span>
+                                    {{-- <span>{{$list_hotel->links()}}</span> --}}
                                         
                                 </div>
                             </div>

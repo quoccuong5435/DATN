@@ -69,6 +69,7 @@
                 <ul id='top-menu' class='dropdown-content top-menu-sty'>
                     <li><a href="{{route('ad-profile')}}" class="waves-effect"><i class="fa fa-cogs" aria-hidden="true"></i>Cài đặt</a>
                     </li>
+
                     <li><a href="{{route('hotel')}}" class="waves-effect"><i class="fa fa-building-o" aria-hidden="true"></i> Quản lý khách sạn</a>
                     </li>
                     <li><a href="{{route('add-user')}}" class="waves-effect"><i class="fa fa-user-plus" aria-hidden="true"></i> Thêm người dùng</a>
@@ -106,21 +107,29 @@
                     <ul class="collapsible" data-collapsible="accordion">
                         <li><a href="" class="menu-active"><i class="fa fa-bar-chart" aria-hidden="true"></i> Thống kê</a>
                         </li>
+                        @if(Auth::User()->role_user==0)
                         <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-user" aria-hidden="true"></i> Quản lý người dùng</a>
+                            @else
+                            <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-user" aria-hidden="true"></i> Thông tin tài khoản</a>
+                            @endif
                             <div class="collapsible-body left-sub-menu">
                                 <ul>
+                                    @if(Auth::User()->role_user==0)
                                     <li><a href="{{route('user')}}">Danh sách người dùng</a>
                                     </li>
-                                    
+                                    @else
+                                    <li><a href="{{route('user')}}">Xem tài khoản</a>
+                                    </li>
+                                    @endif
                                 </ul>
                             </div>
                         </li>
                         <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-h-square" aria-hidden="true"></i> Quản lý khách sạn</a>
                             <div class="collapsible-body left-sub-menu">
                                 <ul>
-                                    @if(Auth::User()->role_user==0)
+                                    
                                     <li><a href="{{route('hotel')}}">Danh sách khách sạn</a>
-                                        @endif
+                                        
                                     </li>
                                     <li><a href="{{route('hotel-add')}}">Thêm khách sạn</a>
                                     </li>
@@ -128,19 +137,19 @@
                                     </li>
                                     <li><a href="{{route('add-roomtype')}}">Thêm loại phòng</a>
                                     </li>
-                                    @if(Auth::User()->role_user==0)
+                                   {{--  @if(Auth::User()->role_user==0)
                                     <li><a href="{{route('add-roomtype')}}">Test</a>
                                     </li>
                                     @else
                                     <li><a href="{{route('add-roomtype')}}">Test1</a>
                                     </li>
-                                    @endif
+                                    @endif --}}
                                 </ul>
                             </div>
                         </li>
                         <li><a href="{{route('hotel-booking')}}" class="collapsible-header"><i class="fa fa-ticket" aria-hidden="true"></i> Danh sách đặt phòng khách sạn</a>
                         </li>
-                        <li><a href="{{route('dangxuat')}}" target="_blank"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng xuất</a>
+                        <li><a href="{{route('dangxuat')}}" ><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng xuất</a>
                         </li>
                     </ul>
                 </div>

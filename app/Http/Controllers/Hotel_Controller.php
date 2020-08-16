@@ -7,6 +7,8 @@ use App\Hotel_info_detail;
 use App\Hotel_image;
 use App\Room;
 use App\Place;
+use App\User;
+use Auth;
 use App\Service_room;
 use Illuminate\Http\Request;
 use DB;
@@ -70,10 +72,30 @@ class Hotel_Controller extends Controller
     public function admin_hotel()
     {   
         $stt=1;
-        $list_hotel= Hotel::paginate(10);
-        $place=Place::all();
+        if (Auth::User()->role_user==2) {
+            $list_hotel= DB::table('hotel')
+            ->where('status',1)
+            ->where('user_id',Auth::User()->id)
+            ->paginate(10); 
+        }else {
+            $list_hotel= DB::table('hotel')
+        ->where('status',1)
+        
+        ->paginate(10); 
+        }
         return view('admin.hotels.hotel-list',compact('list_hotel','stt'));
     }
+     public function act_hotel()
+    {   
+        $stt=1;
+        $list_hotel= DB::table('hotel')
+        ->where('status',0)
+        ->paginate(15);
+        // ->get();
+        $place=Place::all();
+        return view('admin.hotels.hotel_action',compact('list_hotel','stt'));
+    }
+
     
     public function admin_hotel_add()
     {

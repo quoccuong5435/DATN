@@ -159,6 +159,10 @@ Route::get('/hotel',[
     'as'=>'hotel',
     'uses'=>'Hotel_Controller@admin_hotel'
 ]);
+Route::get('/hotel/accept',[
+    'as'=>'hotel_acp',
+    'uses'=>'Hotel_Controller@act_hotel'
+]);
 Route::post('/hotel/search',[
     'as'=>'hotel-search',
     'uses'=>'Hotel_Controller@search'
