@@ -151,6 +151,7 @@ Route::get('/users/view', function(){
     return view('admin.users.user-view');
 })->name('view-user');
 
+
 Route::get('/hotels', function(){
     return view('admin.hotels.hotel-list');
 });
@@ -227,7 +228,6 @@ Route::post('admin/login',[
     'as'=>'signin-admin',
     'uses'=>'User_Controller@signin_admin'
 ]);
-
 
 
 

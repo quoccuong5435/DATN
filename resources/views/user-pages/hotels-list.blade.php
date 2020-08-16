@@ -10,7 +10,7 @@
 					<ul>
 						<li><a href="#inner-page-title">Khách sạn</a> </li>
 						<li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>
-						<li><a href="#inner-page-title" class="bread-acti">Hotels & Restaurants</a> </li>
+						<li><a href="#inner-page-title" class="bread-acti">Khách sạn {{$place->name_place}}</a> </li>
 					</ul>
 					
 				</div>
