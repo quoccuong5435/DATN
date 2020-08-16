@@ -92,7 +92,9 @@
                                                     <span>File</span>
                                                     <input type="file" name="avatar_room" id="avatar_room">
                                                 </div>
-                                                
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate"  type="text" >
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

@@ -8,6 +8,7 @@ use App\Room_image;
 use App\Room_status;
 use App\Room_type;
 use App\Hotel;
+use DB;
 
 class Room_Controller extends Controller
 {
@@ -19,7 +20,9 @@ class Room_Controller extends Controller
     public function index($id)
     {
         $list_hotel= Hotel::find($id);
-        $list_room_type= Room_type::all();
+        $list_room_type= DB::table('room_type')
+        ->where('status',1)
+        ->get();
         return view('admin.room-types.room-add',compact('list_room_type','list_hotel'));
     }
 
@@ -57,7 +60,9 @@ class Room_Controller extends Controller
      */
     public function list_room_type()
     {
-        $list_room_type = Room_type::all();
+        $list_room_type = DB::table('room_type')
+                ->where('status', 1)
+                ->get();
         return view('admin.room-types.room-type-list',compact('list_room_type'));
     }
 
@@ -101,7 +106,7 @@ class Room_Controller extends Controller
         $room->avatar_room = $getImages;
         $room->status=1;
         $room->save();
-        return  redirect()->back('list_room');
+        return  redirect()->route('hotel');
 
     }
 
@@ -123,8 +128,29 @@ class Room_Controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function edit_roomtype($id)
     {
-        //
+        $roomtype = Room_type::find($id);
+        return view('admin.room-types.room-type-edit',compact('roomtype'));
+    }
+    public function edit_roomtype_send(Request $request,$id)
+    {
+        $room_type=  Room_type::find($id);
+        $room_type->room_type = $request->room_type;
+        $room_type->room_type_description = $request->room_type_description;
+        $room_type->status = 1;
+        $room_type->save();
+        return redirect()->route('roomtypes');
+    }
+     public function changeStatus(Request $request, $id)
+    {
+        $room_type = DB::table('room_type')
+              ->where('id', $id)
+              ->update(['status' => 0]);
+            
+        $room = DB::table('room')
+              ->where('room_type_id', $id)
+              ->update(['status' => 0]);
+        return redirect()->route('roomtypes');
     }
 }

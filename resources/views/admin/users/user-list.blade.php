@@ -30,9 +30,12 @@
                                                     <th>Email</th>
                                                     <th>Địa chỉ</th>
                                                     <th>Role</th>
+                                                     @if(Auth::User()->role_user==0)
                                                     <th>Xem</th>
                                                     <th>Sửa</th>
-                                                    <th>Khóa </th>
+                                                   
+                                                    <th>Hàng động</th>
+                                                    @endif
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -54,6 +57,7 @@
                                                     @else
                                                     <td>User</td>
                                                     @endif
+                                                    @if(Auth::User()->role_user==0)
                                                     <td>
                                                         <a href="{{ route('view-user') }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     </td>
@@ -61,15 +65,12 @@
                                                         <a href="{{ route('edit-user') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     </td>
                                                     
-                                                    {{-- @if($user->role_user==2) --}}
+                                                    
                                                     <td>
                                                         <a href="#"><i class="fa fa-lock" id="2" aria-hidden="true"></i></a>
                                                     </td>
-                                                    {{-- @else
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-lock" id="0" hidden aria-hidden="true"></i></a>
-                                                    </td>
-                                                    @endif --}}
+                                                   
+                                                    @endif
                                                 </tr>
                                                 
                                                 @endforeach

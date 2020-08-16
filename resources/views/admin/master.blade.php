@@ -27,7 +27,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="{{ asset('source/admin/css/bootstrap.min.css') }}"/>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"  />
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -87,7 +91,7 @@
                         </li>
                         <li>
                             <h5>{{Auth::User()->fullname_user}}<span> Loại tài khoản: 
-                               @if(Auth::User()->roll_user==0)
+                               @if(Auth::User()->role_user==0)
                                 Admin
                                 @else
                                 Partner
@@ -114,7 +118,9 @@
                         <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-h-square" aria-hidden="true"></i> Quản lý khách sạn</a>
                             <div class="collapsible-body left-sub-menu">
                                 <ul>
+                                    @if(Auth::User()->role_user==0)
                                     <li><a href="{{route('hotel')}}">Danh sách khách sạn</a>
+                                        @endif
                                     </li>
                                     <li><a href="{{route('hotel-add')}}">Thêm khách sạn</a>
                                     </li>

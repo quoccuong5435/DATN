@@ -141,7 +141,10 @@ class Hotel_Controller extends Controller
      public function info($id)
     {
         $list_hotel=Hotel::find($id);
-        $list_room=DB::table('room')->where('hotel_id','=',$id)->get();
+        $list_room=DB::table('room')
+        ->where('hotel_id','=',$id)
+        ->where('status',1)
+        ->get();
         
         $list_img=DB::table('hotel_image')->where('hotel_id' ,'=', $id)->get();
         

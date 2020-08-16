@@ -15,11 +15,16 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th>STT</th>
                                 <th>Tên loại phòng</th>
+                                <th>Mô tả</th>
                                 <th>Ngày</th>
+                                @if(Auth::User()->role_user==0)
                                 <th>Sửa</th>
-                                <th>Xóa</th>
+                                <th>Khóa</th>
+                               
+                                @endif
+
                             </tr>
                         </thead>
                         <tbody>
@@ -27,16 +32,40 @@
                             <tr>
                                 <td>{{$lroom_type->id}}</td>
                                 <td>{{$lroom_type->room_type}}</td>
+                                <td>{{$lroom_type->room_type_description}}</td>
                                 <td>{{$lroom_type->created_at}}</td>
-                                <td><a href="{{ route('edit-roomtype') }}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                @if(Auth::User()->role_user==0)
+                                <td><a href="{{ route('edit_room_type',($lroom_type->id)) }}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                 </td>
-                                <td><a href="#" class="sb2-2-1-edit"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                </td>
+                                <form action="{{ route('set_status',($lroom_type->id)) }}" method="POST" accept-charset="utf-8">
+                                    @csrf
+                                    <td><a href="" class="sb2-2-1-edit"><button class="fa fa-lock" aria-hidden="true"></button></a></td>
+                                </form>
+                                                                
+                                
+                                @endif
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
-     
+{{-- <script>
+  $(function() {
+    $('.toggle-class').change(function() {
+        var status = $(this).prop('checked') == true ? 1 : 0; 
+        var id = $(this).data('id'); 
+         
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: '/admin/changeStatus',
+            data: {'status': status, 'id': id},
+            success: function(data){
+              console.log(data.success)
+            }
+        });
+    })
+  })
+</script> --}}
 @endsection

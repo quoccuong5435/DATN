@@ -209,14 +209,23 @@ Route::get('/room-types',[
     'as'=>'roomtypes',
     'uses'=>'Room_Controller@list_room_type'
 ]);
-Route::get('/room-types/edit', function(){
-    return view('admin.room-types.room-type-edit');
-})->name('edit-roomtype');
+Route::get('/room-types/edit/{id}', [
+    'as'=>'edit_room_type',
+    'uses'=>'Room_Controller@edit_roomtype'
+]);
+Route::post('/room-types/edit/{id}', [
+    'as'=>'edit_room_type',
+    'uses'=>'Room_Controller@edit_roomtype_send'
+]);
 
 Route::get('/hotel-booking', function(){
     return view('admin.hotel-booking.hotel-booking-list');
 })->name('hotel-booking');
 
+Route::post('/room-types/{id}', [
+    'as'=>'set_status',
+    'uses'=>'Room_Controller@changeStatus'
+]);
 });
 Route::get('admin/login', [
     'as'=>'get_login',
