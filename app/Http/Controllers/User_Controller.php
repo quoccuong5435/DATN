@@ -196,7 +196,7 @@ class User_Controller extends Controller
             $user->role_user =2;
             $user->save();
 
-            return redirect()->back()->with('thanhcong',"Đã tạo tạo khoản thành công");
+            return redirect()->route('get_login')->with('thongbao',"Đã tạo tạo khoản thành công");
 
 
 
