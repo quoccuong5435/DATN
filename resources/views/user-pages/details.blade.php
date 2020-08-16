@@ -6,7 +6,7 @@
 			<div class="container">
 				<h2><span>{{$list_hotels->name_hotel}}</span></h2>
 				<ul>
-					<li><a href="#inner-page-title">Home</a>
+					<li><a href="#inner-page-title">Khách sạn</a>
 					</li>
 					<li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>
 					<li><a href="#inner-page-title" class="bread-acti">Hotel Booking</a>
@@ -28,7 +28,7 @@
 						@endif
 						@endforeach
 						<li class="dl3">Liên hệ : {{$list_hotels->phone_hotel}}</li>
-						<li class="dl4"><a href="booking.html">Đặt ngay</a> </li>
+						<li class="dl4"><a href="#room-list">Đặt ngay</a> </li>
 					</ul>
 				</div>
 			</div>
@@ -85,7 +85,7 @@
 				
 					<!--====== HOTEL ROOM TYPES ==========-->
 					
-					<div class="tour_head1">
+					<div id="room-list" class="tour_head1">
 						<h3>Danh sách phòng</h3>
 						<div class="tr-room-type">
 							<ul>
@@ -97,7 +97,7 @@
 										<div class="col-md-6 tr-room-type-list-2">
 											<h4>{{$dsroom->room_name}}</h4>
 											<span><b>Số phòng còn: </b>{{$dsroom->num_of_rooms}}</span> <span><b>Tiện ích phòng</b> : Free Parking, Breakfast, VAT</span> <span><b>Thông tin phòng </b> : {{$dsroom->description_room}}</span> <span><b>Số người tối đa </b> : {{$dsroom->num_of_people}}</span> </div>
-										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Giá mỗi đêm</span> <span class="hot-list-p3-2">{{$dsroom->price_room}} VNĐ</span> <a href="" class="hot-page2-alp-quot-btn spec-btn-text">Đặt ngay</a> </div>
+										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Giá mỗi đêm</span> <span class="hot-list-p3-2">{{$dsroom->price_room}} VNĐ</span> <a href="{{ route('db-hoteldetails') }}" class="hot-page2-alp-quot-btn spec-btn-text">Đặt ngay</a> </div>
 									</div>
 								</li>
 								@endforeach

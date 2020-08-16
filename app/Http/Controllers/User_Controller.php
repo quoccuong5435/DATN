@@ -89,7 +89,7 @@ class User_Controller extends Controller
             return redirect()->route('admin')->with('thongbao'," Đăng nhập tài khoản Partner thành công");
         }
         else {
-            return redirect()->back()->with('thongbao'," Đăng nhập thất bại vì tk của bạn là user");
+            return redirect()->back()->with('thongbao'," Đăng nhập thất bại. Địa chỉ email hoặc mật khẩu không đúng");
         }
         
     }
