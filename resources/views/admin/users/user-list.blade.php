@@ -62,7 +62,7 @@
                                                         <a href="{{ route('view-user') }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     </td>
                                                     <td>
-                                                        <a href="{{ route('edit-user') }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                        <a href="{{ route('edit-user',($info->id)) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     </td>
                                                     
                                                     

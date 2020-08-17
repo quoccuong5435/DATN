@@ -45,6 +45,27 @@ class Hotel_Controller extends Controller
         return view('user-pages.details',compact('list_hotels','list_room','place','list_img','list_hotel_detail','service_room'));
     
     }
+    public function show_search(Request $request, $id)
+    {
+
+        $list_hotels=Hotel::find($id);
+        $place=Place::all();
+        $check_in= $request->check_in;
+        $check_out =$request->check_out;
+        $people =$request->people;
+        $room =$request->room;
+        $list_hotel_detail=Hotel_info_detail::find($id);
+        $service_room=Service_room::find($id);
+        $list_room=DB::table('room')->where('hotel_id','=',$id)
+        ->where('num_of_rooms' ,'>=',$room)
+        ->where('num_of_people' ,'>=',$people)
+        ->get();
+        $list_img=DB::table('hotel_image')->where('hotel_id','=',$id)->get();
+        $service_room=DB::table('service_room')->where('hotel_id','=',$id)->get();
+ 
+        return view('user-pages.details_hotel',compact('list_hotels','list_room','place','list_img','list_hotel_detail','service_room','check_in','check_out','people','room'));
+    
+    }
 
     public function list_hotel_place($id)
     {
@@ -56,14 +77,15 @@ class Hotel_Controller extends Controller
     }
     public function search_place(Request $request)
     {
-        $search = $request->get('search');
-        $check_in= $request->get('checkin');
-        $check_out =$request->get('checkout');
+        $search = $request->search;
+        $check_in= $request->checkin;
+        $check_out =$request->checkout;
+        $people =$request->people;
+        $room =$request->room;
         $list_hotel = DB::table('hotel')
                     ->where('address_hotel', 'like', '%'.$search.'%')
-                    
                     ->get();
-                    return view('user-pages.hotels-list',compact('list_hotel','search','checkin','checkout'));
+                    return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room'));
 
     }
 
@@ -114,7 +136,7 @@ class Hotel_Controller extends Controller
                     ->orWhere('address_hotel', 'like', '%'.$search.'%')
                     ->get();
 
-        return view('admin.hotels.hotel-search',compact('list_hotel','search','stt'));
+        return view('user-pages.hotel_list_search',compact('list_hotel','search','stt'));
    }
    
   
@@ -129,6 +151,7 @@ class Hotel_Controller extends Controller
         $hotel->email_hotel= $request->email_hotel;
         $hotel->rate_hotel = $request->rate_hotel;
         $hotel->score_hotel = $request->score_hotel;
+        $hotel->user_id = $request->user_id;
         $hotel->place_id = $request->place_id;
         if($request->hasFile('avatar_hotel')){
             $this->validate($request, 
@@ -147,7 +170,7 @@ class Hotel_Controller extends Controller
         }
         $hotel->avatar_hotel = $getImages;
         $hotel->address_hotel =$request->address_hotel;
-        $hotel->status = 1;
+        $hotel->status = 0;
         $hotel->save();
         return redirect()->route('hotel');
     }
@@ -184,6 +207,7 @@ class Hotel_Controller extends Controller
         $hotel->email_hotel= $request->email_hotel;
         $hotel->rate_hotel = $request->rate_hotel;
         $hotel->score_hotel = $request->score_hotel;
+        $hotel->user_id = $request->user_id;
        if($request->hasFile('avatar_hotel')){
             $this->validate($request, 
                 [

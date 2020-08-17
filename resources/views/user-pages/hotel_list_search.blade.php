@@ -5,13 +5,13 @@
 		<div class="container">
 			<div class="row inner_banner inner_banner_3 bg-none">
 				<div class="hot-page2-alp-tit">
-					<h1>Khách sạn ở {{$place->name_place}} </h1>
+					{{-- <h1>Khách sạn ở {{$place->name_place}} </h1>
 
 					<ul>
 						<li><a href="#inner-page-title">Khách sạn</a> </li>
 						<li><i class="fa fa-angle-right" aria-hidden="true"></i> </li>
 						<li><a href="#inner-page-title" class="bread-acti">Khách sạn {{$place->name_place}}</a> </li>
-					</ul>
+					</ul> --}}
 					
 				</div>
 			</div>
@@ -229,7 +229,7 @@
 										</a>
 									</div>
 									<div class="col-md-6">
-										<div class="hot-page2-alp-ri-p2"> <a href="{{ route('chitiet',($dshotel->id)) }}"><h3>{{$dshotel->name_hotel}}</h3></a>
+										<div class="hot-page2-alp-ri-p2"> <a href=""><h3>{{$dshotel->name_hotel}}</h3></a>
 											<ul>
 												<li>{{$dshotel->address_hotel}}</li>
 
@@ -237,12 +237,20 @@
 											</ul>
 										</div>
 									</div>
-									<div class="col-md-3">
+									<form action="{{ route('detail',($dshotel->id)) }}" method="POST" accept-charset="utf-8">
+										@csrf
+										<div class="col-md-3">
+										<input type="" name="check_in" value="{{$check_in}}" hidden="">
+										<input type="" name="check_out" value="{{$check_out}}" hidden="">
+										<input type="" name="people" value="{{$people}}" hidden="">
+										<input type="" name="room" value="{{$room}}" hidden="">
 										<div class="hot-page2-alp-ri-p3">
 												<br><br><br>
-												<a href="{{ route('chitiet',($dshotel->id)) }}" class="hot-page2-alp-quot-btn">Xem Phòng</a>
+												<a href=""><button type="submit">Xem Phòng</button></a>
 											 </div>
 									</div>
+									</form>
+									
 								</div>
 								@endforeach
 															

@@ -55,7 +55,10 @@
                                                 <input id="phone_hotel" name="phone_hotel" type="number" class="validate" required>
                                                 <label for="list-name">Phone</label>
                                             </div>
-                                            
+                                            <div class="input-field col s12">
+                                                <input id="user_id" name="user_id" value="{{Auth::User()->id}}" hidden="" class="validate" required>
+                                                
+                                            </div>
                                             <div class=" col s12" >
                                                 <select id="place_id" name="place_id" >
                                                     <option value="" disabled selected>Địa danh</option>

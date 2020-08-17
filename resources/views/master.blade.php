@@ -52,7 +52,7 @@
                         <div class="ed-com-t1-right">
                             <ul>
                             	@if(Auth::check())
-                                <li><a href="{{ route('dangxuat') }}">Đăng xuất</a>&nbsp
+                                <li><a href="{{ route('dang_xuat') }}">Đăng xuất</a>&nbsp
                                 <li><a href="{{ route('dangky-partner') }}" style="background-color: #189ecf;">Đăng ký chỗ nghỉ của bạn</a>
                                 </li>
                                 @else
@@ -98,7 +98,7 @@
         </div>
 		
 		<!-- TOP SEARCH BOX -->
-        <div class="search-top">
+       {{--  <div class="search-top">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -120,7 +120,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 		<!-- END TOP SEARCH BOX -->
     </section>
     <!--END HEADER SECTION-->

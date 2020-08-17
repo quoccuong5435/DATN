@@ -9,53 +9,62 @@
 				<div class="db-2-com db-2-main">
 					<h4>Chi tiết đặt phòng khách sạn</h4>
 					<div class="db-2-main-com db-2-main-com-table">
+						<form action="" method="POST" accept-charset="utf-8">
+							
+							
+						
 						<table class="responsive-table">
 							<tbody>
 								<tr>
 									<td>Tên khách sạn</td>
 									<td>:</td>
-									<td>GTC Grand Chola</td>
+									<td><input type="" name="hotel_id" hidden="" value="{{$list_hotels->id}}">{{$list_hotels->name_hotel}}</td>
 								</tr>
 								<tr>
-									<td>Thời gian</td>
+									<td>Tên khách hàng</td>
 									<td>:</td>
-									<td>12Days / 11Nights</td>
+									<input type="" name="user_id" hidden="" value="{{Auth::User()->id}}">
+									<td>{{Auth::User()->fullname_user}}</td>
 								</tr>
-								<tr>
-									<td>Giá</td>
+								
+									<tr>
+									<td>Phòng</td>
 									<td>:</td>
-									<td>$1280</td>
+									@foreach($list_room as $list)
+									<input type="" name="price_room"hidden value="{{$list->price_room}}">
+									<input type="" name="room_id"hidden value="{{$list->id}}">
+									<td>{{$list->room_name}}</td>
+									@endforeach
 								</tr>
 								<tr>
 									<td>Ngày nhận phòng</td>
 									<td>:</td>
-									<td>21 May 2017</td>
+									<input type="" name="date_to" hidden="" value="{{$check_in}}">
+									<td>{{$check_in}}</td>
 								</tr>
 								<tr>
 									<td>Ngày trả phòng</td>
 									<td>:</td>
-									<td>03 Jun 2017</td>
+									<input type="" name="date_from" hidden="" value="{{$check_out}}">
+									<td>{{$check_out}}</td>
 								</tr>
-								<tr>
+								{{-- <tr>
 									<td>Tổng thành viên</td>
 									<td>:</td>
-									<td>7(Adult:5, Children:2)</td>
-								</tr>
+									<td><input type="number" min="1" name="people" style="width: 100%" value=""></td>
+								</tr> --}}
 								<tr>
-									<td>Tiện ích khách sạn</td>
+									<td>Số lượng phòng</td>
 									<td>:</td>
-									<td>Plush Bedding, Bathrooms, Wi-Fi, King & Queen sized rooms, Courtyard Suites etc</td>
+									<td><input type="number" min="1" style="width: 100%" name="sl" value=""></td>
 								</tr>
-								<tr>
-									<td>Trạng thái thanh toán</td>
-									<td>:</td>
-									<td><span class="db-not-done">Pending</span>
-									</td>
-								</tr>
+
+
 							</tbody>
 						</table>
 						<div class="db-mak-pay-bot">
-							<a href="{{ route('db-makepayment') }}" class="waves-effect waves-light btn-large">Thanh Toán</a> </div>
+							<a href="" {{-- class="waves-effect waves-light btn-large" --}}><button type="">Đặt phòng</button</a> </div>
+							</form>
 					</div>
 				</div>
 			</div>

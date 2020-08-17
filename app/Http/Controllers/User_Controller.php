@@ -5,6 +5,7 @@ use App\User_account;
 use App\User;
 use Auth;
 use Admin;
+use Account;
 use App\Http\Request\Login_Request;
 use Illuminate\Http\Request;
 use Hash;
@@ -55,8 +56,8 @@ class User_Controller extends Controller
                 'password.min' =>'Mật khẩu ít nhất 6 kí tự',
                 'password.max' =>'Mật khẩu không quá 20 kí tự',
             ]);
-        if(Auth::attempt(['email_user' => $request->email_user, 'password' => $request->password])){
-            return redirect()->route('trang-chu');
+        if(Auth::attempt(['email_user' => $request->email_user, 'password' => $request->password,'status'=>1,'role_user'=>1])){
+            return redirect()->route('trang-chu')->with('thongbao'," Đăng nhập tài khoản thành công");
         }
         else {
             return redirect()->back()->with('thongbao'," Đăng nhập thất bại");
@@ -212,6 +213,15 @@ class User_Controller extends Controller
             return view('admin.login');
         }
     }
+    public function get_login_user()
+    {
+        if(Auth::check())
+        {
+            return redirect()->route('dashboard');
+        }else {
+            return view('user-pages.signin');
+        }
+    }
     /**
      * Display the specified resource.
      *
@@ -248,11 +258,7 @@ class User_Controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        
-    }
-
+  
     /**
      * Remove the specified resource from storage.
      *
@@ -260,8 +266,50 @@ class User_Controller extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function destroy($id)
+    public function dashboard()
     {
-        //
+        return view('dashboard.main');
+    }
+    public function edit($id)
+    {
+        $list_user=User::find($id);
+       return view('admin.users.user-edit',compact('list_user'));
+    }
+     public function update(Request $request,$id)
+    {
+        $this->validate($request,
+            [
+                
+                
+                'phone_user' => 'required|max:10',
+                'address_user' => 'required',
+                'fullname_user' => 'required',
+
+
+            ],
+
+            [
+                
+                'phone_user.required' =>'Vui lòng nhập số điện thoại',
+                'phone_user.max' =>'Số điện thoại không quá 10 kí tự',
+            ])
+        ;
+            $user =   User::find($id);
+            $user->username= $request->username;
+            $user->fullname_user= $request->fullname_user;
+            $user->email_user= $request->email_user;
+            $user->password=  Hash::make($request->password);
+            $user->phone_user= $request->phone_user;
+            $user->gender_user= $request->gender_user;
+            $user->address_user= $request->address_user;
+            $user->status  =1;
+            $user->role_user =$request->role_user ;
+            $user->save();
+
+            return redirect()->back()->with('thanhcong',"Update khoản thành công");
+
+
+
+       
     }
 }

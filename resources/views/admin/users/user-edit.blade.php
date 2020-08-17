@@ -18,56 +18,66 @@
                                     <h4>Sửa thông chi tiết người dùng</h4>
                                 </div>
                                 <div class="tab-inn">
-                                    <form>
+                                    <form action="" method="POST">
+                                        @csrf
+                                         @if(count($errors)>0)
+                            <div class="alert alert-danger">
+                                @foreach($errors->all() as $fail)
+                               {{$fail}} <br>
+                               
+                                @endforeach
+                            </div>
+                                
+                                @endif
                                         <div class="row">
                                             <div class="input-field col s6">
-                                                <input id="first_name" type="text" value="Marsha" class="validate">
+                                                <input name="fullname_user" type="text" value="{{$list_user->fullname_user}}" class="validate">
                                                 <label for="first_name">Tên</label>
                                             </div>
                                             <div class="input-field col s6">
-                                                <input id="last_name" type="text" value="Hogen" class="validate">
-                                                <label for="last_name">Họ</label>
+                                                <input name="username" type="text" hidden="" value="{{$list_user->username}}" class="validate">
+                                                
                                             </div>
                                         </div>
                                         <div class="row">
+                                            
                                             <div class="input-field col s6">
-                                                <input id="phone" type="text" value="+01 1234 4654" class="validate">
-                                                <label for="phone">Điện thoại</label>
-                                            </div>
-                                            <div class="input-field col s6">
-                                                <input id="cphone" type="text" value="+01 6541 32145" class="validate">
+                                                <input name="phone_user" type="text" value="{{$list_user->phone_user}}" class="validate">
                                                 <label for="cphone">Di động</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s6">
-                                                <input id="city" type="text" value="Illunois" class="validate">
-                                                <label for="city">Quận/Huyện</label>
+                                                <input name="address_user" type="text" value="{{$list_user->address_user}}" class="validate">
+                                                <label for="country">Địa chỉ</label>
                                             </div>
+                                        </div>
+                                       
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input name="email_user" type="email" hidden="" value="{{$list_user->email_user}}" class="validate">
+                                               
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <input name="role_user" type="" hidden="" value="{{$list_user->role_user}}" class="validate">
+                                               
+                                            </div>
+                                             <div class="row">
                                             <div class="input-field col s6">
-                                                <input id="country" type="text" value="United States" class="validate">
-                                                <label for="country">Tỉnh/Thành phố</label>
+                                                <input name="gender_user" type="text" value="{{$list_user->gender_user}}" class="validate">
+                                                <label for="country">Giới tính</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s6">
-                                                <input id="password" type="password" value="aksdjfhasdf" class="validate">
-                                                <label for="password">Mật khẩu</label>
+                                                <input id="password" type="password" hidden="" value="{{$list_user->password}}" class="validate">
+                                                
                                             </div>
-                                            <div class="input-field col s6">
-                                                <input id="password1" type="password" value="asdfaefrerfg" class="validate">
-                                                <label for="password1">Xác nhận mật khẩu</label>
-                                            </div>
+                                            
                                         </div>
-                                        <div class="row">
-                                            <div class="input-field col s12">
-                                                <input id="email" type="email" value="marshahi@mail.com" class="validate">
-                                                <label for="email">Email</label>
-                                            </div>
-                                            <div class="input-field col s12">
-                                                <input id="email1" type="email" value="marshahi@mail.com" class="validate">
-                                                <label for="email1">Email thay thế</label>
-                                            </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">

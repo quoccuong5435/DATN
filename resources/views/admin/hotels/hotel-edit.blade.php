@@ -17,10 +17,10 @@
                     <ul class="nav nav-tabs tab-list">
                         <li class="active"><a data-toggle="tab" href="#home"><i class="fa fa-info" aria-hidden="true"></i> <span>Chi tiết</span></a>
                         </li>
-                        <li><a data-toggle="tab" href="#menu1"><i class="fa fa-bed" aria-hidden="true"></i> <span>Loại phòng</span></a>
+                        {{-- <li><a data-toggle="tab" href="#menu1"><i class="fa fa-bed" aria-hidden="true"></i> <span>Loại phòng</span></a>
                         </li>
                         <li><a data-toggle="tab" href="#menu2"><i class="fa fa-picture-o" aria-hidden="true"></i> <span>Thư viện ảnh</span></a>
-                        </li>
+                        </li> --}}
                     </ul>
 
                     <div class="tab-content">
@@ -30,7 +30,16 @@
                                     <h4>Danh sách thông tin</h4></br>
                                 </div>
                                 <div class="bor">
-                                    
+                                     </div>
+                                 @if(count($errors)>0)
+                            <div class="alert alert-danger">
+                                @foreach($errors->all() as $fail)
+                               {{$fail}} <br>
+                               
+                                @endforeach
+                            </div>
+                                
+                                @endif
                                     <form action="{{route('edit_hotel_send',($list_hotel->id))}}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="row">
@@ -80,11 +89,19 @@
                                             </div>
                                         </div>
                                          <div class="file-field input-field">
+                                            <div>
+                                                <img style="width: 30%;height: 30%" src="{{asset('images/avatar_hotel')}}/{{$list_hotel->avatar_hotel}}" alt="">
+                                            </div><br>
+                                            <div class="input-field col s12">
+                                                <input id="user_id" name="user_id" value="{{Auth::User()->id}}" hidden="" class="validate" required>
+                                                
+                                            </div>
                                         <div class="btn">
                                             <span>File</span>
                                             <input type="file" id="avatar_hotel" name="avatar_hotel"  >
                                         </div>
                                         <div class="file-path-wrapper">
+                                            
                                             <input value="{{$list_hotel->avatar_hotel }}"  class="file-path validate" id="avatar_hotel" name="avatar_hotel" type="text" placeholder="Tải lên một hoặc nhiểu file">
                                         </div>
                                     </div>
@@ -99,88 +116,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="menu1" class="tab-pane fade">
-                            <div class="inn-title">
-                                <h4>Chi tiết phòng</h4>
-                                
-                            </div>
-                            <div class="bor">
-                                <form>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <select multiple>
-                                                <option value="" disabled selected>Loại phòng</option>
-                                                <option value="1">Deluxe</option>
-                                                <option value="2">Premium</option>
-                                                <option value="3">Premium Plus</option>
-                                                <option value="3">Non-Deluxe</option>
-                                                <option value="3">Normal</option>
-                                            </select>
-                                            <label>Chọn loại</label>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <input id="t2-price" type="number" class="validate">
-                                            <label for="t2-price">Giá</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <div class="chips chips-placeholder"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <textarea id="textarea4" class="materialize-textarea"></textarea>
-                                            <label for="textarea4">Mô tả</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <div class="file-field input-field">
-                                                <div class="btn">
-                                                    <span>File</span>
-                                                    <input type="file">
-                                                </div>
-                                                <div class="file-path-wrapper">
-                                                    <input class="file-path validate" type="text" placeholder="Tải ảnh lên">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input type="submit" class="waves-effect waves-light btn-large" value="Gửi">
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-
-                            
-                        </div>
-                        <div id="menu2" class="tab-pane fade">
-                            <div class="inn-title">
-                                <h4>Thư viện ảnh</h4>
-                            </div>
-                            <div class="bor">
-                                <form action="#">
-                                    <div class="file-field input-field">
-                                        <div class="btn">
-                                            <span>File</span>
-                                            <input type="file" multiple>
-                                        </div>
-                                        <div class="file-path-wrapper">
-                                            <input class="file-path validate" type="text" placeholder="Tải lên một hay nhiều file">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <input type="submit" class="waves-effect waves-light btn-large" value="Tải lên">
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>

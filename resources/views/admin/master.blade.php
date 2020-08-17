@@ -131,8 +131,12 @@
                                     <li><a href="{{route('hotel')}}">Danh sách khách sạn</a>
                                         
                                     </li>
+                                    @if(Auth::User()->role_user==2)
                                     <li><a href="{{route('hotel-add')}}">Thêm khách sạn</a>
                                     </li>
+                                    @else
+                                    <li ><a href="{{route('hotel_acp')}}">Duyệt khách sạn</a></li>
+                                    @endif
                                     <li><a href="{{route('roomtypes')}}">Danh sách loại phòng</a>
                                     </li>
                                     <li><a href="{{route('add-roomtype')}}">Thêm loại phòng</a>

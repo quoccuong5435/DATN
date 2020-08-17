@@ -12,17 +12,65 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['middleware' => 'account','prefix' => 'dashboard'], function() {
+  Route::get('/', [
+    'as'=>'dashboard',
+    'uses'=>'User_Controller@dashboard'
+]);
+Route::get('/hotel-booking', function(){
+    return view('dashboard.hotel-booking');
+})->name('db-hotelbooking');
+
+Route::get('/{id}',[
+    'as'=>'hotel_booking',
+    'uses'=>'Booking_Controller@index'
+]);
+Route::post('/{id}',[
+    'as'=>'hotel_booking-send',
+    'uses'=>'Booking_Controller@store'
+]);
+
+Route::get('/my-profile', function(){
+    return view('dashboard.profile');
+})->name('db-profile');
+
+Route::get('/my-profile/edit', function(){
+    return view('dashboard.edit-profile');
+})->name('db-editprofile');
+
+Route::get('/payment-list', function(){
+    return view('dashboard.payment-list');
+})->name('db-payment');
+
+Route::get('/make-payment', function(){
+    return view('dashboard.payment');
+})-> name('db-makepayment');
+
+Route::get('/refund', function(){
+    return view('dashboard.refund');
+})->name('db-refund');
+});
 
 Route::get('/', [
     'as'=>'trang-chu',
     'uses'=>'Hotel_Controller@home'
 ]);
 
+
+
 Route::get('/hotels-list/{id}',[
 	'as'=>'hotel_list',
 	'uses'=>'Hotel_Controller@list_hotel_place'
 ]);
+Route::post('/hotels-find/',[
+    'as'=>'hotellist_search',
+    'uses'=>'Hotel_Controller@search_place'
+]);
 
+Route::post('/detail/{id}',[
+    'as'=>'detail',
+    'uses'=>'Hotel_Controller@show_search'
+]);
 Route::get('/details/{id}',[
 	'as'=>'chitiet',
 	'uses'=>'Hotel_Controller@show'
@@ -60,8 +108,8 @@ Route::post('/signup',[
     'uses'=>'User_Controller@signup'
 ]);
 // logout
-Route::get('/logout',[
-    'as'=>'dangxuat',
+Route::get('/logouts',[
+    'as'=>'dang_xuat',
     'uses'=>'User_Controller@logout'
 ]);
 Route::get('/logout',[
@@ -70,11 +118,14 @@ Route::get('/logout',[
 ]);
 
 //signin user
-Route::get('/signin',[
-	'as'=>'dangnhap',
-	'uses'=>'User_Controller@index2'
+// Route::get('/signin',[
+// 	'as'=>'dangnhap',
+// 	'uses'=>'User_Controller@index2'
+// ]);
+Route::get('/signin', [
+    'as'=>'dangnhap',
+    'uses'=>'User_Controller@get_login_user'
 ]);
-
 // xu ly danh nhap
 Route::post('/signin',[
     'as'=>'dangnhap-send',
@@ -82,37 +133,7 @@ Route::post('/signin',[
 ]);
 
 
-Route::get('/dashboard', function(){
-    return view('dashboard.main');
-})->name('dashboard');
 
-Route::get('/dashboard/hotel-booking', function(){
-    return view('dashboard.hotel-booking');
-})->name('db-hotelbooking');
-
-Route::get('/dashboard/hotel-booking/details', function(){
-    return view('dashboard.hotel-booking-details');
-})->name('db-hoteldetails');
-
-Route::get('/dashboard/my-profile', function(){
-    return view('dashboard.profile');
-})->name('db-profile');
-
-Route::get('/dashboard/my-profile/edit', function(){
-    return view('dashboard.edit-profile');
-})->name('db-editprofile');
-
-Route::get('/dashboard/payment-list', function(){
-    return view('dashboard.payment-list');
-})->name('db-payment');
-
-Route::get('/dashboard/make-payment', function(){
-    return view('dashboard.payment');
-})-> name('db-makepayment');
-
-Route::get('/dashboard/refund', function(){
-    return view('dashboard.refund');
-})->name('db-refund');
 
 Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function() {
    Route::get('/', [
@@ -134,22 +155,23 @@ Route::get('/profile', function(){
     return view('admin.admin-profile');
 })->name('ad-profile');
 
-Route::get('/users',[
-    'as'=>'user',
-    'uses'=>'User_Controller@show'
-]);
 
 Route::get('/users/add', function(){
     return view('admin.users.user-add');
 })->name('add-user');
 
-Route::get('/users/edit', function(){
-    return view('admin.users.user-edit');
-})->name('edit-user');
-
 Route::get('/users/view', function(){
     return view('admin.users.user-view');
 })->name('view-user');
+
+Route::get('/users/{id}',[
+    'as'=>'edit-user',
+    'uses'=>'User_Controller@edit'
+]);
+Route::post('/users/{id}',[
+    'as'=>'edit-user-send',
+    'uses'=>'User_Controller@update'
+]);
 
 
 Route::get('/hotels', function(){

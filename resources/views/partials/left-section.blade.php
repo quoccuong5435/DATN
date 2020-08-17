@@ -5,10 +5,12 @@
 			<div class="db-l">
 				<div class="db-l-1">
 					<ul>
-						<li><img src="{{ asset('source/images/db-profile.jpg') }}" alt="" />
+						<li><img src="{{ asset(Auth::User()->avatar_user) }}" alt="" />
 						</li>
-						<li><span>80%</span> hoàn thành hồ sơ</li>
-						<li><span>18</span> Thông báo</li>
+						
+						<span><b>Phone: {{Auth::User()->phone_user}}</b> </span>
+						<br>
+						<span><b>Email: {{Auth::User()->email_user}}</b>  </span>
 					</ul>
 				</div>
 				<div class="db-l-2">
