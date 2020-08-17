@@ -88,7 +88,7 @@
                                 </li>
                                 <li><a href="{{ route('dashboard') }}">Thông tin</a>
                                 </li>
-                                <li><a href="contact.html">Liên hệ</a>
+                                <li><a href="{{ route('contact') }}">Liên hệ</a>
                                 </li>
                             </ul>
                         </div>
@@ -151,28 +151,9 @@
 					<div class="testi">
 						<h4>John William</h4>
 						<p>Ut sed sem quis magna ultricies lacinia et sed tortor. Ut non tincidunt nisi, non elementum lorem. Aliquam gravida sodales</p> <address>Illinois, United States of America</address> </div>
-					<!-- ARRANGEMENTS & HELPS -->
-					<h3>Sắp xếp & hỗ trợ</h3>
-					<div class="arrange">
-						<ul>
-							<!-- LOCATION MANAGER -->
-							<li>
-								<a href="#"><img src="{{ asset('source/images/Location-Manager.png') }}" alt=""> </a>
-							</li>
-							<!-- PRIVATE GUIDE -->
-							<li>
-								<a href="#"><img src="{{ asset('source/images/Private-Guide.png') }}" alt=""> </a>
-							</li>
-							<!-- ARRANGEMENTS -->
-							<li>
-								<a href="#"><img src="{{ asset('source/images/Arrangements.png') }}" alt=""> </a>
-							</li>
-							<!-- EVENT ACTIVITIES -->
-							<li>
-								<a href="#"><img src="{{ asset('source/images/Events-Activities.png') }}" alt=""> </a>
-							</li>
-						</ul>
-					</div>
+					<div class="testi">
+						<h4>John William</h4>
+						<p>Ut sed sem quis magna ultricies lacinia et sed tortor. Ut non tincidunt nisi, non elementum lorem. Aliquam gravida sodales</p> <address>Illinois, United States of America</address> </div>
 				</div>
 			</div>
 		</div>
@@ -198,16 +179,10 @@
 								<div class="col-sm-3 col-md-3 foot-spec foot-com">
 									<h4>Hỗ trợ</h4>
 									<ul class="two-columns">
-										<li> <a href="#">About Us</a> </li>
-										<li> <a href="#">FAQ</a> </li>
-										<li> <a href="#">Feedbacks</a> </li>
+										<li> <a href="{{route('about')}}">Về chúng tôi</a> </li>
+										<li> <a href="#">Câu hỏi thường gặp</a> </li>
 										<li> <a href="#">Blog </a> </li>
-										<li> <a href="#">Use Cases</a> </li>
-										<li> <a href="#">Advertise us</a> </li>
-										<li> <a href="#">Discount</a> </li>
-										<li> <a href="#">Vacations</a> </li>
-										<li> <a href="#">Branding Offers </a> </li>
-										<li> <a href="#">Contact Us</a> </li>
+										<li> <a href="{{ route('contact') }}">Liên hệ</a> </li>
 									</ul>
 								</div>
 								<div class="col-sm-3 foot-social foot-spec foot-com">

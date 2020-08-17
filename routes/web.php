@@ -264,9 +264,13 @@ Route::post('admin/login',[
     'uses'=>'User_Controller@signin_admin'
 ]);
 
+Route::get('/about', function(){
+    return view('user-pages.about');
+})->name('about');
 
-
-
+Route::get('/contact', function(){
+    return view('user-pages.contact');
+})->name('contact');
 
 
 

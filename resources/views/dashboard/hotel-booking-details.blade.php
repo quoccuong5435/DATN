@@ -5,7 +5,7 @@
 	@include('partials.left-section')
 
 	<!--CENTER SECTION-->
-			<div class="db-2">
+			<div style="color: #333;" class="db-2">
 				<div class="db-2-com db-2-main">
 					<h4>Chi tiết đặt phòng khách sạn</h4>
 					<div class="db-2-main-com db-2-main-com-table">
