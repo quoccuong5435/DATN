@@ -88,7 +88,7 @@ class Hotel_Controller extends Controller
                     
                     ->where('room.num_of_rooms', '>=', $room)
                     ->where('room.num_of_people', '>=', $people)
-                    ->groupBy()
+                    ->groupBy('hotel_id')
                     
                     
         ->get();
