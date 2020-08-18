@@ -7,6 +7,14 @@
 	<!--CENTER SECTION-->
 			<div style="color: #333;" class="db-2">
 				<div class="db-2-com db-2-main">
+					 @if(Session::has('thongbao'))
+                            <div class="alert alert-danger">
+                                {{Session::get('thongbao')}}
+                            </div>
+                                   
+
+                            
+                        @endif
 					<h4>Chi tiết đặt phòng khách sạn</h4>
 					<div class="db-2-main-com db-2-main-com-table">
 						<form action="" method="POST" accept-charset="utf-8">
@@ -56,7 +64,13 @@
 								<tr>
 									<td>Số lượng phòng</td>
 									<td>:</td>
-									<td><input type="number" min="1" style="width: 100%" name="sl" value=""></td>
+									<td><select name="sl" >
+										@foreach($list_room as $ds)
+										@for($i=1;$i<=$ds->empty_room ;$i++)
+										<option value="{{$i}}">{{$i}}</option>
+										@endfor
+										@endforeach
+									</select></td>
 								</tr>
 
 

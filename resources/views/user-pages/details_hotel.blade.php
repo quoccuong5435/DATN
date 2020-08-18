@@ -96,14 +96,12 @@
 										</div>
 										<div class="col-md-6 tr-room-type-list-2">
 											<h4>{{$dsroom->room_name}}</h4>
-											<span><b>Số phòng còn: </b>{{$dsroom->num_of_rooms}}</span> <span><b>Tiện ích phòng</b> : Free Parking, Breakfast, VAT</span> <span><b>Thông tin phòng </b> : {{$dsroom->description_room}}</span> <span><b>Số người tối đa </b> : {{$dsroom->num_of_people}}</span> </div>
+											<span><b>Số phòng còn: {{$RoomsBooked}} </b></span> <span><b>Tiện ích phòng</b> : Free Parking, Breakfast, VAT</span> <span><b>Thông tin phòng </b> : {{$dsroom->description_room}}</span> <span><b>Số người tối đa  mỗi phòng </b> : {{$dsroom->num_of_people}}</span> </div>
 										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Giá mỗi đêm</span> 
 											<span class="hot-list-p3-2">{{$dsroom->price_room}} VNĐ</span>
 											<form action="{{ route('hotel_booking',($dsroom->hotel_id)) }}" method="GET" accept-charset="utf-8">
 												@csrf
-												<input type="" name="checkin" value="{{$check_in}}" hidden="">
 												<input type="" name="room_id" value="{{$dsroom->id}}" hidden="">
-												<input type="" name="checkout" value="{{$check_out}}" hidden="">
 												 <a href="" ><button class="hot-page2-alp-quot-btn spec-btn-text" type="">Đặt ngay</button></a>
 											</form>
 											 </div>
@@ -122,6 +120,7 @@
 							@foreach($service_room as $service)
 							<li><i class="fa fa-check" aria-hidden="true"></i> {{$service->name_service}}</li>
 							@endforeach
+							<li></li>
 						</ul>
 					</div>
 					<!--====== TOUR LOCATION ==========-->

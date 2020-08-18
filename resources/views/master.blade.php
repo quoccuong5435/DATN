@@ -169,7 +169,7 @@
 							<div class="row">
 								<div class="col-sm-3 foot-spec foot-com">
 									<h4><span>Khách sạn</span> & Du lịch</h4>
-									<p> Đại lý đặt phòng khách sạn hàng đầu Đông Nam Á với hơn 200.000 khách sạn đối tác</p>
+									<p> Đại lý đặt phòng khách sạn hàng đầu Việt Nam với hơn 200.000 khách sạn đối tác</p>
 								</div>
 								<div class="col-sm-3 foot-spec foot-com">
 									<h4><span>Địa chỉ</span> & Thông tin liên hệ</h4>
@@ -210,19 +210,7 @@
 			</div>
 		</div>
 	</section>
-	<section>
-		<div class="icon-float">
-			<ul>
-				<li><a href="#" class="sh">1k <br> Share</a> </li>
-				<li><a href="#" class="fb1"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
-				<li><a href="#" class="gp1"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
-				<li><a href="#" class="tw1"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-				<li><a href="#" class="li1"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
-				<li><a href="#" class="wa1"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> </li>
-				<li><a href="#" class="sh1"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> </li>
-			</ul>
-		</div>
-	</section>
+
 	<!--========= Scripts ===========-->
 	<script src="{{ asset('source/js/jquery-latest.min.js') }}"></script>
 	<script src="{{ asset('source/js/jquery-ui.js') }}"></script>

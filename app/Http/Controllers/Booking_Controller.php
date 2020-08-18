@@ -27,8 +27,8 @@ class Booking_Controller extends Controller
      public function index($id , Request $request)
     {
         $list_hotels=Hotel::find($id);
-        $check_in= $request->checkin;
-        $check_out =$request->checkout;
+        $check_in = $request->session()->get('checkin');
+        $check_out = $request->session()->get('checkout');
         $room_id = $request->room_id;
         $list_room=DB::table('room')
         ->where('id','=',$room_id)
@@ -36,7 +36,7 @@ class Booking_Controller extends Controller
         $book_status=Booking_status::all();
  
         
-        return view('dashboard.hotel-booking-details',compact('list_hotels','list_room','check_in','check_out','book_status'));
+        return view('dashboard.hotel-booking-details',compact('list_hotels','list_room','book_status','check_in','check_out'));
     }
     /**
      * Show the form for creating a new resource.
@@ -69,7 +69,19 @@ class Booking_Controller extends Controller
         $booking->total_price = ($request->sl)*($request->price_room);
         $booking->room_id = $request->room_id;
         $booking->save();
-        return redirect()->back();
+        $room = DB::table('room')
+              ->where('id',  $request->room_id)
+              ->get();
+              foreach ($room as $rooms) {
+                  
+             
+        $empty_room=$rooms->empty_room - $request->sl;
+        $room_booked=$rooms->room_booked + $request->sl;
+         }
+        $room_book = DB::table('room')
+              ->where('id',  $request->room_id)
+              ->update(['empty_room' => $empty_room,'room_booked'=> $room_booked]);
+        return redirect()->back()->with('thongbao',"Đặt phòng thành công");
     }
 
     /**
