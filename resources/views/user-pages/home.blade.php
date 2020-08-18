@@ -22,41 +22,39 @@
 							@csrf
 							<div class="row">
 								<div class="input-field col s12">
-									<input type="text" id="" name="search" class="" >
-									<label for="select-city">Nhập địa điểm du lịch  hoặc khách sạn </label>
+									<select name="search" required="">
+										<option value="" disabled selected>Địa danh</option>
+										@foreach($place as $list)
+										<option value="{{$list->name_place}}">{{$list->name_place}}</option>
+										@endforeach
+									</select>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s6">
-									<input type="text" id="from" name="checkin" >
+									<input type="text" id="from" name="checkin" required="" >
 									<label for="from">Ngày nhận phòng </label>
 								</div>
 								<div class="input-field col s6">
-									<input type="text" id="to" name="checkout" >
+									<input type="text" id="to" name="checkout" required="" >
 									<label for="to">Ngày trả phòng</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s6">
-									<select name="people">
+									<select name="people" required="">
 										<option value="" disabled selected>Số lượng phòng</option>
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
+										@for($i=1;$i<=10;$i++)
+										<option value="{{$i}}">{{$i}}</option>
+										@endfor
 									</select></div>
 								
-									<div class="input-field col s6">
+									<div class="input-field col s6" required>
 									<select name="room">
 										<option value="" disabled selected>Số người</option>
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										
+										@for($i=1;$i<=10;$i++)
+										<option value="{{$i}}">{{$i}}</option>
+										@endfor
 									</select>
 								</div>
 								
@@ -66,7 +64,7 @@
 											
 							<div class="row">
 								<div class="input-field col s12">
-									<input type="submit" value="Tìm kiếm phòng" class="waves-effect waves-light tourz-sear-btn v2-ser-btn">
+									<a><input type="submit" value="Tìm kiếm phòng" class="waves-effect waves-light tourz-sear-btn v2-ser-btn"></a>
 								</div>
 							</div>
 						</form>
