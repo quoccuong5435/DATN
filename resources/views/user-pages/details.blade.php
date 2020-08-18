@@ -97,7 +97,7 @@
 										<div class="col-md-6 tr-room-type-list-2">
 											<h4>{{$dsroom->room_name}}</h4>
 											<span><b>Số phòng còn: </b>{{$dsroom->num_of_rooms}}</span> <span><b>Tiện ích phòng</b> : Free Parking, Breakfast, VAT</span> <span><b>Thông tin phòng </b> : {{$dsroom->description_room}}</span> <span><b>Số người tối đa </b> : {{$dsroom->num_of_people}}</span> </div>
-										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Giá mỗi đêm</span> <span class="hot-list-p3-2">{{$dsroom->price_room}} VNĐ</span> <a href="{{ route('db-hoteldetails') }}" class="hot-page2-alp-quot-btn spec-btn-text">Đặt ngay</a> </div>
+										<div class="col-md-3 tr-room-type-list-3"> <span class="hot-list-p3-1">Giá mỗi đêm</span> <span class="hot-list-p3-2">{{$dsroom->price_room}} VNĐ</span> <a href="{{-- {{ route('db-hoteldetails') }} --}}" class="hot-page2-alp-quot-btn spec-btn-text">Đặt ngay</a> </div>
 									</div>
 								</li>
 								@endforeach

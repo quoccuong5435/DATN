@@ -45,7 +45,7 @@ class Hotel_Controller extends Controller
         return view('user-pages.details',compact('list_hotels','list_room','place','list_img','list_hotel_detail','service_room'));
     
     }
-    public function show_search(Request $request, $id)
+    public function search_with_hotel(Request $request, $id)
     {
 
         $list_hotels=Hotel::find($id);
@@ -84,7 +84,16 @@ class Hotel_Controller extends Controller
         $room =$request->room;
         $list_hotel = DB::table('hotel')
                     ->where('address_hotel', 'like', '%'.$search.'%')
-                    ->get();
+                    ->join('room', 'hotel.id', '=', 'room.hotel_id')
+                    
+                    ->where('room.num_of_rooms', '>=', $room)
+                    ->where('room.num_of_people', '>=', $people)
+                    ->groupBy('hotel_id')
+                    
+                    
+        ->get();
+                    
+
                     return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room'));
 
     }

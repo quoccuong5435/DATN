@@ -69,7 +69,7 @@ Route::post('/hotels-find/',[
 
 Route::post('/detail/{id}',[
     'as'=>'detail',
-    'uses'=>'Hotel_Controller@show_search'
+    'uses'=>'Hotel_Controller@search_with_hotel'
 ]);
 Route::get('/details/{id}',[
 	'as'=>'chitiet',

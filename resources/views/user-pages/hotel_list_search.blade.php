@@ -28,15 +28,24 @@
 									<ul>
 										<li>
 											<label>Nhập tên thành phố</label>
-											<input type="text" placeholder="Enter City"> </li>
+											<input type="text" value="{{$search}}" placeholder="Enter City"> </li>
 										<li>
 											<label>Ngày nhận phòng</label>
-											<input type="date"> </li>
+											<input type="text" value="{{$check_in}}"> </li>
 										<li>
 											<label>Ngày trả phòng</label>
-											<input type="date"> </li>
+											<input type="text" value="{{$check_out}}"> </li>
+										<li>
+											<label>Nhập số phòng</label>
+											<input type="text" value="{{$people}}" placeholder="Enter City"> </li>
+										<li>
+										<li>
+											<label>Nhập số người</label>
+											<input type="text" value="{{$room}}" placeholder="Enter City"> </li>
+										<li>
 										<li>
 											<input type="submit" value="Kiểm tra"> </li>
+
 									</ul>
 								</form>
 							</div>
@@ -221,6 +230,8 @@
 							<div class="row">
 								<!--LISTINGS START-->
 								@foreach($list_hotel as $dshotel)
+									
+									
 								<div class="hot-page2-alp-r-list">
 									<div class="col-md-3 hot-page2-alp-r-list-re-sp">
 										<a href="javascript:void(0);">
@@ -252,6 +263,8 @@
 									</form>
 									
 								</div>
+								
+								
 								@endforeach
 															
 							</div>
