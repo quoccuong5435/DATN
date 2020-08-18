@@ -28,7 +28,7 @@
 									<ul>
 										<li>
 											<label>Nhập tên thành phố</label>
-											<input type="text" placeholder="Enter City"> </li>
+											<input type="text" placeholder="Nhập thành phố	"> </li>
 										<li>
 											<label>Ngày nhận phòng</label>
 											<input type="date"> </li>
@@ -50,31 +50,31 @@
 										<li>
 											<div class="checkbox checkbox-info checkbox-circle">
 												<input id="chp41" class="styled" type="checkbox" checked="">
-												<label for="chp41"> Nashville, USA </label>
+												<label for="chp41"> Đà Nẵng </label>
 											</div>
 										</li>
 										<li>
 											<div class="checkbox checkbox-info checkbox-circle">
 												<input id="chp42" class="styled" type="checkbox">
-												<label for="chp42"> Hull, England </label>
+												<label for="chp42"> Bà Rịa - Vũng Tàu </label>
 											</div>
 										</li>
 										<li>
 											<div class="checkbox checkbox-info checkbox-circle">
 												<input id="chp43" class="styled" type="checkbox">
-												<label for="chp43"> Seoul, South Korea </label>
+												<label for="chp43"> Hồ Chí Minh </label>
 											</div>
 										</li>
 										<li>
 											<div class="checkbox checkbox-info checkbox-circle">
 												<input id="chp44" class="styled" type="checkbox">
-												<label for="chp44"> Ljubljana, Slovenia </label>
+												<label for="chp44"> Hà Nội </label>
 											</div>
 										</li>
 										<li>
 											<div class="checkbox checkbox-info checkbox-circle">
 												<input id="chp45" class="styled" type="checkbox">
-												<label for="chp45"> Wroclaw, Poland </label>
+												<label for="chp45"> An Giang </label>
 											</div>
 										</li>
 									</ul>

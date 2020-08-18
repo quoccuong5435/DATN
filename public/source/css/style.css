@@ -200,7 +200,7 @@
      text-align: center;
      position: relative;
      overflow: hidden;
-     margin-bottom: 50px;
+     margin-bottom: 120px;
 }
  .spe-title h2 {
      margin-bottom: 0px;
@@ -1266,7 +1266,7 @@
      background-size: contain;
 }
  .form-spac {
-     padding: 100px 0px;
+     padding: 60px 0px;
 }
  .form_book_1 ul li:nth-child(11) {
      width: 100%;
@@ -5033,7 +5033,7 @@
  .v2-ho-se-ri h1 {
      margin: 0px;
      color: #fff;
-     font-size: 48px;
+     font-size: 40px;
      margin-bottom: 20px;
 }
  .v2-ho-se-ri p {

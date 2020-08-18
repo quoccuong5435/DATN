@@ -12,16 +12,7 @@
                 </div>
                 <div class="sb2-2-add-blog sb2-2-1">
                     <h2>Sửa thông tin chi tiết khách sạn</h2> </br>
-                    
 
-                    <ul class="nav nav-tabs tab-list">
-                        <li class="active"><a data-toggle="tab" href="#home"><i class="fa fa-info" aria-hidden="true"></i> <span>Chi tiết</span></a>
-                        </li>
-                        {{-- <li><a data-toggle="tab" href="#menu1"><i class="fa fa-bed" aria-hidden="true"></i> <span>Loại phòng</span></a>
-                        </li>
-                        <li><a data-toggle="tab" href="#menu2"><i class="fa fa-picture-o" aria-hidden="true"></i> <span>Thư viện ảnh</span></a>
-                        </li> --}}
-                    </ul>
 
                     <div class="tab-content">
                         <div id="home" class="tab-pane fade in active">
@@ -29,8 +20,6 @@
                                 <div class="inn-title">
                                     <h4>Danh sách thông tin</h4></br>
                                 </div>
-                                <div class="bor">
-                                     </div>
                                  @if(count($errors)>0)
                             <div class="alert alert-danger">
                                 @foreach($errors->all() as $fail)
@@ -40,16 +29,17 @@
                             </div>
                                 
                                 @endif
+                                <div class="bor">
                                     <form action="{{route('edit_hotel_send',($list_hotel->id))}}" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <input id="name_hotel" name="name_hotel" type="text" class="validate" value="{{$list_hotel->name_hotel }}" >
-                                                <label for="list-title"></label>
+                                                <label for="list-title">Tên khách sạn</label>
                                             </div>
                                             <div class="input-field col s12">
                                                 <input id="address_hotel" name="address_hotel" type="text" class="validate" value="{{$list_hotel->address_hotel }}" >
-                                                <label for="list-name">Address</label>
+                                                <label for="list-name">Địa chỉ</label>
                                             </div>
                                             <div class="input-field col s12">
                                                 <input id="email_hotel" name="email_hotel" type="email" class="validate" value="{{$list_hotel->email_hotel }}">
@@ -57,7 +47,7 @@
                                             </div>
                                             <div class="input-field col s12">
                                                 <input id="phone_hotel" name="phone_hotel" type="number" class="validate" value="{{$list_hotel->phone_hotel }}">
-                                                <label for="list-name">Phone</label>
+                                                <label for="list-name">Số điện thoại</label>
                                             </div>
                                             
 
@@ -112,7 +102,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                   
+                                   </div>
                                 </div>
                             </div>
                         </div>

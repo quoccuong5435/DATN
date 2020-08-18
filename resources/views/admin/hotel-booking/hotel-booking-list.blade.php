@@ -24,134 +24,69 @@
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>User</th>
+                                                    <th>Avatar</th>
+                                                    <th>Tên khách hàng</th>
                                                     <th>Khách sạn</th>
+                                                    <th>Ngày nhận phòng</th>
+                                                    <th>Ngày trả phòng</th>
                                                     <th>Di động</th>
                                                     <th>Email</th>
                                                     <th>Địa chỉ</th>
-                                                    <th>Tin nhắn</th>
+                                                    <th>Bình luận</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><span class="list-img"><img src="images/listing/1.jpg" alt=""></span>
+                                                    <td><span class="list-img"><img src="{{asset('images/user/user.png')}}" alt=""></span>
                                                     </td>
-                                                    <td><a href="#"><span class="list-enq-name">Domestic Help Services</span><span class="list-enq-city">Illunois, United States</span></a>
+                                                    <td>Huy</td>
+                                                    <td><a href="#"><span class="list-enq-name">Khách sạn Sala Đà Nẵng Beach</span><span class="list-enq-city">Đà Nẵng</span></a>
                                                     </td>
-                                                    <td>+91 32111 65412</td>
-                                                    <td>enquiry@mail.com</td>
-                                                    <td>Australia</td>
-                                                    <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
+                                                    <td>18-08-2020</td>
+                                                    <td>19-08-2020</td>
+                                                    <td>+32111 65412</td>
+                                                    <td>quochuylu95@gmail.com</td>
+                                                    <td>TP.HCM</td>
+                                                    <td>Phòng tiện nghi, giá rẻ</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><span class="list-img"><img src="ima    ges/listing/2.jpg" alt=""></span>
+                                                    <td><span class="list-img"><img src="{{asset('images/user/user.png')}}" alt=""></span>
                                                     </td>
-                                                    <td><a href="#"><span class="list-enq-name">Home Appliances Repair & Services</span><span class="list-enq-city">Illunois, United States</span></a>
+                                                    <td>Huy</td>
+                                                    <td><a href="#"><span class="list-enq-name">Khách sạn Sala Đà Nẵng Beach</span><span class="list-enq-city">Đà Nẵng</span></a>
                                                     </td>
-                                                    <td>+91 32111 65412</td>
-                                                    <td>enquiry@mail.com</td>
-                                                    <td>Australia</td>
-                                                    <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
+                                                    <td>18-08-2020</td>
+                                                    <td>19-08-2020</td>
+                                                    <td>+32111 65412</td>
+                                                    <td>quochuylu95@gmail.com</td>
+                                                    <td>TP.HCM</td>
+                                                    <td>Phòng tiện nghi, giá rẻ</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><span class="list-img"><img src="images/listing/3.jpg" alt=""></span>
+                                                    <td><span class="list-img"><img src="{{asset('images/user/user.png')}}" alt=""></span>
                                                     </td>
-                                                    <td><a href="#"><span class="list-enq-name">Packers and Movers</span><span class="list-enq-city">Illunois, United States</span></a>
+                                                    <td>Huy</td>
+                                                    <td><a href="#"><span class="list-enq-name">Khách sạn Sala Đà Nẵng Beach</span><span class="list-enq-city">Đà Nẵng</span></a>
                                                     </td>
-                                                    <td>+91 32111 65412</td>
-                                                    <td>enquiry@mail.com</td>
-                                                    <td>Australia</td>
-                                                    <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
+                                                    <td>18-08-2020</td>
+                                                    <td>19-08-2020</td>
+                                                    <td>+32111 65412</td>
+                                                    <td>quochuylu95@gmail.com</td>
+                                                    <td>TP.HCM</td>
+                                                    <td>Phòng tiện nghi, giá rẻ</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><span class="list-img"><img src="images/listing/4.jpg" alt=""></span>
+                                                    <td><span class="list-img"><img src="{{asset('images/user/user.png')}}" alt=""></span>
                                                     </td>
-                                                    <td><a href="#"><span class="list-enq-name">Security System Dealers</span><span class="list-enq-city">Illunois, United States</span></a>
+                                                    <td>Huy</td>
+                                                    <td><a href="#"><span class="list-enq-name">Khách sạn Sala Đà Nẵng Beach</span><span class="list-enq-city">Đà Nẵng</span></a>
                                                     </td>
-                                                    <td>+91 32111 65412</td>
-                                                    <td>enquiry@mail.com</td>
-                                                    <td>Australia</td>
-                                                    <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/5.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Skin Care & Treatment</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+91 32111 65412</td>
-                                                    <td>enquiry@mail.com</td>
-                                                    <td>Australia</td>
-                                                    <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/1.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Domestic Help Services</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+91 32111 65412</td>
-                                                    <td>enquiry@mail.com</td>
-                                                    <td>Australia</td>
-                                                    <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/1.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Domestic Help Services</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+91 32111 65412</td>
-                                                    <td>enquiry@mail.com</td>
-                                                    <td>Australia</td>
-                                                    <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/2.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Home Appliances Repair & Services</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+91 32111 65412</td>
-                                                    <td>enquiry@mail.com</td>
-                                                    <td>Australia</td>
-                                                    <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/3.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Packers and Movers</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+91 32111 65412</td>
-                                                    <td>enquiry@mail.com</td>
-                                                    <td>Australia</td>
-                                                    <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/4.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Security System Dealers</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+91 32111 65412</td>
-                                                    <td>enquiry@mail.com</td>
-                                                    <td>Australia</td>
-                                                    <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/5.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Skin Care & Treatment</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+91 32111 65412</td>
-                                                    <td>enquiry@mail.com</td>
-                                                    <td>Australia</td>
-                                                    <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><span class="list-img"><img src="images/listing/1.jpg" alt=""></span>
-                                                    </td>
-                                                    <td><a href="#"><span class="list-enq-name">Domestic Help Services</span><span class="list-enq-city">Illunois, United States</span></a>
-                                                    </td>
-                                                    <td>+91 32111 65412</td>
-                                                    <td>enquiry@mail.com</td>
-                                                    <td>Australia</td>
-                                                    <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
+                                                    <td>18-08-2020</td>
+                                                    <td>19-08-2020</td>
+                                                    <td>+32111 65412</td>
+                                                    <td>quochuylu95@gmail.com</td>
+                                                    <td>TP.HCM</td>
+                                                    <td>Phòng tiện nghi, giá rẻ</td>
                                                 </tr>
                                             </tbody>
                                         </table>

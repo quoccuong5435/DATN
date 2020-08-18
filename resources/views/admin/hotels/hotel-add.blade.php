@@ -12,10 +12,6 @@
                 </div>
                 <div class="sb2-2-add-blog sb2-2-1">
                     <h2>Thêm thông tin chi tiết khách sạn</h2></br>
-
-                    <ul class="nav nav-tabs tab-list">
-                        <li class="active"><a data-toggle="tab" href="#home"><i class="fa fa-info" aria-hidden="true"></i> <span>Chi tiết</span></a>
-                        </li>
                        
                     </ul>
 

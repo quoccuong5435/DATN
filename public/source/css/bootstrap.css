@@ -1271,7 +1271,7 @@ h2,
 }
 h3,
 .h3 {
-    text-align: center;
+    text-align: inherit;
     font-size: 30px;
 }
 h4,

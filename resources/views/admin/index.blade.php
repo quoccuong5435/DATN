@@ -9,10 +9,10 @@
                     <ul>
                         <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ</a>
                         </li>
-                        <li class="active-bre"><a href="#"> Thống kê</a>
+                       <!-- <li class="active-bre"><a href="#"> Thống kê</a>
                         </li>
                         <li class="page-back"><a href="index.html"><i class="fa fa-backward" aria-hidden="true"></i> Back</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <!--== DASHBOARD INFO ==-->
@@ -83,24 +83,8 @@
                             <div class="box-inn-sp">
                                 <div class="inn-title">
                                     <h4>Google Map</h4>
-                                    <p>Airtport Hotels The Right Way To Start A Short Break Holiday</p>
                                     <a class="dropdown-button drop-down-meta" href="#" data-activates="dr-map"><i class="material-icons">more_vert</i></a>
-                                    <ul id="dr-map" class="dropdown-content">
-                                        <li><a href="#!">Add New</a>
-                                        </li>
-                                        <li><a href="#!">Edit</a>
-                                        </li>
-                                        <li><a href="#!">Update</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li><a href="#!"><i class="material-icons">delete</i>Delete</a>
-                                        </li>
-                                        <li><a href="#!"><i class="material-icons">subject</i>View All</a>
-                                        </li>
-                                        <li><a href="#!"><i class="material-icons">play_for_work</i>Download</a>
-                                        </li>
-                                    </ul>
-                                    <!-- Dropdown Structure -->
+                                   
 
                                 </div>
                                 <div class="tab-inn">

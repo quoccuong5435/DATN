@@ -105,8 +105,8 @@
                 <!--== LEFT MENU ==-->
                 <div class="sb2-13">
                     <ul class="collapsible" data-collapsible="accordion">
-                        <li><a href="" class="menu-active"><i class="fa fa-bar-chart" aria-hidden="true"></i> Thống kê</a>
-                        </li>
+                        <!--<li><a href="" class="menu-active"><i class="fa fa-bar-chart" aria-hidden="true"></i> Thống kê</a>
+                        </li>-->
                         @if(Auth::User()->role_user==0)
                         <li><a href="javascript:void(0)" class="collapsible-header"><i class="fa fa-user" aria-hidden="true"></i> Quản lý người dùng</a>
                             @else

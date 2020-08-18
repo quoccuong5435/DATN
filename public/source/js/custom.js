@@ -177,7 +177,7 @@ function myFunction() {
 
 //DATE PICKER	
 $(function() {
-    var dateFormat = "mm/dd/yy",
+    var dateFormat = "dd/mm/yy",
         from = $("#from,#from-1,#from-2,#from-3,#from-4,#from-5")
         .datepicker({
             defaultDate: "+1w",

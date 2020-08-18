@@ -9,7 +9,7 @@
 					<div class="col-md-6">
 					<div class="v2-ho-se-ri">
 						<h5>Tour du lịch và du lịch hàng đầu thế giới</h5>
-						<h1><b>Booking Now</b>!</h1>
+						<h1><b>ĐẶT NGAY </b>!</h1>
 						<p>Trải nghiệm chuyến du lịch thú vị và đặt phòng khách sạn, tận hưởng kỳ nghỉ, tìm kiếm các khách sạn giá rẻ.</p>
 						
 					</div>						

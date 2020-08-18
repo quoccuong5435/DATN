@@ -21,59 +21,31 @@
                                     <form>
                                         <div class="row">
                                             <div class="input-field col s6">
-                                                <input id="first_name" type="text" value="Marsha" class="validate">
+                                                <input id="first_name" type="text" value="Huy" class="validate">
                                                 <label for="first_name">Tên</label>
                                             </div>
                                             <div class="input-field col s6">
-                                                <input id="last_name" type="text" value="Hogen" class="validate">
-                                                <label for="last_name">Họ</label>
+                                                <input id="last_name" type="text" value="henrylu489" class="validate">
+                                                <label for="last_name">Username</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s6">
-                                                <input id="phone" type="text" value="+01 1234 4654" class="validate">
-                                                <label for="phone">Điện thoại</label>
+                                                <input id="phone" type="text" value="947345421" class="validate">
+                                                <label for="email">Điện thoại</label>
                                             </div>
                                             <div class="input-field col s6">
-                                                <input id="cphone" type="text" value="+01 6541 32145" class="validate">
-                                                <label for="cphone">Di động</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="input-field col s6">
-                                                <input id="city" type="text" value="Illunois" class="validate">
-                                                <label for="city">Quận/Huyện</label>
-                                            </div>
-                                            <div class="input-field col s6">
-                                                <input id="country" type="text" value="United States" class="validate">
-                                                <label for="country">Tỉnh/Thành phố</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="input-field col s6">
-                                                <input id="password" type="password" value="aksdjfhasdf" class="validate">
-                                                <label for="password">Mật khẩu</label>
-                                            </div>
-                                            <div class="input-field col s6">
-                                                <input id="password1" type="password" value="asdfaefrerfg" class="validate">
-                                                <label for="password1">Xác nhận mật khẩu</label>
+                                                <input id="cphone" type="text" value="quochuylu98@gmail.com" class="validate">
+                                                <label for="cphone">Email</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <input id="email" type="email" value="marshahi@mail.com" class="validate">
-                                                <label for="email">Email</label>
-                                            </div>
-                                            <div class="input-field col s12">
-                                                <input id="email1" type="email" value="marshahi@mail.com" class="validate">
-                                                <label for="email1">Email thay thế</label>
+                                                <input id="add" type="text" value="1017/25 Trần Thị Liền" class="validate">
+                                                <label for="email">Địa chỉ</label>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="input-field col s12">
-                                                <input type="submit" class="waves-effect waves-light btn-large">
-                                            </div>
-                                        </div>
+                                    
                                     </form>
                                 </div>
                             </div>
