@@ -103,6 +103,7 @@ class Hotel_Controller extends Controller
     {
         $search = $request->search;
         $checkin= $request->checkin;
+        
         $check_in=date('Y-m-d',strtotime($checkin));
         $checkout= $request->checkout;
         $check_out =date('Y-m-d',strtotime($checkout));
@@ -170,7 +171,7 @@ class Hotel_Controller extends Controller
                     ->orWhere('address_hotel', 'like', '%'.$search.'%')
                     ->get();
 
-        return view('user-pages.hotel_list_search',compact('list_hotel','search','stt'));
+        return view('admin.hotels.hotel-search',compact('list_hotel','search','stt'));
    }
    
   

@@ -102,7 +102,7 @@
 											<form action="{{ route('hotel_booking',($dsroom->hotel_id)) }}" method="GET" accept-charset="utf-8">
 												@csrf
 												<input type="" name="room_id" value="{{$dsroom->id}}" hidden="">
-												 <a href="" ><button class="hot-page2-alp-quot-btn spec-btn-text" type="">Đặt ngay</button></a>
+												 <a href="" target="blank" ><button  class="hot-page2-alp-quot-btn spec-btn-text" type="">Đặt ngay</button></a>
 											</form>
 											 </div>
 									</div>
