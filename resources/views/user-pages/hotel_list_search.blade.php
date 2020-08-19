@@ -227,6 +227,7 @@
 					<div class="col-md-9 hot-page2-alp-con-right">
 						<div class="hot-page2-alp-con-right-1">
 							<!--LISTINGS-->
+							
 							<div class="row">
 								<!--LISTINGS START-->
 								@foreach($list_hotel as $dshotel)
@@ -266,7 +267,7 @@
 								
 								
 								@endforeach
-															
+									{{$list_hotel->links()}}						
 							</div>
 						</div>
 					</div>

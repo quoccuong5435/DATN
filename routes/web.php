@@ -62,7 +62,7 @@ Route::get('/hotels-list/{id}',[
 	'as'=>'hotel_list',
 	'uses'=>'Hotel_Controller@list_hotel_place'
 ]);
-Route::post('/hotels-find/',[
+Route::get('/hotels-find/',[
     'as'=>'hotellist_search',
     'uses'=>'Hotel_Controller@search_place'
 ]);

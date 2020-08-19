@@ -9,6 +9,7 @@ use App\Room;
 use App\Place;
 use App\User;
 use Auth;
+use Carbon\Carbon;
 use App\Booking;
 use App\Service_room;
 use Illuminate\Http\Request;
@@ -21,7 +22,7 @@ class Hotel_Controller extends Controller
     public function home()
     {
         $list_hotel=Hotel::all();
-        $place=Place::paginate(6);
+        $place=Place::paginate(3);
         return view('user-pages.home',compact('list_hotel','place'));
     }
     public function index()
@@ -95,8 +96,24 @@ class Hotel_Controller extends Controller
     {
         
         $place=Place::find($id);
-        $list_hotel=DB::table('hotel')->where('place_id','=',$id)->get();
-        return view('user-pages.hotels-list',compact('list_hotel','place'));
+        
+                $search = $place->name_place;
+        
+        
+        $room=1;
+        $people=1;
+        $now =Carbon::now('Asia/Ho_Chi_Minh');
+        $tomorrow = Carbon::tomorrow('Asia/Ho_Chi_Minh');
+        $check_in = $now->toDateString();
+        $check_out = $tomorrow->toDateString();
+        $list_hotel = DB::table('hotel')
+                    ->join('room', 'hotel.id', '=', 'room.hotel_id')
+                    ->where('hotel.place_id', '=',$id)
+                    ->where('room.empty_room', '>=', $room)
+                    ->where('room.num_of_people', '>=', $people)
+                    ->groupBy('hotel.id')
+        ->paginate(6);
+        return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room'));
     
     }
     public function search_place(Request $request)
@@ -117,10 +134,10 @@ class Hotel_Controller extends Controller
                     ->where('room.empty_room', '>=', $room)
                     ->where('room.num_of_people', '>=', $people)
                     ->groupBy('hotel.id')
-        ->get();
+        ->paginate(6);
                     
                      
-                    return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room','s'));
+                    return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room'));
 
     }
 

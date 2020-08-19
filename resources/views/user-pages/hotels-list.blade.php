@@ -243,9 +243,10 @@
 												<a href="{{ route('chitiet',($dshotel->id)) }}" class="hot-page2-alp-quot-btn">Xem Phòng</a>
 											 </div>
 									</div>
+									
 								</div>
 								@endforeach
-															
+								{{$list_hotel->links()}}							
 							</div>
 						</div>
 					</div>

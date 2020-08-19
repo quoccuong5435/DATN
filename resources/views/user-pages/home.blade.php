@@ -17,7 +17,7 @@
 					<div class="col-md-6">
 					<div class="">
 
-						<form class=" v2-search-form" method="post" action="{{route('hotellist_search')}}">
+						<form class=" v2-search-form" method="get" action="{{route('hotellist_search')}}">
 							
 							@csrf
 							<div class="row">
@@ -109,7 +109,7 @@
 					</div>
 				</div>
 					@endforeach
-					
+					{{$place->links()}}
 					<div>
 						
 						
