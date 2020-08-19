@@ -27,8 +27,8 @@ class Booking_Controller extends Controller
      public function index($id , Request $request)
     {
         $list_hotels=Hotel::find($id);
-        $check_in = $request->session()->get('checkin');
-        $check_out = $request->session()->get('checkout');
+        $check_in = $request->check_in;
+        $check_out = $request->check_out;
         $room_id = $request->room_id;
         $list_room=DB::table('room')
         ->where('id','=',$room_id)

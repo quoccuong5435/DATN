@@ -52,8 +52,8 @@ class Hotel_Controller extends Controller
 
         $list_hotels=Hotel::find($id);
         $place=Place::all();
-        $FirstDate = $request->session()->get('checkin');
-        $SecDate = $request->session()->get('checkout');
+        $check_in = $request->check_in;
+        $check_out = $request->check_out;
         // $people =$request->people;
         // $room =$request->room;
         $list_hotel_detail=Hotel_info_detail::find($id);
@@ -63,21 +63,21 @@ class Hotel_Controller extends Controller
         foreach ($list_room as $Room) {
             $Id = $Room->id;
             $RoomsBooked = Booking::where('room_id', '=', $Id)
-                ->where('date_to', '>=', $FirstDate)
-                ->where('date_from', '<=', $SecDate)
+                ->where('date_to', '>=', $check_in)
+                ->where('date_from', '<=', $check_out)
 
-                ->orWhere(function ($query) use ($FirstDate, $Id) {
+                ->orWhere(function ($query) use ($check_in, $Id) {
                     $query->where('room_id', '=', $Id)
-                        ->where('date_to', '<=', $FirstDate)
+                        ->where('date_to', '<=', $check_in)
 
-                        ->where('date_from', '>=', $FirstDate);
+                        ->where('date_from', '>=', $check_in);
                 })
 
-                ->orWhere(function ($query2) use ($FirstDate, $SecDate, $Id) {
+                ->orWhere(function ($query2) use ($check_in, $check_out, $Id) {
                     $query2->where('room_id', '=', $Id)
-                        ->where('date_from', '>=', $FirstDate)
+                        ->where('date_from', '>=', $check_in)
 
-                        ->where('date_from', '<=', $SecDate);
+                        ->where('date_from', '<=', $check_out);
                 })->sum('num_of_rooms');
 
             $Roomsavailable = $Room->empty_room;
@@ -88,7 +88,7 @@ class Hotel_Controller extends Controller
         $list_img=DB::table('hotel_image')->where('hotel_id','=',$id)->get();
         $service_room=DB::table('service_room')->where('hotel_id','=',$id)->get();
  
-        return view('user-pages.details_hotel',compact('list_hotels','list_room','place','list_img','list_hotel_detail','service_room','RoomsBooked'));
+        return view('user-pages.details_hotel',compact('list_hotels','list_room','place','check_out','check_in','list_img','list_hotel_detail','service_room'));
     
     }
 
