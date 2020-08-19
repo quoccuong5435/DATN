@@ -103,10 +103,10 @@ class Hotel_Controller extends Controller
     {
         $search = $request->search;
         $checkin= $request->checkin;
-        
-        $check_in=date('Y-m-d',strtotime($checkin));
+        $s=strtotime($checkin);
+        $check_in=date('d-m-Y',strtotime($checkin));
         $checkout= $request->checkout;
-        $check_out =date('Y-m-d',strtotime($checkout));
+        $check_out =date('d-m-Y',strtotime($checkout));
         $people =$request->people;
         $room =$request->room;
         $request->session()->put('checkin', $check_in);
@@ -120,7 +120,7 @@ class Hotel_Controller extends Controller
         ->get();
                     
                      
-                    return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room'));
+                    return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room','s'));
 
     }
 
@@ -171,7 +171,7 @@ class Hotel_Controller extends Controller
                     ->orWhere('address_hotel', 'like', '%'.$search.'%')
                     ->get();
 
-        return view('admin.hotels.hotel-search',compact('list_hotel','search','stt'));
+        return view('admin.hotels.hotel_search',compact('list_hotel','search','stt'));
    }
    
   

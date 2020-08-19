@@ -61,8 +61,12 @@ class Booking_Controller extends Controller
         $booking->hotel_id = $request->hotel_id;
         $booking->user_id = $request->user_id;
         $booking->num_of_rooms = $request->sl;
-        $booking->date_from =  $request->date_from;
-        $booking->date_to =$request->date_to;
+        $datefrom=$request->date_from;
+         $dateto=$request->date_to;
+        $date_from =date('Y-m-d',strtotime($datefrom));
+        $booking->date_from =  $date_from;
+        $date_to =date('Y-m-d',strtotime($dateto));
+        $booking->date_to =$date_to;
         $booking->booking_status_id = 1;
         $booking->rate = 1;
         $booking->status = 1;
