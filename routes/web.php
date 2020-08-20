@@ -83,9 +83,25 @@ Route::get('/hotels-list/{id}',[
 	'as'=>'hotel_list',
 	'uses'=>'Hotel_Controller@list_hotel_place'
 ]);
+Route::get('/hotels_list/{id}',[
+    'as'=>'hotel_lists',
+    'uses'=>'Hotel_Controller@list_hotel_rate'
+]);
+Route::get('/hotel_lists/{id}',[
+    'as'=>'hotels_lists',
+    'uses'=>'Hotel_Controller@list_hotel_score'
+]);
 Route::get('/hotels-find/',[
     'as'=>'hotellist_search',
     'uses'=>'Hotel_Controller@search_place'
+]);
+Route::get('/hotel-find/',[
+    'as'=>'hotellists_search',
+    'uses'=>'Hotel_Controller@search_rate'
+]);
+Route::get('/hotel_find/',[
+    'as'=>'hotellist-search',
+    'uses'=>'Hotel_Controller@search_score'
 ]);
 
 Route::post('/detail/{id}',[
@@ -166,16 +182,30 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function() {
     'as'=>'user',
     'uses'=>'User_Controller@show'
 ]);
+//    Route::post('/user/{id}',[
+//     'as'=>'ban',
+//     'uses'=>'User_Controller@ban_hotel'
+// ]);
+
 
 
 
 Route::get('/forgot', function(){
     return view('admin.forgot-pass');
 });
-Route::get('/profile', function(){
-    return view('admin.admin-profile');
-})->name('ad-profile');
 
+Route::get('/profile',[
+    'as'=>'ad-profile',
+    'uses'=>'User_Controller@profile'
+]);
+Route::get('/partner_profile',[
+    'as'=>'profile',
+    'uses'=>'User_Controller@profiles'
+]);
+Route::post('/profile',[
+    'as'=>'ads-profile',
+    'uses'=>'User_Controller@profile_send'
+]);
 
 Route::get('/users/add', function(){
     return view('admin.users.user-add');
@@ -202,6 +232,7 @@ Route::get('/hotel',[
     'as'=>'hotel',
     'uses'=>'Hotel_Controller@admin_hotel'
 ]);
+
 Route::get('/hotel/accept',[
     'as'=>'hotel_acp',
     'uses'=>'Hotel_Controller@act_hotel'
@@ -245,6 +276,11 @@ Route::post('/room-types/list_room',
 [
     'as'=>'add_rooms',
     'uses'=>'Room_Controller@add_room'
+]);
+Route::get('/list_rooms/{id}',
+[
+    'as'=>'info_room',
+    'uses'=>'Room_Controller@info_room'
 ]);
 Route::post('/room-types/add',
 [
@@ -291,10 +327,7 @@ Route::post('/room-types/{id}', [
     'uses'=>'Room_Controller@changeStatus'
 ]);
 });
-Route::get('admin/login', [
-    'as'=>'get_login',
-    'uses'=>'User_Controller@get_login'
-]);
+
 
 Route::post('admin/login',[
     'as'=>'signin-admin',
@@ -316,7 +349,10 @@ Route::get('/contact', function(){
 
 
 
-
+Route::get('admin/login', [
+    'as'=>'get_login',
+    'uses'=>'User_Controller@get_login'
+]);
 
 
 

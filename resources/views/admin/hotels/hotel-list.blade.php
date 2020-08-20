@@ -96,9 +96,7 @@
                                                         <a href="{{ route('edit_hotel',($dshotel->id)) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     </td>
                                                     @if(Auth::User()->role_user==0)
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>
-                                                    </td>
+                                                    
                                                     @endif
                                                 </tr>
                                                

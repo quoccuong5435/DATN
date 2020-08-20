@@ -100,7 +100,7 @@
                                                     <th>Số lượng phòng</th>
                                                     <th>Xem</th>
                                                     <th>Sửa</th>
-                                                    <th>Khóa</th>
+                                                    
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -133,14 +133,12 @@
                                                     <td>{{$dsroom->price_room}}</td>
                                                     <td>{{$dsroom->num_of_rooms}}</td>
                                                     <td>
-                                                        <a href="{{ route('info_hotel',($list_hotel->id)) }}" ><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                        <a href="{{ route('info_room',($dsroom->id)) }}" ><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     </td>
                                                     <td>
                                                         <a href="{{ route('edit_hotel',($list_hotel->id)) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>
-                                                    </td>
+                                                   
                                                 </tr>
                                            @endforeach
                                             </tbody>

@@ -24,139 +24,76 @@
 					
 						<!--PART 4 : LEFT LISTINGS-->
 						<div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-							<h4><i class="fa fa-map-marker" aria-hidden="true"></i> Các bộ lọc phổ biến</h4>
-							<div class="hot-page2-alp-l-com1 hot-page2-alp-p4">
-								<form>
-									<ul>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp41" class="styled" type="checkbox" checked="">
-												<label for="chp41"> Nashville, USA </label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp42" class="styled" type="checkbox">
-												<label for="chp42"> Hull, England </label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp43" class="styled" type="checkbox">
-												<label for="chp43"> Seoul, South Korea </label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp44" class="styled" type="checkbox">
-												<label for="chp44"> Ljubljana, Slovenia </label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp45" class="styled" type="checkbox">
-												<label for="chp45"> Wroclaw, Poland </label>
-											</div>
-										</li>
-									</ul>
-								</form> <a href="javascript:void(0);" class="hot-page2-alp-p4-btn-s">xem thêm</a> </div>
+							<h4><i class="fa fa-star-o" aria-hidden="true"></i> Xếp hạng điểm đánh giá</h4>
+							
+								
+											
+												
+												<form action="{{route('hotels_lists',($id))}}" method="get" accept-charset="utf-8">
+													@csrf
+													<input type="" name="search" hidden="" value="{{$search}}">
+													<input type="" name="check_in" hidden  value="{{$check_in}}">
+													<input type="" name="check-out" hidden="" value="{{$check_out}}">
+													<input type="" name="room" hidden="" value="{{$room}}">
+													<input type="" name="people" hidden="" value="{{$people}}">
+													<br>
+													<br>
+													<span>Nhập min</span>
+													<input type="number" style="width: 100%" min="1" max="10" step="0.1" name="min" value="">
+													<br>
+													<br>
+													<span>Nhập max</span>
+													<input type="number" style="width: 100%" min="1" max="10" step="0.1" name="max" value="">
+													<br>
+													<br>
+													<br>
+													<a href="" style="padding-left: 65px" title=""><button class="btn-light">Lọc điều kiện</button></a>
+												</form>
+												
+												
+												
+												
+											<br>
+													<br>
+									
 						</div>
 						<!--END PART 4 : LEFT LISTINGS-->
-						<!--PART 5 : LEFT LISTINGS-->
-						<div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-							<h4><i class="fa fa-dollar" aria-hidden="true"></i> Giá phòng</h4>
-							<div class="hot-page2-alp-l-com1 hot-page2-alp-p5">
-								<form>
-									<ul>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp51" class="styled" type="checkbox" checked="">
-												<label for="chp51"> $5000 - Above </label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp52" class="styled" type="checkbox">
-												<label for="chp52"> $4000 - $5000 </label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp53" class="styled" type="checkbox">
-												<label for="chp53"> $3000 - $4000 </label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp54" class="styled" type="checkbox">
-												<label for="chp54"> $2000 - $3000 </label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp55" class="styled" type="checkbox">
-												<label for="chp55"> $2000 - Below </label>
-											</div>
-										</li>
-									</ul>
-								</form> <a href="javascript:void(0);" class="hot-page2-alp-p5-btn-s">xem thêm</a> </div>
-						</div>
-						<!--END PART 5 : LEFT LISTINGS-->
+						
 						<!--PART 6 : LEFT LISTINGS-->
 						<div class="hot-page2-alp-l3 hot-page2-alp-l-com">
 							<h4><i class="fa fa-star-o" aria-hidden="true"></i> Xếp hạng sao</h4>
 							
 								
 											
-												<a href="" style="margin: 10px;"><button>Khách sạn 1</button></a>
-												<a href="" style="margin: 10px;"><button>Khách sạn 1</button></a>
-												<a href="" style="margin: 10px;"><button>Khách sạn 1</button></a>
-												<a href="" style="margin: 10px;"><button>Khách sạn 1</button></a>
-												<a href="" style="margin: 10px;"><button>Khách sạn 1</button></a>
-												<a href="" style="margin: 10px;"><button>Khách sạn 1</button></a>
+												
+												<form action="{{route('hotel_lists',($id))}}" method="get" accept-charset="utf-8">
+													@csrf
+													<input type="" name="search" hidden="" value="{{$search}}">
+													<input type="" name="check_in" hidden  value="{{$check_in}}">
+													<input type="" name="check-out" hidden="" value="{{$check_out}}">
+													<input type="" name="room" hidden="" value="{{$room}}">
+													<input type="" name="people" hidden="" value="{{$people}}">
+													<select name="rate_hotel" >
+														<option value="1">Khách sạn 1 sao</option>
+														<option value="2">Khách sạn 2 sao</option>
+														<option value="3">Khách sạn 3 sao</option>
+														<option value="4">Khách sạn 4 sao</option>
+														<option value="5">Khách sạn 5 sao</option>
+														
+													</select>
+													<br>
+													<a href="" style="padding-left: 65px" title=""><button class="btn-light">Lọc điều kiện</button></a>
+												</form>
+												
+												
+												
+												
 											
 									
 						</div>
 						<!--END PART 5 : LEFT LISTINGS-->
 						<!--PART 6 : LEFT LISTINGS-->
-						<div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-							<h4><i class="fa fa-heart-o" aria-hidden="true"></i> Tiện ích </h4>
-							<div class="hot-page2-alp-l-com1 hot-page2-alp-p5">
-								<form>
-									<ul>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp71" class="styled" type="checkbox" checked="">
-												<label for="chp71"> Hồ bơi </label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp72" class="styled" type="checkbox">
-												<label for="chp72"> Wi-Fi </label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp73" class="styled" type="checkbox">
-												<label for="chp73"> Khu vực bếp</label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp74" class="styled" type="checkbox">
-												<label for="chp74"> Phòng GYM </label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp75" class="styled" type="checkbox">
-												<label for="chp75"> Bể bơi </label>
-											</div>
-										</li>
-									</ul>
-								</form> <a href="javascript:void(0);" class="hot-page2-alp-p5-btn-s">xem thêm</a> </div>
-						</div>
+					
 						<!--END PART 7 : LEFT LISTINGS-->
 					</div>
 					<!--END LEFT LISTINGS-->
@@ -170,9 +107,9 @@
 								<!--LISTINGS START-->
 								@foreach($list_hotel as $dshotel)
 									
-									
 								<div class="hot-page2-alp-r-list">
 									<div class="col-md-3 hot-page2-alp-r-list-re-sp">
+										
 										<a href="javascript:void(0);">
 											<div class="hotel-list-score">{{$dshotel->score_hotel}}</div>
 											<div class="hot-page2-hli-1"> <img src="{{asset('images/avatar_hotel')}}/{{$dshotel->avatar_hotel}}" alt=""> </div>

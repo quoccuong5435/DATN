@@ -155,4 +155,13 @@ class Room_Controller extends Controller
               ->update(['status' => 0]);
         return redirect()->route('roomtypes')->with('thongbao',"Đã khóa loại phòng thành công");
     }
+    public function info_room($id)
+    {
+        $lroom= DB::table('room')
+        ->join('room_type','room_type.id','=','room.room_type_id')
+        ->where('room.id','=',$id)
+        ->select('room.*','room_type')
+        ->get();
+        return view('admin.room-types.room_edit',compact('lroom'));
+    }
 }

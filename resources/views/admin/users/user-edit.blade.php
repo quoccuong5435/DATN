@@ -53,24 +53,13 @@
                                             </div>
                                         </div>
                                        
-                                        <div class="row">
-                                            <div class="input-field col s12">
-                                                <input name="email_user" type="email" hidden="" value="{{$list_user->email_user}}" class="validate">
-                                               
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="row">
-                                            <div class="input-field col s12">
-                                                <input name="role_user" type="" hidden="" value="{{$list_user->role_user}}" class="validate">
-                                               
-                                         </div>
+                                       
 
                                           <div class="input-field col s6">
                                             <select>
                                                 <option value="" disabled selected>Chọn</option>
-                                                <option value="1">Nam</option>
-                                                <option value="2">Nữ</option>
+                                                <option @if($list_user->gender_user=='Nam') selected="" @endif value="1">Nam</option>
+                                                <option @if($list_user->gender_user=='Nữ') selected="" @endif value="2">Nữ</option>
                                             </select>
                                             <label>Giới tính</label>
                                         </div>
@@ -80,13 +69,7 @@
                                                 <label for="country">Giới tính</label>
                                             </div>
                                         </div> -->
-                                        <div class="row">
-                                            <div class="input-field col s6">
-                                                <input id="password" type="password" hidden="" value="{{$list_user->password}}" class="validate">
-                                                
-                                            </div>
-                                            
-                                        </div>
+                                        
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">

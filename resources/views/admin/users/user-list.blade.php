@@ -31,8 +31,8 @@
                                                     <th>Địa chỉ</th>
                                                     <th>Role</th>
                                                      @if(Auth::User()->role_user==0)
-                                                    <th>Xem</th>
-                                                    <th>Sửa</th>
+                                                    
+                                                    
                                                    
                                                     <th>Hàng động</th>
                                                     @endif
@@ -58,17 +58,14 @@
                                                     <td>User</td>
                                                     @endif
                                                     @if(Auth::User()->role_user==0)
-                                                    <td>
-                                                        <a href="{{ route('view-user') }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="{{ route('edit-user',($info->id)) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
                                                     
                                                     
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-lock" id="2" aria-hidden="true"></i></a>
+                                                    <form action="{{route('ban',($info->id))}}" method="post" accept-charset="utf-8">
+                                                        @csrf
+                                                        <td><a href=""><button class="btn-warning fa fa-lock"></button></a>
                                                     </td>
+                                                    </form>
+                                                  
                                                    
                                                     @endif
                                                 </tr>

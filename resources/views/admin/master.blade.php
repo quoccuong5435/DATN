@@ -62,20 +62,18 @@
             <!--== MY ACCCOUNT ==-->
             <div class="col-md-2 col-sm-3 col-xs-6">
                 <!-- Dropdown Trigger -->
-                <a class='waves-effect dropdown-button top-user-pro' href='#' data-activates='top-menu'><img src="{{ asset('source/admin/images/user/6.png') }} " alt="" />Tài khoản của tôi <i class="fa fa-angle-down" aria-hidden="true"></i>
+                <a class='waves-effect dropdown-button top-user-pro' href='#' data-activates='top-menu'><img src="{{ asset('images/user') }}/{{Auth::User()->avatar_user}} " alt="" />Tài khoản của tôi <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </a>
 
                 <!-- Dropdown Structure -->
                 <ul id='top-menu' class='dropdown-content top-menu-sty'>
-                    <li><a href="{{route('ad-profile')}}" class="waves-effect"><i class="fa fa-cogs" aria-hidden="true"></i>Cài đặt</a>
-                    </li>
+                    
 
                     <li><a href="{{route('hotel')}}" class="waves-effect"><i class="fa fa-building-o" aria-hidden="true"></i> Quản lý khách sạn</a>
                     </li>
-                    <li><a href="{{route('add-user')}}" class="waves-effect"><i class="fa fa-user-plus" aria-hidden="true"></i> Thêm người dùng</a>
-                    </li>
+                   
                     <li class="divider"></li>
-                    <li><a href="#" class="ho-dr-con-last waves-effect"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng xuất</a>
+                    <li><a href="{{route('dangxuat')}}" class="ho-dr-con-last waves-effect"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng xuất</a>
                     </li>
                 </ul>
             </div>
@@ -88,7 +86,7 @@
                 <!--== USER INFO ==-->
                 <div class="sb2-12">
                     <ul>
-                        <li><img src="{{ asset(Auth::User()->avatar_user) }}" alt="">
+                        <li><img src="{{ asset('images/user') }}/{{Auth::User()->avatar_user}}" alt="">
                         </li>
                         <li>
                             <h5>{{Auth::User()->fullname_user}}<span> Loại tài khoản: 
@@ -114,11 +112,16 @@
                             @endif
                             <div class="collapsible-body left-sub-menu">
                                 <ul>
+                                    
+                                   
+                                    
                                     @if(Auth::User()->role_user==0)
-                                    <li><a href="{{route('user')}}">Danh sách người dùng</a>
+                                    <li><a href="{{route('user')}}">Xem tài khoản</a>
                                     </li>
                                     @else
-                                    <li><a href="{{route('user')}}">Xem tài khoản</a>
+                                     <li><a href="{{route('profile')}}">Xem tài khoản</a>
+                                    </li>
+                                    <li><a href="{{route('ad-profile')}}">Cập nhật tài khoản</a>
                                     </li>
                                     @endif
                                 </ul>
@@ -136,11 +139,12 @@
                                     </li>
                                     @else
                                     <li ><a href="{{route('hotel_acp')}}">Duyệt khách sạn</a></li>
-                                    @endif
+                                    
                                     <li><a href="{{route('roomtypes')}}">Danh sách loại phòng</a>
                                     </li>
                                     <li><a href="{{route('add-roomtype')}}">Thêm loại phòng</a>
                                     </li>
+                                    @endif
                                    {{--  @if(Auth::User()->role_user==0)
                                     <li><a href="{{route('add-roomtype')}}">Test</a>
                                     </li>
