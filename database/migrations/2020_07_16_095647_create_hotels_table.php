@@ -15,6 +15,7 @@ class CreateHotelsTable extends Migration
     {
         Schema::create('hotel', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('user_id');
             $table->string('name_hotel');
             $table->string('avatar_hotel');
             $table->string('phone_hotel');

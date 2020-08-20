@@ -49,7 +49,7 @@ class Room_Controller extends Controller
         $room_type->room_type_description = $request->room_type_description;
         $room_type->status = 1;
         $room_type->save();
-        return redirect()->route('roomtypes');
+        return redirect()->route('roomtypes')->with('thongbao',"Thêm loại phòng thành công");
     }
 
     /**
@@ -82,6 +82,8 @@ class Room_Controller extends Controller
         $room->hotel_id = $request->hotel_id;
         $room->room_type_id = $request->room_type_id;
         $room->room_status_id =1;
+        $room->empty_room =$request->num_of_rooms;
+        $room->room_booked =0;
         $room->num_of_rooms = $request->num_of_rooms;
         $room->num_of_people = $request->num_of_people;
         $room->description_room = $request->description_room;
@@ -106,7 +108,7 @@ class Room_Controller extends Controller
         $room->avatar_room = $getImages;
         $room->status=1;
         $room->save();
-        return  redirect()->route('hotel');
+        return  redirect()->route('hotel')->with('thongbao',"Thêm phòng thành công");
 
     }
 
@@ -140,7 +142,7 @@ class Room_Controller extends Controller
         $room_type->room_type_description = $request->room_type_description;
         $room_type->status = 1;
         $room_type->save();
-        return redirect()->route('roomtypes');
+        return redirect()->route('roomtypes')->with('thongbao',"Update loại phòng thành công");
     }
      public function changeStatus(Request $request, $id)
     {
@@ -151,6 +153,6 @@ class Room_Controller extends Controller
         $room = DB::table('room')
               ->where('room_type_id', $id)
               ->update(['status' => 0]);
-        return redirect()->route('roomtypes');
+        return redirect()->route('roomtypes')->with('thongbao',"Đã khóa loại phòng thành công");
     }
 }

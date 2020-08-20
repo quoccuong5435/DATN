@@ -16,8 +16,8 @@
                         <div class="col-md-12">
                             <div class="box-inn-sp">
                                 <div class="inn-title">
-                                    <div><h4>Danh sách khách sạn</h4></div>
-                                    <a href="{{route('hotel-add')}}" title=""><button class="btn-light">Thêm khách sạn</button></a>
+                                    <div><h4>Danh sách khách sạn cần duyệt</h4></div>
+                                    <a href="{{route('hotel')}}" title=""><button class="btn-light">Trở vế</button></a>
                                     <div>
                                         <form action="{{route('hotel-search')}}" method="POST" accept-charset="utf-8">
                                                 <div class="form-group">
@@ -45,9 +45,8 @@
                                                     <th>Di động</th>
                                                     <th>Email</th>
                                                     <th>Địa chỉ</th>
-                                                    <th>Xem</th>
-                                                    <th>Sửa</th>
-                                                    <th>Khóa</th>
+                                                  
+                                                    <th>Duyệt</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -81,12 +80,12 @@
                                                     <td>
                                                         <a href="{{ route('info_hotel',($dshotel->id)) }}"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     </td>
-                                                    <td>
-                                                        <a href="{{ route('edit_hotel',($dshotel->id)) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>
-                                                    </td>
+                                                   
+                                                    <form action="{{route('duyet_phong',($dshotel->id))}}" method="post" accept-charset="utf-8">
+                                        @csrf
+                                        <td><a href=""><button class="btn-success fa fa-unlock"></button></a>
+                                    </td>
+                                    </form>
                                                 {{-- </tr> --}}
                                             @endforeach
                                             </tbody>

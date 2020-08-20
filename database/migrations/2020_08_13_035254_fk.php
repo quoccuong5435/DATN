@@ -24,6 +24,7 @@ class Fk extends Migration
           Schema::table('booking', function (Blueprint $table) {
             $table->foreign('hotel_id')->references('id')->on('hotel');
             $table->foreign('user_id')->references('id')->on('user');
+            $table->foreign('room_id')->references('id')->on('room');
             $table->foreign('booking_status_id')->references('id')->on('booking_status');
         });
            Schema::table('service_room', function (Blueprint $table) {
@@ -33,6 +34,7 @@ class Fk extends Migration
             $table->foreign('hotel_id')->references('id')->on('hotel');
         });
         Schema::table('hotel', function (Blueprint $table) {
+            $table->foreign('user_id')->references('id')->on('user');
             $table->foreign('place_id')->references('id')->on('places');
         });
             Schema::table('hotel_info_detail', function (Blueprint $table) {

@@ -132,10 +132,59 @@ class Booking_Controller extends Controller
     }
  public function cancel_room($id,Request $request)
     {
+        $room=DB::table('room')
+        ->where('id','=',$request->room_id)
+        ->get();
+        foreach ($room as $rooms) {
+            $room_empty = ($rooms->empty_room) + ($request->num_of_rooms);
+        $room_booked = ($rooms->room_booked) - ($request->num_of_rooms);
+        }
+        
+         $rate_booking= DB::table('booking')
+         ->where('booking.id','=',$id)
+         ->where('room.id','=',$request->room_id)
+         ->join('room','room_id' ,'=','room.id')
+         ->update(['booking.status'=>0,'booking.booking_status_id'=>3,'room.empty_room'=>$room_empty,'room.room_booked'=>$room_booked]);
+
+         return redirect()->back()->with('thongbao',"Hủy thành công ");
+    }
+     public function admin_booking()
+    {
+        $list_booking= DB::table('booking')
+        ->join('hotel','hotel_id' ,'=','hotel.id')
+        ->join('user','booking.user_id' ,'=','user.id')
+        ->select('booking.*', 'hotel.name_hotel','fullname_user','phone_user','email_user','address_user')
+        ->paginate(10);
+        return view('admin.hotel-booking.hotel-booking-list',compact('list_booking'));
+    }
+     public function partner_booking()
+    {
+        $list_booking= DB::table('booking')
+        ->join('hotel','hotel_id' ,'=','hotel.id')
+        ->join('user','booking.user_id' ,'=','user.id')
+        ->where('hotel.user_id','=',Auth::User()->id)
+        ->where('booking_status_id','=',2)
+        ->select('booking.*', 'hotel.name_hotel','fullname_user','phone_user','email_user','address_user','hotel.user_id')
+        ->paginate(10);
+        return view('admin.hotel-booking.hotel-partner-booking',compact('list_booking'));
+    }
+     public function partner_booking_ok()
+    {
+        $list_booking= DB::table('booking')
+        ->join('hotel','hotel_id' ,'=','hotel.id')
+        ->join('user','booking.user_id' ,'=','user.id')
+        ->where('hotel.user_id','=',Auth::User()->id)
+        ->where('booking_status_id','=',1)
+        ->select('booking.*', 'hotel.name_hotel','fullname_user','phone_user','email_user','address_user','hotel.user_id')
+        ->paginate(10);
+        return view('admin.hotel-booking.hotel-partner-ok',compact('list_booking'));
+    }
+     public function accept_room($id,Request $request)
+    {
          $rate_booking= DB::table('booking')
          ->where('id','=',$id)
-         ->update(['status'=>0]);
-         return redirect()->back()->with('thongbao',"Hủy thành công ");
+         ->update(['status'=>0,'booking_status_id'=>2]);
+         return redirect()->back()->with('thongbao',"Thanh toán thành công ");
     }
     /**
      * Update the specified resource in storage.

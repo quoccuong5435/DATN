@@ -52,7 +52,6 @@
 									<td>Phòng</td>
 									<td>:</td>
 									@foreach($list_room as $list)
-									<input type="" name="price_room"hidden value="{{$list->price_room}}">
 									<input type="" name="room_id"hidden value="{{$list->id}}">
 									<input type="" name="name_room"hidden value="{{$list->room_name}}">
 									<td>{{$list->room_name}}</td>
@@ -61,13 +60,13 @@
 								<tr>
 									<td>Ngày nhận phòng</td>
 									<td>:</td>
-									<input type="" name="date_to" hidden="" value="{{$check_in}}">
+									<input type="" name="date_to" hidden="" value="{{date('d-m-Y',strtotime($check_in))}}">
 									<td>{{$check_in}}</td>
 								</tr>
 								<tr>
 									<td>Ngày trả phòng</td>
 									<td>:</td>
-									<input type="" name="date_from" hidden="" value="{{$check_out}}">
+									<input type="" name="date_from" hidden="" value="{{date('d-m-Y',strtotime($check_out))}}">
 									<td>{{$check_out}}</td>
 								</tr>
 								<tr>

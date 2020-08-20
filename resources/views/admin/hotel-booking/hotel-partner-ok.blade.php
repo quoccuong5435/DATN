@@ -15,12 +15,20 @@
                         <div class="col-md-12">
                             <div class="box-inn-sp">
                                 <div class="inn-title">
-                                    <h4>Danh sách đặt phòng khách sạn</h4>
-                                    
+                                    <h4>Danh sách đặt phòng khách sạn chưa duyệt</h4>
+                                   <a href="{{route('partner-booking')}}" title="">Trở về</a>
 
                                 </div>
                                 <div class="tab-inn">
                                     <div class="table-responsive table-desi">
+                                        @if(Session::has('thongbao'))
+                            <div class="alert alert-success">
+                                {{Session::get('thongbao')}}
+                            </div>
+                                   
+
+                            
+                        @endif
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
@@ -50,18 +58,22 @@
                                                     <td>{{$list->phone_user}}</td>
                                                     <td>{{$list->email_user}}</td>
                                                    <td>{{$list->address_user}}</td>
-                                                   @if($list->booking_status_id==1)
+                                                  @if($list->booking_status_id==1)
                                     <td>
                                         Đang xử lí
                                     </td>
-                                    
-                                 
+                                    <form action="{{route('partner-booking-send',($list->id))}}" method="post" accept-charset="utf-8">
+                                        @csrf
+                                        <td><a href=""><button class="btn-success ">Khách thanh toán</button></a>
+                                    </td>
+                                    </form>
                                     
                                     @elseif($list->booking_status_id==2)
                                     <td>
                                         Đã thanh toán 
                                     </td>
-                                    
+                                    <td>
+                                    </td>
                                     @else
                                     <td>
                                         Đã hủy phòng

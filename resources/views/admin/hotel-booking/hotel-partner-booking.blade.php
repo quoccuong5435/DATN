@@ -15,8 +15,8 @@
                         <div class="col-md-12">
                             <div class="box-inn-sp">
                                 <div class="inn-title">
-                                    <h4>Danh sách đặt phòng khách sạn</h4>
-                                    
+                                    <h4>Danh sách đặt phòng khách sạn đã thanh toán</h4>
+                                    <a href="{{route('partner-booking-acp')}}" title=""><button style="float: right;" type="" class="btn-secondary">Danh sách đặt phòng cần duyệt</button></a>
 
                                 </div>
                                 <div class="tab-inn">
@@ -50,12 +50,15 @@
                                                     <td>{{$list->phone_user}}</td>
                                                     <td>{{$list->email_user}}</td>
                                                    <td>{{$list->address_user}}</td>
-                                                   @if($list->booking_status_id==1)
+                                                  @if($list->booking_status_id==1)
                                     <td>
                                         Đang xử lí
                                     </td>
-                                    
-                                 
+                                    <form action="{{route('cancel-hotel',($list->id))}}" method="post" accept-charset="utf-8">
+                                        @csrf
+                                        <td><a href=""><button class="btn-warning "></button></a>
+                                    </td>
+                                    </form>
                                     
                                     @elseif($list->booking_status_id==2)
                                     <td>

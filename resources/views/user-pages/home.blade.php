@@ -51,7 +51,7 @@
 								
 									<div class="input-field col s6" required>
 									<select name="room">
-										<option value="" disabled selected>Số người</option>
+										<option value="" disabled selected>Số người tối đa</option>
 										@for($i=1;$i<=10;$i++)
 										<option value="{{$i}}">{{$i}}</option>
 										@endfor

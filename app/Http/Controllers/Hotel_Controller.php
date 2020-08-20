@@ -109,11 +109,12 @@ class Hotel_Controller extends Controller
         $check_out = $tomorrow->toDateString();
         $list_hotel = DB::table('hotel')
                     ->join('room', 'hotel.id', '=', 'room.hotel_id')
+                    ->select('hotel.*')
                     ->where('hotel.place_id', '=',$id)
                     ->where('room.empty_room', '>=', $room)
                     ->where('room.num_of_people', '>=', $people)
                     ->groupBy('hotel.id')
-        ->paginate(6);
+        ->paginate(5);
         return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room'));
     
     }
@@ -131,11 +132,12 @@ class Hotel_Controller extends Controller
         $request->session()->put('checkout', $check_out);
         $list_hotel = DB::table('hotel')
                     ->join('room', 'hotel.id', '=', 'room.hotel_id')
+                    ->select('hotel.*')
                     ->where('hotel.address_hotel', 'like', '%'.$search.'%')
                     ->where('room.empty_room', '>=', $room)
                     ->where('room.num_of_people', '>=', $people)
                     ->groupBy('hotel.id')
-        ->paginate(6);
+        ->paginate(5);
                     
                      
                     return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room'));
@@ -189,7 +191,7 @@ class Hotel_Controller extends Controller
                     ->orWhere('address_hotel', 'like', '%'.$search.'%')
                     ->get();
 
-        return view('admin.hotels.hotel_search',compact('list_hotel','search','stt'));
+        return view('admin.hotels.hotel-search',compact('list_hotel','search','stt'));
    }
    
   
@@ -225,7 +227,7 @@ class Hotel_Controller extends Controller
         $hotel->address_hotel =$request->address_hotel;
         $hotel->status = 0;
         $hotel->save();
-        return redirect()->route('hotel');
+        return redirect()->route('hotel')->with('thongbao',"Thêm phòng thành công chờ xét duyệt");
     }
 
    
@@ -294,8 +296,11 @@ class Hotel_Controller extends Controller
         return view('dashboard.hotel-booking',compact('list_booking'));
     }
    
-    public function destroy($id)
+    public function duyet_room($id,Request $request)
     {
-        //
+         $rate_booking= DB::table('hotel')
+         ->where('id','=',$id)
+         ->update(['status'=>1]);
+         return redirect()->back()->with('thongbao',"Duyệt thành công thành công ");
     }
 }

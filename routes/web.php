@@ -96,10 +96,10 @@ Route::get('/details/{id}',[
 	'as'=>'chitiet',
 	'uses'=>'Hotel_Controller@show'
 ]);
-// Route::post('admin/hotel/search',[
-//     'as'=>'place-search',
-//     'uses'=>'Hotel_Controller@search_place'
-// ]);
+Route::post('admin/hotel/search',[
+    'as'=>'place-search',
+    'uses'=>'Hotel_Controller@search'
+]);
 
 Route::get('/rooms-list',[
 	'as'=>'rlist',
@@ -206,6 +206,10 @@ Route::get('/hotel/accept',[
     'as'=>'hotel_acp',
     'uses'=>'Hotel_Controller@act_hotel'
 ]);
+Route::post('/hotel/accept/{id}',  [
+    'as'=>'duyet_phong',
+    'uses'=>'Hotel_Controller@duyet_room'
+]);
 Route::post('/hotel/search',[
     'as'=>'hotel-search',
     'uses'=>'Hotel_Controller@search'
@@ -266,10 +270,22 @@ Route::post('/room-types/edit/{id}', [
     'uses'=>'Room_Controller@edit_roomtype_send'
 ]);
 
-Route::get('/hotel-booking', function(){
-    return view('admin.hotel-booking.hotel-booking-list');
-})->name('hotel-booking');
-
+Route::get('/hotel-booking',  [
+    'as'=>'hotel-booking',
+    'uses'=>'Booking_Controller@admin_booking'
+]);
+Route::get('/hotel-bookings',  [
+    'as'=>'partner-booking',
+    'uses'=>'Booking_Controller@partner_booking'
+]);
+Route::get('/hotel-bookings/accept',  [
+    'as'=>'partner-booking-acp',
+    'uses'=>'Booking_Controller@partner_booking_ok'
+]);
+Route::post('/hotel-bookings/accept/{id}',  [
+    'as'=>'partner-booking-send',
+    'uses'=>'Booking_Controller@accept_room'
+]);
 Route::post('/room-types/{id}', [
     'as'=>'set_status',
     'uses'=>'Room_Controller@changeStatus'

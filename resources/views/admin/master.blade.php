@@ -151,8 +151,12 @@
                                 </ul>
                             </div>
                         </li>
+                         @if(Auth::User()->role_user==0)
                         <li><a href="{{route('hotel-booking')}}" class="collapsible-header"><i class="fa fa-ticket" aria-hidden="true"></i> Danh sách đặt phòng khách sạn</a>
                         </li>
+                        @else
+                         <li><a href="{{route('partner-booking')}}" class="collapsible-header"><i class="fa fa-ticket" aria-hidden="true"></i> Danh sách đặt phòng khách sạn của bạn</a>
+                            @endif
                         <li><a href="{{route('dangxuat')}}" ><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng xuất</a>
                         </li>
                     </ul>

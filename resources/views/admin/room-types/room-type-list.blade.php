@@ -11,6 +11,14 @@
                     </ul>
                 </div>
                 <div class="sb2-2-1">
+                     @if(Session::has('thongbao'))
+                            <div class="alert alert-success">
+                                {{Session::get('thongbao')}}
+                            </div>
+                                   
+
+                            
+                        @endif
                     <h2>Danh sách tất cả loại phòng</h2>
                     <table class="table">
                         <thead>
@@ -18,7 +26,7 @@
                                 <th>STT</th>
                                 <th>Tên loại phòng</th>
                                 <th>Mô tả</th>
-                                <th>Ngày</th>
+                                
                                 @if(Auth::User()->role_user==0)
                                 <th>Sửa</th>
                                 <th>Khóa</th>
@@ -33,7 +41,7 @@
                                 <td>{{$lroom_type->id}}</td>
                                 <td>{{$lroom_type->room_type}}</td>
                                 <td>{{$lroom_type->room_type_description}}</td>
-                                <td>{{$lroom_type->created_at}}</td>
+                                
                                 @if(Auth::User()->role_user==0)
                                 <td><a href="{{ route('edit_room_type',($lroom_type->id)) }}" class="sb2-2-1-edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                 </td>

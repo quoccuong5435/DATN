@@ -35,8 +35,8 @@
 								<tr>
 									<td>{{$i++}}</td>
 									<td>{{$list->name_hotel}}</td>
-									<td>{{date('d-m-Y',strtotime($list->date_to))}}</td>
-									<td>{{date('d-m-Y',strtotime($list->date_from))}}</td>
+									<td>{{$list->date_to}}</td>
+									<td>{{$list->date_from}}</td>
 									<td>{{$list->total_price}}</td>
 									@if($list->booking_status_id==1)
 									<td>
@@ -44,6 +44,8 @@
 									</td>
 									<form action="{{route('cancel-hotel',($list->id))}}" method="post" accept-charset="utf-8">
 										@csrf
+										<input type="" hidden="" name="num_of_rooms" value="{{$list->num_of_rooms}}">
+										<input type="" hidden="" name="room_id" value="{{$list->room_id}}">
 										<td><a href=""><button class="btn-warning ">Hủy phòng</button></a>
 									</td>
 									</form>

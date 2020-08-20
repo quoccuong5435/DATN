@@ -16,6 +16,14 @@
                         <div class="col-md-12">
                             <div class="box-inn-sp">
                                 <div class="inn-title">
+                                      @if(Session::has('thongbao'))
+                            <div class="alert alert-success">
+                                {{Session::get('thongbao')}}
+                            </div>
+                                   
+
+                            
+                        @endif
                                     <div><h4>Danh sách khách sạn</h4></div>
                                     <a href="{{route('hotel-add')}}" title=""><button class="btn-light">Thêm khách sạn</button></a>
                                     <div>
@@ -47,7 +55,9 @@
                                                     <th>Địa chỉ</th>
                                                     <th>Xem</th>
                                                     <th>Sửa</th>
+                                                @if(Auth::User()->role_user==0)
                                                     <th>Khóa</th>
+                                                    @endif
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -85,9 +95,11 @@
                                                     <td>
                                                         <a href="{{ route('edit_hotel',($dshotel->id)) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     </td>
+                                                    @if(Auth::User()->role_user==0)
                                                     <td>
                                                         <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>
                                                     </td>
+                                                    @endif
                                                 </tr>
                                                
                                             @endforeach

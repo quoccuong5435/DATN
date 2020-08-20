@@ -19,6 +19,8 @@ class CreateRoomsTable extends Migration
             $table->unsignedInteger('room_type_id');
             $table->unsignedInteger('room_status_id');
             $table->integer('num_of_rooms');
+            $table->integer('empty_room');
+            $table->integer('room_booked');
             $table->integer('num_of_people');
             $table->string('avatar_room');
             $table->string('description_room');

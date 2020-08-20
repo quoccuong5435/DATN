@@ -77,7 +77,7 @@
                                         </div> --}}
                                         <div class="row">
                                             <div class="input-field col s6" >
-                                                <select id="rate_hotel" name="rate_hotel" multiple="">
+                                                <select id="rate_hotel" name="rate_hotel">
                                                     <option value="" disabled selected>Hạng sao</option>
                                                     <option value="1">Khách sạn 1 sao</option>
                                                     <option value="2">Khách sạn 2 sao</option>

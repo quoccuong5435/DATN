@@ -105,51 +105,17 @@
 						<!--PART 6 : LEFT LISTINGS-->
 						<div class="hot-page2-alp-l3 hot-page2-alp-l-com">
 							<h4><i class="fa fa-star-o" aria-hidden="true"></i> Xếp hạng sao</h4>
-							<div class="hot-page2-alp-l-com1 hot-page2-alp-p5">
-								<form>
-									<ul>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp61" class="styled" type="checkbox" checked="">
-												<label for="chp61"> <span class="ho-hot-rat-star-list">
-                                                        <span class="hot-list-left-part-rat">5.0</span> <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i> </span>
-												</label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp62" class="styled" type="checkbox">
-												<label for="chp62"> <span class="ho-hot-rat-star-list">
-                                                        <span class="hot-list-left-part-rat">4.0</span> <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i> </span>
-												</label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp63" class="styled" type="checkbox">
-												<label for="chp63"> <span class="ho-hot-rat-star-list">
-                                                        <span class="hot-list-left-part-rat">3.0</span> <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i> </span>
-												</label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp64" class="styled" type="checkbox">
-												<label for="chp64"> <span class="ho-hot-rat-star-list">
-                                                        <span class="hot-list-left-part-rat">2.0</span> <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i> </span>
-												</label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-info checkbox-circle">
-												<input id="chp65" class="styled" type="checkbox">
-												<label for="chp65"> <span class="ho-hot-rat-star-list">
-                                                        <span class="hot-list-left-part-rat">1.0</span> <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i> </span>
-												</label>
-											</div>
-										</li>
-									</ul>
-								</form> <a href="javascript:void(0);" class="hot-page2-alp-p5-btn-s">xem thêm</a> </div>
+							
+								
+											
+												<a href="" style="margin: 10px;"><button>Khách sạn 1</button></a>
+												<a href="" style="margin: 10px;"><button>Khách sạn 1</button></a>
+												<a href="" style="margin: 10px;"><button>Khách sạn 1</button></a>
+												<a href="" style="margin: 10px;"><button>Khách sạn 1</button></a>
+												<a href="" style="margin: 10px;"><button>Khách sạn 1</button></a>
+												<a href="" style="margin: 10px;"><button>Khách sạn 1</button></a>
+											
+									
 						</div>
 						<!--END PART 5 : LEFT LISTINGS-->
 						<!--PART 6 : LEFT LISTINGS-->
@@ -221,6 +187,7 @@
 											</ul>
 										</div>
 									</div>
+									
 									<form action="{{ route('detail',($dshotel->id)) }}" method="POST" accept-charset="utf-8">
 										@csrf
 										<div class="col-md-3">
@@ -239,7 +206,7 @@
 								
 								
 								@endforeach
-									{{$list_hotel->links()}}						
+											{{$list_hotel->links()}}				
 							</div>
 						</div>
 					</div>

@@ -17,15 +17,17 @@ class CreateBookingsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('hotel_id');
             $table->unsignedInteger('user_id');
+            $table->unsignedInteger('room_id');
             $table->integer('num_of_rooms');
             $table->datetime('date_from');
-            $table->unsignedInteger('booking_status_id');
             $table->datetime('date_to');
+            $table->unsignedInteger('booking_status_id');
             $table->integer('total_price');
             $table->integer('rate');
             $table->integer('status');
+            $table->string('cmt');
             $table->timestamps();
-            $table->softDeletes();
+            
         });
     }
 
