@@ -100,7 +100,7 @@
                                                     <th>Số lượng phòng</th>
                                                     <th>Xem</th>
                                                     <th>Sửa</th>
-                                                    <th>Khóa</th>
+                                                    
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -138,9 +138,7 @@
                                                     <td>
                                                         <a href="{{ route('edit_hotel',($list_hotel->id)) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     </td>
-                                                    <td>
-                                                        <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a>
-                                                    </td>
+                                                   
                                                 </tr>
                                            @endforeach
                                             </tbody>

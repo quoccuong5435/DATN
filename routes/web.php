@@ -83,9 +83,25 @@ Route::get('/hotels-list/{id}',[
 	'as'=>'hotel_list',
 	'uses'=>'Hotel_Controller@list_hotel_place'
 ]);
+Route::get('/hotels_list/{id}',[
+    'as'=>'hotel_lists',
+    'uses'=>'Hotel_Controller@list_hotel_rate'
+]);
+Route::get('/hotel_lists/{id}',[
+    'as'=>'hotels_lists',
+    'uses'=>'Hotel_Controller@list_hotel_score'
+]);
 Route::get('/hotels-find/',[
     'as'=>'hotellist_search',
     'uses'=>'Hotel_Controller@search_place'
+]);
+Route::get('/hotel-find/',[
+    'as'=>'hotellists_search',
+    'uses'=>'Hotel_Controller@search_rate'
+]);
+Route::get('/hotel_find/',[
+    'as'=>'hotellist-search',
+    'uses'=>'Hotel_Controller@search_score'
 ]);
 
 Route::post('/detail/{id}',[
@@ -157,10 +173,10 @@ Route::post('/signin',[
 
 
 Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function() {
-   Route::get('/', [
-    'as'=>'admin',
-    'uses'=>'User_Controller@admin'
-]);
+//    Route::get('/', [
+//     'as'=>'admin',
+//     'uses'=>'User_Controller@admin'
+// ]);
 
    Route::get('/users',[
     'as'=>'user',
@@ -172,10 +188,19 @@ Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function() {
 Route::get('/forgot', function(){
     return view('admin.forgot-pass');
 });
-Route::get('/profile', function(){
-    return view('admin.admin-profile');
-})->name('ad-profile');
 
+Route::get('/profile',[
+    'as'=>'ad-profile',
+    'uses'=>'User_Controller@profile'
+]);
+Route::get('/partner_profile',[
+    'as'=>'profile',
+    'uses'=>'User_Controller@profiles'
+]);
+Route::post('/profile',[
+    'as'=>'ads-profile',
+    'uses'=>'User_Controller@profile_send'
+]);
 
 Route::get('/users/add', function(){
     return view('admin.users.user-add');
@@ -198,7 +223,7 @@ Route::post('/users/{id}',[
 Route::get('/hotels', function(){
     return view('admin.hotels.hotel-list');
 });
-Route::get('/hotel',[
+Route::get('/',[
     'as'=>'hotel',
     'uses'=>'Hotel_Controller@admin_hotel'
 ]);

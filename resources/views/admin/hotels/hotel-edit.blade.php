@@ -74,7 +74,7 @@
                                                 <label>Loại khách sạn</label>
                                             </div>
                                             <div class="input-field col s6" >
-                                                 <input id="list-name" type="number" min="1" max="10"  class="validate" id="score_hotel" name="score_hotel" value="{{$list_hotel->score_hotel }}">
+                                                 <input id="list-name" type="number" min="1" max="10" step="0.1" class="validate" id="score_hotel" name="score_hotel" value="{{$list_hotel->score_hotel }}">
                                                 <label>Điểm đánh giá</label>
                                             </div>
                                         </div>

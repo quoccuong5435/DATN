@@ -115,7 +115,60 @@ class Hotel_Controller extends Controller
                     ->where('room.num_of_people', '>=', $people)
                     ->groupBy('hotel.id')
         ->paginate(5);
-        return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room'));
+        return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room','id'));
+    
+    }
+     public function list_hotel_rate($id,Request $request)
+    {
+        
+        $place=Place::find($id);
+        
+                $search = $place->name_place;
+        
+        
+        $room=1;
+        $people=1;
+        $now =Carbon::now('Asia/Ho_Chi_Minh');
+        $tomorrow = Carbon::tomorrow('Asia/Ho_Chi_Minh');
+        $check_in = $now->toDateString();
+        $check_out = $tomorrow->toDateString();
+        $list_hotel = DB::table('hotel')
+                    ->join('room', 'hotel.id', '=', 'room.hotel_id')
+                    ->select('hotel.*')
+                    ->where('hotel.place_id', '=',$id)
+                    ->where('room.empty_room', '>=', $room)
+                    ->where('rate_hotel', '=', $request->rate_hotel)
+                    ->where('room.num_of_people', '>=', $people)
+                    ->groupBy('hotel.id')
+        ->paginate(5);
+        return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room','id'));
+    
+    }
+     public function list_hotel_score($id,Request $request)
+    {
+        
+        $place=Place::find($id);
+        
+                $search = $place->name_place;
+        
+        
+        $room=1;
+        $people=1;
+        $now =Carbon::now('Asia/Ho_Chi_Minh');
+        $tomorrow = Carbon::tomorrow('Asia/Ho_Chi_Minh');
+        $check_in = $now->toDateString();
+        $check_out = $tomorrow->toDateString();
+        $list_hotel = DB::table('hotel')
+                    ->join('room', 'hotel.id', '=', 'room.hotel_id')
+                    ->select('hotel.*')
+                    ->where('hotel.place_id', '=',$id)
+                    ->where('room.empty_room', '>=', $room)
+                    ->where('score_hotel', '>=', $request->min)
+                    ->where('score_hotel', '<=', $request->max)
+                    ->where('room.num_of_people', '>=', $people)
+                    ->groupBy('hotel.id')
+        ->paginate(5);
+        return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room','id'));
     
     }
     public function search_place(Request $request)
@@ -130,6 +183,7 @@ class Hotel_Controller extends Controller
         $room =$request->room;
         $request->session()->put('checkin', $check_in);
         $request->session()->put('checkout', $check_out);
+       
         $list_hotel = DB::table('hotel')
                     ->join('room', 'hotel.id', '=', 'room.hotel_id')
                     ->select('hotel.*')
@@ -139,11 +193,66 @@ class Hotel_Controller extends Controller
                     ->groupBy('hotel.id')
         ->paginate(5);
                     
-                     
-                    return view('user-pages.hotel_list_search',compact('list_hotel','search','check_in','check_out','people','room'));
+                  
+                    return view('user-pages.hotels-list',compact('list_hotel','search','check_in','check_out','people','room'));
 
     }
+     public function search_rate(Request $request)
+    {
+        $search = $request->search;
+        $checkin= $request->checkin;
+        $s=strtotime($checkin);
+        $check_in=date('d-m-Y',strtotime($checkin));
+        $checkout= $request->checkout;
 
+        $check_out =date('d-m-Y',strtotime($checkout));
+        $people =$request->people;
+        $room =$request->room;
+        $request->session()->put('checkin', $check_in);
+        $request->session()->put('checkout', $check_out);
+       
+        $list_hotel = DB::table('hotel')
+                    ->join('room', 'hotel.id', '=', 'room.hotel_id')
+                    ->select('hotel.*')
+                    ->where('hotel.address_hotel', 'like', '%'.$search.'%')
+                    ->where('room.empty_room', '>=', $room)
+                    ->where('rate_hotel', '=', $request->rate_hotel)
+                    ->where('room.num_of_people', '>=', $people)
+                    ->groupBy('hotel.id')
+        ->paginate(5);
+                    
+                  
+                    return view('user-pages.hotels-list',compact('list_hotel','search','check_in','check_out','people','room'));
+
+    }
+ public function search_score(Request $request)
+    {
+        $search = $request->search;
+        $checkin= $request->checkin;
+        $s=strtotime($checkin);
+        $check_in=date('d-m-Y',strtotime($checkin));
+        $checkout= $request->checkout;
+        $check_out =date('d-m-Y',strtotime($checkout));
+        $people =$request->people;
+        $room =$request->room;
+        $request->session()->put('checkin', $check_in);
+        $request->session()->put('checkout', $check_out);
+       
+        $list_hotel = DB::table('hotel')
+                    ->join('room', 'hotel.id', '=', 'room.hotel_id')
+                    ->select('hotel.*')
+                    ->where('hotel.address_hotel', 'like', '%'.$search.'%')
+                    ->where('room.empty_room', '>=', $room)
+                    ->where('score_hotel', '>=', $request->min)
+                    ->where('score_hotel', '<=', $request->max)
+                    ->where('room.num_of_people', '>=', $people)
+                    ->groupBy('hotel.id')
+        ->paginate(5);
+                    
+                  
+                    return view('user-pages.hotels-list',compact('list_hotel','search','check_in','check_out','people','room'));
+
+    }
     // Admin
     
     public function admin_hotel()
@@ -186,6 +295,7 @@ class Hotel_Controller extends Controller
         $search = $request->get('search');
         $list_hotel = DB::table('hotel')
                     ->where('phone_hotel', 'like', '%'.$search.'%')
+                    ->where('status', '=', 1)
                     ->orWhere('name_hotel', 'like', '%'.$search.'%')
                     ->orWhere('email_hotel', 'like', '%'.$search.'%')
                     ->orWhere('address_hotel', 'like', '%'.$search.'%')
@@ -282,7 +392,7 @@ class Hotel_Controller extends Controller
         $hotel->address_hotel =$request->address_hotel;
         $hotel->status = 1;
         $hotel->save();
-        return redirect()->route('hotel');
+        return redirect()->route('hotel')->with('thongbao',"Cập nhật thành công");
     }
     public function dashboard_booking()
     {

@@ -284,10 +284,15 @@ class User_Controller extends Controller
             $this->validate($request, 
                 [
                     'avatar_user' => 'mimes:jpg,jpeg,png,gif|max:2048',
+                     'phone_user' => 'required|max:10',
+                'address_user' => 'required',
+                'fullname_user' => 'required',
                 ],          
                 [
                     'avatar_user.mimes' => 'Chỉ chấp nhận ảnh đại diện với đuôi ( jpg, jpeg, png, gif )',
-                    'avatar_user.max' => 'Ảnh đại diện không được vượt quá 4MB'
+                    'avatar_user.max' => 'Ảnh đại diện không được vượt quá 4MB',
+                    'phone_user.required' =>'Vui lòng nhập số điện thoại',
+                'phone_user.max' =>'Số điện thoại không quá 10 kí tự',
                 ]
             );
             $avatar_user = $request->file('avatar_user');
@@ -317,15 +322,17 @@ class User_Controller extends Controller
 
             [
                 
-                'phone_user.required' =>'Vui lòng nhập số điện thoại',
+                'avatar_user.mimes' => 'Chỉ chấp nhận ảnh đại diện với đuôi ( jpg, jpeg, png, gif )',
+                    'avatar_user.max' => 'Ảnh đại diện không được vượt quá 4MB',
+                    'phone_user.required' =>'Vui lòng nhập số điện thoại',
                 'phone_user.max' =>'Số điện thoại không quá 10 kí tự',
             ])
         ;
             $user =   User::find($id);
-            $user->username= $request->username;
+            
             $user->fullname_user= $request->fullname_user;
-            $user->email_user= $request->email_user;
-            $user->password=  Hash::make($request->password);
+           
+
             $user->phone_user= $request->phone_user;
             $user->gender_user= $request->gender_user;
             $user->address_user= $request->address_user;
@@ -338,5 +345,49 @@ class User_Controller extends Controller
 
 
        
+    }
+    public function profile()
+    {
+        $list_user=DB::table('user')
+        ->where('id','=',Auth::User()->id)
+        ->get();
+        return view('admin.admin-profile',compact('$list_user'));
+    }
+     public function profiles()
+    {
+        $list_user=DB::table('user')
+        ->where('id','=',Auth::User()->id)
+        ->get();
+        return view('admin.users.profile',compact('$list_user'));
+    }
+    public function profile_send(Request $request)
+    {
+         $getImages = '';
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
+        if($request->hasFile('avatar_user')){
+            $this->validate($request, 
+                [
+                    'avatar_user' => 'mimes:jpg,jpeg,png,gif|max:2048',
+                     'phone_user' => 'required|max:10',
+                'address_user' => 'required',
+                'fullname_user' => 'required',
+                ],          
+                [
+                    'avatar_user.mimes' => 'Chỉ chấp nhận ảnh đại diện với đuôi ( jpg, jpeg, png, gif )',
+                    'avatar_user.max' => 'Ảnh đại diện không được vượt quá 4MB',
+                    'phone_user.required' =>'Vui lòng nhập số điện thoại',
+                'phone_user.max' =>'Số điện thoại không quá 10 kí tự',
+                ]
+            );
+            $avatar_user = $request->file('avatar_user');
+            $getImages = date('H-i-s_d-m-Y', time()).'_'.$avatar_user->getClientOriginalName();
+            $destinationPath = public_path('images/user');
+            $avatar_user->move($destinationPath, $getImages);
+        }
+
+        $list_user= DB::table('user')
+        ->where('id','=',Auth::User()->id)
+        ->update(['fullname_user' =>$request->fullname_user,'phone_user'=> $request->phone_user,'address_user'=>$request->address_users,'avatar_user'=>$getImages]);
+        return redirect()->back()->with('thongbao',"Update tài khoản thành công. ");
     }
 }

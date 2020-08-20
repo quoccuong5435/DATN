@@ -37,10 +37,35 @@
                                 <div class="tab-inn">
                                     <form method="POST" action="{{route('ads-profile')}}" enctype="multipart/form-data">
                                         @csrf
+                                          
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <span for="name">Tên người dùng</span>
-                                                <input name="fullname_user" type="text" value="{{Auth::User()->fullname_user}}" class="validate">
+                                                <input name="fullname_user" readonly="" type="text" value="{{Auth::User()->fullname_user}}" class="validate">
+                                                
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <span for="name">Username</span>
+                                                <input name="fullname_user" readonly="" type="text" value="{{Auth::User()->username}}" class="validate">
+                                                
+                                            </div>
+                                           
+                                        </div>
+                                         <div class="row">
+                                            <div class="input-field col s12">
+                                                <span for="name">Email</span>
+                                                <input name="fullname_user" readonly="" type="text" value="{{Auth::User()->email_user}}" class="validate">
+                                                
+                                            </div>
+                                           
+                                        </div>
+                                         <div class="row">
+                                            <div class="input-field col s12">
+                                                <span for="name">Giới tính</span>
+                                                <input name="fullname_user" readonly="" type="text" value="{{Auth::User()->gender_user}}" class="validate">
                                                 
                                             </div>
                                            
@@ -48,7 +73,7 @@
                                         <div class="row">
                                              <div class="input-field col s12">
                                                 <span for="phone">Số điện thoại</span>
-                                                <input name="phone_user" type="text" value="{{Auth::User()->phone_user}}" class="validate">
+                                                <input name="phone_user" type="text"readonly value="{{Auth::User()->phone_user}}" class="validate">
                                                 
                                             </div>
                                            
@@ -57,25 +82,14 @@
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <span for="email">Địa chỉ</span>
-                                                <input  name="address_user" type="text" value="{{Auth::User()->address_user}}" class="validate">
+                                                <input  name="address_user" type="text"readonly value="{{Auth::User()->address_user}}" class="validate">
                                             </div>
                                             
                                         </div>
                                       
-                                           <div class="row db-file-upload">
-                                            <div class="file-field input-field">
-                                                <div class="db-up-btn"> <span>File</span>
-                                                <input type="file" name="avatar_user"> </div>
-                                                <div class="file-path-wrapper">
-                                                <input class="file-path validate" type="text"> </div>
-                                            </div>
-                                        </div>
+                                         
 
-                                        <div class="row">
-                                            <div class="input-field col s12">
-                                                <input type="submit" class="waves-effect waves-light btn-large">
-                                            </div>
-                                        </div>
+                                       
 
                                      
                                     </form>
