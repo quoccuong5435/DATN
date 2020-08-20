@@ -224,35 +224,9 @@ class Hotel_Controller extends Controller
                   
                     return view('user-pages.hotels-list',compact('list_hotel','search','check_in','check_out','people','room'));
 
-    }
- public function search_score(Request $request)
-    {
-        $search = $request->search;
-        $checkin= $request->checkin;
-        $s=strtotime($checkin);
-        $check_in=date('d-m-Y',strtotime($checkin));
-        $checkout= $request->checkout;
-        $check_out =date('d-m-Y',strtotime($checkout));
-        $people =$request->people;
-        $room =$request->room;
-        $request->session()->put('checkin', $check_in);
-        $request->session()->put('checkout', $check_out);
-       
-        $list_hotel = DB::table('hotel')
-                    ->join('room', 'hotel.id', '=', 'room.hotel_id')
-                    ->select('hotel.*')
-                    ->where('hotel.address_hotel', 'like', '%'.$search.'%')
-                    ->where('room.empty_room', '>=', $room)
-                    ->where('score_hotel', '>=', $request->min)
-                    ->where('score_hotel', '<=', $request->max)
-                    ->where('room.num_of_people', '>=', $people)
-                    ->groupBy('hotel.id')
-        ->paginate(5);
-                    
-                  
-                    return view('user-pages.hotels-list',compact('list_hotel','search','check_in','check_out','people','room'));
 
     }
+
     // Admin
     
     public function admin_hotel()
