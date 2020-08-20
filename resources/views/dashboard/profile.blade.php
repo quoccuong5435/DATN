@@ -14,32 +14,34 @@
 								<tr>
 									<td>Tên</td>
 									<td>:</td>
-									<td>Sam Anderson</td>
+									<td>{{Auth::User()->username}}</td>
 								</tr>
 								<tr>
 									<td>Email</td>
 									<td>:</td>
-									<td>sam_anderson@gmail.com</td>
+									<td>{{Auth::User()->email_user}}</td>
 								</tr>
-								<tr>
+								{{-- <tr>
 									<td>Mật khẩu</td>
 									<td>:</td>
 									<td>mypasswordtour</td>
-								</tr>
+								</tr> --}}
 								<tr>
 									<td>Di động</td>
 									<td>:</td>
-									<td>0321456789</td>
+									<td>{{Auth::User()->phone_user}}</td>
 								</tr>
 								<tr>
-									<td>Ngày sinh</td>
+									<td>Gender</td>
 									<td>:</td>
-									<td>03 Jun 1990</td>
+									<td>{{Auth::User()->gender_user}}</td>
+									
 								</tr>
 								<tr>
 									<td>Địa chỉ</td>
 									<td>:</td>
-									<td>1017/25 Trần Thị Liền, Phước Kiển, Nhà Bè </td>
+									<td>{{Auth::User()->address_user}}</td>
+									
 								</tr>
 							</tbody>
 						</table>

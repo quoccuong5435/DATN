@@ -5,12 +5,10 @@
 			<div class="db-l">
 				<div class="db-l-1">
 					<ul>
-						<li><img src="{{ asset(Auth::User()->avatar_user) }}" alt="" />
+						<li><img style="width: 200px;height: 200px;padding: 10px" src="{{ asset('images/user') }}/{{Auth::User()->avatar_user}}" alt="" />
 						</li>
 						
-						<span><b>Phone: {{Auth::User()->phone_user}}</b> </span>
-						<br>
-						<span><b>Email: {{Auth::User()->email_user}}</b>  </span>
+						
 					</ul>
 				</div>
 				<div class="db-l-2">
@@ -20,7 +18,7 @@
 						</li>
 						</li>
 						<li>
-							<a href="{{ route('db-profile') }}"><img src="{{ asset('source/images/icon/dbl6.png') }}" alt="" /> Hồ sơ của tôi</a>
+							<a href="{{route('dashboard')}}"><img src="{{ asset('source/images/icon/dbl6.png') }}" alt="" /> Hồ sơ của tôi</a>
 						</li>
 					</ul>
 				</div>

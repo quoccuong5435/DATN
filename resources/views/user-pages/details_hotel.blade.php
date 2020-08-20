@@ -21,15 +21,7 @@
 		<div class="rows banner_book" id="inner-page-title">
 			<div class="container">
 				<div class="banner_book_1">
-					<ul>
-						@foreach ($place as  $s)
-						@if($s->id == $list_hotels->place_id)
-						<li class="dl1">Vị trí : {{$s->name_place}}</li>
-						@endif
-						@endforeach
-						<li class="dl3">Liên hệ : {{$list_hotels->phone_hotel}}</li>
-						<li class="dl4"><a href="#room-list">Đặt ngay</a> </li>
-					</ul>
+					
 				</div>
 			</div>
 		</div>

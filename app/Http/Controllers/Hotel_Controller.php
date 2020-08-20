@@ -22,8 +22,9 @@ class Hotel_Controller extends Controller
     public function home()
     {
         $list_hotel=Hotel::all();
-        $place=Place::paginate(3);
-        return view('user-pages.home',compact('list_hotel','place'));
+        $place=Place::all();
+        $places=Place::paginate(3);
+        return view('user-pages.home',compact('list_hotel','place','places'));
     }
     public function index()
     {
@@ -281,7 +282,17 @@ class Hotel_Controller extends Controller
         $hotel->save();
         return redirect()->route('hotel');
     }
-
+    public function dashboard_booking()
+    {
+        $list_booking= DB::table('booking')
+        ->join('hotel','hotel_id' ,'=','hotel.id')
+        ->select('booking.*', 'hotel.name_hotel')
+        ->where('booking.user_id','=',Auth::User()->id)
+        ->where('booking.status','=',1)
+        ->orderBy('date_from','desc')
+        ->paginate(10);
+        return view('dashboard.hotel-booking',compact('list_booking'));
+    }
    
     public function destroy($id)
     {

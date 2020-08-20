@@ -21,35 +21,7 @@
 					<div class="col-md-3 hot-page2-alp-con-left">
 						
 						<!--PART 7 : LEFT LISTINGS-->
-						<div class="hot-page2-alp-l3 hot-page2-alp-l-com">
-							<h4><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Kiểm tra còn phòng</h4>
-							<div class="hot-page2-alp-l-com1 hot-room-ava-check">
-								<form>
-									<ul>
-										<li>
-											<label>Nhập tên thành phố</label>
-											<input type="text" value="{{$search}}" placeholder="Enter City"> </li>
-										<li>
-											<label>Ngày nhận phòng</label>
-											<input type="text" value="{{$check_in}}"> </li>
-										<li>
-											<label>Ngày trả phòng</label>
-											<input type="text" value="{{$check_out}}"> </li>
-										<li>
-											<label>Nhập số phòng</label>
-											<input type="text" value="{{$people}}" placeholder="Enter City"> </li>
-										<li>
-										<li>
-											<label>Nhập số người</label>
-											<input type="text" value="{{$room}}" placeholder="Enter City"> </li>
-										<li>
-										<li>
-											<input type="submit" value="Kiểm tra"> </li>
-
-									</ul>
-								</form>
-							</div>
-						</div>
+					
 						<!--PART 4 : LEFT LISTINGS-->
 						<div class="hot-page2-alp-l3 hot-page2-alp-l-com">
 							<h4><i class="fa fa-map-marker" aria-hidden="true"></i> Các bộ lọc phổ biến</h4>

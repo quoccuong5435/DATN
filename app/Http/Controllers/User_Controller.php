@@ -9,6 +9,7 @@ use Account;
 use App\Http\Request\Login_Request;
 use Illuminate\Http\Request;
 use Hash;
+use DB;
 class User_Controller extends Controller
 {
     /**
@@ -268,12 +269,38 @@ class User_Controller extends Controller
     
     public function dashboard()
     {
-        return view('dashboard.main');
+        return view('dashboard.profile');
     }
     public function edit($id)
     {
         $list_user=User::find($id);
        return view('admin.users.user-edit',compact('list_user'));
+    }
+    public function edit_user(Request $request)
+    {
+        $getImages = '';
+        date_default_timezone_set('Asia/Ho_Chi_Minh');
+        if($request->hasFile('avatar_user')){
+            $this->validate($request, 
+                [
+                    'avatar_user' => 'mimes:jpg,jpeg,png,gif|max:2048',
+                ],          
+                [
+                    'avatar_user.mimes' => 'Chỉ chấp nhận ảnh đại diện với đuôi ( jpg, jpeg, png, gif )',
+                    'avatar_user.max' => 'Ảnh đại diện không được vượt quá 4MB'
+                ]
+            );
+            $avatar_user = $request->file('avatar_user');
+            $getImages = date('H-i-s_d-m-Y', time()).'_'.$avatar_user->getClientOriginalName();
+            $destinationPath = public_path('images/user');
+            $avatar_user->move($destinationPath, $getImages);
+        }
+
+        $edit_user= DB::table('user')
+        ->where('id','=',Auth::User()->id)
+        ->update(['fullname_user' =>$request->fullname_user,'phone_user'=> $request->phone_user,'address_user'=>$request->address_user,'gender_user'=>$request->gender_user,'avatar_user'=>$getImages]);
+        return redirect()->back()->with('thongbao',"Update tài khoản thành công. ");
+
     }
      public function update(Request $request,$id)
     {
@@ -306,7 +333,7 @@ class User_Controller extends Controller
             $user->role_user =$request->role_user ;
             $user->save();
 
-            return redirect()->back()->with('thanhcong',"Update khoản thành công");
+            return redirect()->back()->with('thanhcong',"Update tài khoản thành công");
 
 
 

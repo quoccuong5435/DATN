@@ -22,7 +22,11 @@
                                     <h4>Thông tin</h4>
                                     
                                 </div>
-                                @if(count($errors)>0)
+                                
+                                <div class="bor">
+                                    <form action="{{route('hotel-add-send')}}" method="POST" enctype="multipart/form-data" >
+                                        @csrf
+                                        @if(count($errors)>0)
                             <div class="alert alert-danger">
                                 @foreach($errors->all() as $fail)
                                {{$fail}} <br>
@@ -31,9 +35,6 @@
                             </div>
                                 
                                 @endif
-                                <div class="bor">
-                                    <form action="{{route('hotel-add-send')}}" method="POST" enctype="multipart/form-data" >
-                                        @csrf
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <input id="name_hotel" name="name_hotel" type="text" class="validate" required>

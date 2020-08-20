@@ -52,14 +52,18 @@
                         <div class="ed-com-t1-right">
                             <ul>
                             	@if(Auth::check())
-                                <li><a href="{{ route('dang_xuat') }}">Đăng xuất</a>&nbsp
-                                <li><a href="{{ route('dangky-partner') }}" style="background-color: #189ecf;">Đăng ký chỗ nghỉ của bạn</a>
+                            	<li>Chào mừng {{Auth::User()->fullname_user}}</a>&nbsp
                                 </li>
+                                <li><a href="{{ route('dang_xuat') }}">Đăng xuất</a>&nbsp
+                                <li><a href="{{ route('dangky-partner') }}" style="background-color: #189ecf;">Đăng ký chỗ nghỉ của bạn</a>&nbsp
+                                </li>
+
                                 @else
                                 <li><a href="{{ route('dangky') }}">Đăng ký</a>&nbsp
                                 </li>
                                 <li><a href="{{ route('dangnhap') }}">Đăng nhập</a>&nbsp
                                 </li>
+
                                 <li><a href="{{ route('dangky-partner') }}" style="background-color: #189ecf;">Đăng ký chỗ nghỉ của bạn</a>
                                 </li>
                                 @endif

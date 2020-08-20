@@ -12,31 +12,52 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('send_email', function () {
+    $details =['title'=>'Huỳnh Quốc Cường',
+    'body'=>"SendEmail.php" ];
+    $email='hirayoshi5435@gmail.com';
+\Mail::to("$email")->send(new \App\Mail\SendEmail($details));
+echo "Email send";
+});
 Route::group(['middleware' => 'account','prefix' => 'dashboard'], function() {
   Route::get('/', [
     'as'=>'dashboard',
     'uses'=>'User_Controller@dashboard'
 ]);
-Route::get('/hotel-booking', function(){
-    return view('dashboard.hotel-booking');
-})->name('db-hotelbooking');
-
-Route::get('/{id}',[
+Route::get('/hotel-booking', ['as'=> 'db-hotelbooking',
+    'uses'=>'Hotel_Controller@dashboard_booking'
+]);
+Route::post('/hotel-booking/{id}', ['as'=> 'cancel-hotel',
+    'uses'=>'Booking_Controller@cancel_room'
+]);
+Route::get('/hotel-booking/rate/{id}',[
+    'as'=>'rate_booking',
+    'uses'=>'Booking_Controller@show'
+]);
+Route::post ('/hotel-booking/rate/{id}',[
+    'as'=>'rate_booking-send',
+    'uses'=>'Booking_Controller@edit'
+]);
+Route::get('/booking/{id}',[
     'as'=>'hotel_booking',
     'uses'=>'Booking_Controller@index'
 ]);
-Route::post('/{id}',[
+Route::post('/booking/{id}',[
     'as'=>'hotel_booking-send',
     'uses'=>'Booking_Controller@store'
 ]);
 
-Route::get('/my-profile', function(){
-    return view('dashboard.profile');
-})->name('db-profile');
+// Route::get('/profiles', function(){
+//     return view('dashboard.profile');
+// })->name('db-profile');
 
-Route::get('/my-profile/edit', function(){
+Route::get('/profile/edit', function(){
     return view('dashboard.edit-profile');
 })->name('db-editprofile');
+Route::post('/profile/edit',[
+    'as'=>'edit_profile',
+    'uses'=>'User_Controller@edit_user'
+]);
 
 Route::get('/payment-list', function(){
     return view('dashboard.payment-list');

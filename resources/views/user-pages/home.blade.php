@@ -94,7 +94,7 @@
 					<!-- TOUR PLACE 3 -->
 					
 					
-						@foreach($place as $list)
+						@foreach($places as $list)
 						<div class="col-md-4 col-sm-6 col-xs-12 b_packages">
 						<div class="v_place_img"><img src="{{ asset('/images/gallery/') }}/{{$list->avatar_place}}" alt="Tour Booking" title="Tour Booking" /> </div>
 						<div class="b_pack rows">
@@ -109,7 +109,7 @@
 					</div>
 				</div>
 					@endforeach
-					{{$place->links()}}
+					{{$places->links()}}
 					<div>
 						
 						

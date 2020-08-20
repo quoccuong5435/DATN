@@ -9,99 +9,65 @@
 				<div class="db-2-com db-2-main">
 					<h4>Danh sách phòng đã đặt</h4>
 					<div class="db-2-main-com db-2-main-com-table">
+						 @if(Session::has('thongbao'))
+                            <div class="alert alert-success">
+                                {{Session::get('thongbao')}}
+                            </div>
+                                   
+
+                            
+                        @endif
 						<table style="color: #333;" class="responsive-table">
 							<thead>
 								<tr>
 									<th>STT</th>
 									<th>Khách sạn</th>
-									<th>Thời gian</th>
-									<th>Ngày bắt đầu</th>
+									<th>Check in</th>
+									<th>Check out</th>
 									<th>Giá</th>
-									<th>Thanh toán</th>
-									<th>Chi tiết</th>
+									<th>Trạng thái</th>
+									<th>Hành động</th>
 								</tr>
 							</thead>
 							<tbody>
+								<span hidden="">{{$i=1}}/span
+								@foreach($list_booking as $list)
 								<tr>
-									<td>1</td>
-									<td>Honeymoon Tailand</td>
-									<td>6days/5nights</td>
-									<td>12 Aug 2017</td>
-									<td>$784</td>
-									<td><span class="db-done">Done</span>
+									<td>{{$i++}}</td>
+									<td>{{$list->name_hotel}}</td>
+									<td>{{date('d-m-Y',strtotime($list->date_to))}}</td>
+									<td>{{date('d-m-Y',strtotime($list->date_from))}}</td>
+									<td>{{$list->total_price}}</td>
+									@if($list->booking_status_id==1)
+									<td>
+										Đang xử lí
 									</td>
-									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
+									<form action="{{route('cancel-hotel',($list->id))}}" method="post" accept-charset="utf-8">
+										@csrf
+										<td><a href=""><button class="btn-warning ">Hủy phòng</button></a>
 									</td>
+									</form>
+									
+									@elseif($list->booking_status_id==2)
+									<td>
+										Đã thanh toán 
+									</td>
+									<td><a href="{{route('rate_booking',($list->id))}}" ><button class="btn-success">Đánh giá</button></a>
+									</td>
+									@else
+									<td>
+										Đã hủy phòng
+									</td>
+									@endif
+									
 								</tr>
-								<tr>
-									<td>2</td>
-									<td>Europe</td>
-									<td>10days/9nights</td>
-									<td>09 Nov 2017</td>
-									<td>$1058</td>
-									<td><span class="db-not-done">Done</span>
-									</td>
-									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
-									</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>Dubai</td>
-									<td>7days/6nights</td>
-									<td>24 Dec 2017</td>
-									<td>$862</td>
-									<td><span class="db-not-done">Done</span>
-									</td>
-									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
-									</td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>Thailand</td>
-									<td>8days/7nights</td>
-									<td>24 Jan 2018</td>
-									<td>$2355</td>
-									<td><span class="db-not-done">Done</span>
-									</td>
-									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
-									</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>Australia</td>
-									<td>8days/7nights</td>
-									<td>02 Mar 2018</td>
-									<td>$1542</td>
-									<td><span class="db-not-done">Done</span>
-									</td>
-									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
-									</td>
-								</tr>
-								<tr>
-									<td>6</td>
-									<td>Singapore</td>
-									<td>12days/11nights</td>
-									<td>21 Apr 2018</td>
-									<td>$2142</td>
-									<td><span class="db-not-done">Done</span>
-									</td>
-									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
-									</td>
-								</tr>
-								<tr>
-									<td>7</td>
-									<td>South Africa</td>
-									<td>14days/13nights</td>
-									<td>08 Jun 2018</td>
-									<td>$2350</td>
-									<td><span class="db-not-done">Done</span>
-									</td>
-									<td><a href="{{ route('db-hoteldetails') }}" class="db-done">view more</a>
-									</td>
-								</tr>
+								@endforeach
 							</tbody>
+
 						</table>
+						
 					</div>
+					{{$list_booking->links()}}
 				</div>
 			</div>
 

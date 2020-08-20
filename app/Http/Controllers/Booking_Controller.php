@@ -70,6 +70,8 @@ class Booking_Controller extends Controller
         $booking->booking_status_id = 1;
         $booking->rate = 1;
         $booking->status = 1;
+        $price=(strtotime($datefrom) -strtotime($dateto))/86400;
+        $total=($request->sl)*($request->price_room)*$price ;
         $booking->total_price = ($request->sl)*($request->price_room);
         $booking->room_id = $request->room_id;
         $booking->save();
@@ -85,6 +87,16 @@ class Booking_Controller extends Controller
         $room_book = DB::table('room')
               ->where('id',  $request->room_id)
               ->update(['empty_room' => $empty_room,'room_booked'=> $room_booked]);
+               $details =array(
+                'hotel_name' => $request->name_hotel,
+                'user_name'  => $request->name_user,
+                'room' => $request->sl,
+                'name_room'=>$request->name_room,
+                'date_to' =>$request->date_to,
+                'date_from' => $request->date_from,
+                'price' => $total
+               );
+            \Mail::to('hirayoshi5435@gmail.com')->send(new \App\Mail\SendEmail($details));
         return redirect()->back()->with('thongbao',"Đặt phòng thành công");
     }
 
@@ -96,8 +108,14 @@ class Booking_Controller extends Controller
      */
     public function show($id)
     {
-        //
+        $rate_booking= DB::table('booking')
+        ->where('id','=',$id)
+        ->get();
+        return view('dashboard.rate',compact('rate_booking'));
+        
+
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -105,11 +123,20 @@ class Booking_Controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id,Request $request)
     {
-        //
+         $rate_booking= DB::table('booking')
+         ->where('id','=',$id)
+         ->update(['rate'=>$request->rate,'cmt'=>$request->cmt]);
+         return redirect()->back()->with('thongbao',"Đánh giá thành công ");
     }
-
+ public function cancel_room($id,Request $request)
+    {
+         $rate_booking= DB::table('booking')
+         ->where('id','=',$id)
+         ->update(['status'=>0]);
+         return redirect()->back()->with('thongbao',"Hủy thành công ");
+    }
     /**
      * Update the specified resource in storage.
      *
