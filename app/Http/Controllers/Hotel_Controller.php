@@ -227,6 +227,7 @@ class Hotel_Controller extends Controller
 
     }
 
+<<<<<<< HEAD
  public function search_score(Request $request)
     {
         $search = $request->search;
@@ -254,6 +255,8 @@ class Hotel_Controller extends Controller
                   
                     return view('user-pages.hotels-list',compact('list_hotel','search','check_in','check_out','people','room'));
 }
+=======
+>>>>>>> 3531557d8854bcb527850ab483c124e3a1bac223
     // Admin
     
     public function admin_hotel()
