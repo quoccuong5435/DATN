@@ -60,7 +60,7 @@
                                                     @if(Auth::User()->role_user==0)
                                                     
                                                     
-                                                    <form action="{{route('ban',($info->id))}}" method="post" accept-charset="utf-8">
+                                                    <form action="" method="post" accept-charset="utf-8">
                                                         @csrf
                                                         <td><a href=""><button class="btn-warning fa fa-lock"></button></a>
                                                     </td>

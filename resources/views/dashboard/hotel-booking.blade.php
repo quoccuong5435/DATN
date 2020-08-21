@@ -40,7 +40,7 @@
 									<td>{{$list->total_price}}</td>
 									@if($list->booking_status_id==1)
 									<td>
-										Đang xử lí
+										Đang đặt đặt thành công
 									</td>
 									<form action="{{route('cancel-hotel',($list->id))}}" method="post" accept-charset="utf-8">
 										@csrf

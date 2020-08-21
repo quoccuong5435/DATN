@@ -17,7 +17,14 @@
                                 <div class="inn-title">
                                     <h4>Danh sách đặt phòng khách sạn đã thanh toán</h4>
                                     <a href="{{route('partner-booking-acp')}}" title=""><button style="float: right;" type="" class="btn-secondary">Danh sách đặt phòng cần duyệt</button></a>
+ @if(Session::has('thongbao'))
+                            <div class="alert alert-success">
+                                {{Session::get('thongbao')}}
+                            </div>
+                                   
 
+                            
+                        @endif
                                 </div>
                                 <div class="tab-inn">
                                     <div class="table-responsive table-desi">
@@ -31,7 +38,7 @@
                                                     <th>Ngày trả phòng</th>
                                                     <th>Di động</th>
                                                     <th>Email</th>
-                                                    <th>Địa chỉ</th>
+                                                    <th>Số phòng</th>
                                                     <th>Trạng thái</th>
                                                 </tr>
                                             </thead>
@@ -49,10 +56,10 @@
                                                     <td>{{date('d-m-Y',strtotime($list->date_from))}}</td>
                                                     <td>{{$list->phone_user}}</td>
                                                     <td>{{$list->email_user}}</td>
-                                                   <td>{{$list->address_user}}</td>
+                                                   <td>{{$list->num_os_rooms}}</td>
                                                   @if($list->booking_status_id==1)
                                     <td>
-                                        Đang xử lí
+                                        Đang đặt phòng
                                     </td>
                                     <form action="{{route('cancel-hotel',($list->id))}}" method="post" accept-charset="utf-8">
                                         @csrf

@@ -55,9 +55,7 @@
                                                     <th>Địa chỉ</th>
                                                     <th>Xem</th>
                                                     <th>Sửa</th>
-                                                @if(Auth::User()->role_user==0)
-                                                    <th>Khóa</th>
-                                                    @endif
+                                                
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -95,9 +93,7 @@
                                                     <td>
                                                         <a href="{{ route('edit_hotel',($dshotel->id)) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                     </td>
-                                                    @if(Auth::User()->role_user==0)
-                                                    
-                                                    @endif
+                                                   
                                                 </tr>
                                                
                                             @endforeach

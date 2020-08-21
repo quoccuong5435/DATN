@@ -157,11 +157,20 @@ class Room_Controller extends Controller
     }
     public function info_room($id)
     {
+
         $lroom= DB::table('room')
         ->join('room_type','room_type.id','=','room.room_type_id')
         ->where('room.id','=',$id)
         ->select('room.*','room_type')
         ->get();
         return view('admin.room-types.room_edit',compact('lroom'));
+
+        $list_room= DB::table('room')
+        ->where('id','=',$id)
+        ->join('room_type','room_type.id','=','room.room_type_id')
+        ->select('room.*','room_type')
+        ->get();
+        return view('admin.room-types.room_edit',compact('$list_room'));
+
     }
 }

@@ -99,7 +99,7 @@
                                                     <th>Giá phòng</th>
                                                     <th>Số lượng phòng</th>
                                                     <th>Xem</th>
-                                                    <th>Sửa</th>
+                                                    {{-- <th>Sửa</th> --}}
                                                     
                                                 </tr>
                                             </thead>
@@ -135,9 +135,9 @@
                                                     <td>
                                                         <a href="{{ route('info_room',($dsroom->id)) }}" ><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                     </td>
-                                                    <td>
+                                                   {{--  <td>
                                                         <a href="{{ route('edit_hotel',($list_hotel->id)) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                    </td>
+                                                    </td> --}}
                                                    
                                                 </tr>
                                            @endforeach

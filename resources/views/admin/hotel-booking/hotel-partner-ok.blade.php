@@ -39,7 +39,7 @@
                                                     <th>Ngày trả phòng</th>
                                                     <th>Di động</th>
                                                     <th>Email</th>
-                                                    <th>Địa chỉ</th>
+                                                    <th>Số phòng</th>
                                                     <th>Trạng thái</th>
                                                 </tr>
                                             </thead>
@@ -57,10 +57,10 @@
                                                     <td>{{date('d-m-Y',strtotime($list->date_from))}}</td>
                                                     <td>{{$list->phone_user}}</td>
                                                     <td>{{$list->email_user}}</td>
-                                                   <td>{{$list->address_user}}</td>
+                                                   <td>{{$list->num_of_rooms}}</td>
                                                   @if($list->booking_status_id==1)
                                     <td>
-                                        Đang xử lí
+                                        Đang đặt phòng
                                     </td>
                                     <form action="{{route('partner-booking-send',($list->id))}}" method="post" accept-charset="utf-8">
                                         @csrf

@@ -173,10 +173,10 @@ Route::post('/signin',[
 
 
 Route::group(['middleware' => 'admin', 'prefix' => 'admin'], function() {
-   Route::get('/', [
-    'as'=>'admin',
-    'uses'=>'User_Controller@admin'
-]);
+//    Route::get('/', [
+//     'as'=>'admin',
+//     'uses'=>'User_Controller@admin'
+// ]);
 
    Route::get('/users',[
     'as'=>'user',
@@ -228,7 +228,7 @@ Route::post('/users/{id}',[
 Route::get('/hotels', function(){
     return view('admin.hotels.hotel-list');
 });
-Route::get('/hotel',[
+Route::get('/',[
     'as'=>'hotel',
     'uses'=>'Hotel_Controller@admin_hotel'
 ]);

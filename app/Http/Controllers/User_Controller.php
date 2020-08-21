@@ -85,10 +85,10 @@ class User_Controller extends Controller
             ]);
         
         if(Auth::attempt(['email_user' => $request->email_user, 'password' => $request->password,'status'=>1,'role_user'=>0])){
-            return redirect()->route('admin')->with('thongbao'," Đăng nhập tài khoản Admin thành công");
+            return redirect()->route('hotel')->with('thongbao'," Đăng nhập tài khoản Admin thành công");
         }
         elseif(Auth::attempt(['email_user' => $request->email_user, 'password' => $request->password,'status'=>1,'role_user'=> 2])){
-            return redirect()->route('admin')->with('thongbao'," Đăng nhập tài khoản Partner thành công");
+            return redirect()->route('hotel')->with('thongbao'," Đăng nhập tài khoản Partner thành công");
         }
         else {
             return redirect()->back()->with('thongbao'," Đăng nhập thất bại. Địa chỉ email hoặc mật khẩu không đúng");
@@ -394,7 +394,7 @@ public function ban_hotel($id, Request $request)
 
         $list_user= DB::table('user')
         ->where('id','=',Auth::User()->id)
-        ->update(['fullname_user' =>$request->fullname_user,'phone_user'=> $request->phone_user,'address_user'=>$request->address_users,'avatar_user'=>$getImages]);
+        ->update(['fullname_user' =>$request->fullname_user,'phone_user'=> $request->phone_user,'address_user'=>$request->address_user,'avatar_user'=>$getImages]);
         return redirect()->back()->with('thongbao',"Update tài khoản thành công. ");
     }
 }

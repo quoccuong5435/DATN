@@ -33,17 +33,20 @@
 													@csrf
 													<input type="" name="search" hidden="" value="{{$search}}">
 													<input type="" name="check_in" hidden  value="{{$check_in}}">
+													<div>
+														
+													</div>
 													<input type="" name="check-out" hidden="" value="{{$check_out}}">
 													<input type="" name="room" hidden="" value="{{$room}}">
 													<input type="" name="people" hidden="" value="{{$people}}">
 													<br>
 													<br>
-													<span>Nhập min</span>
-													<input type="number" style="width: 100%" min="1" max="10" step="0.1" name="min" value="">
+													<span style="margin-left: 20px">Nhập min</span>
+													<input type="number" style="width: 90%;margin-left: 20px" min="1" max="10" step="0.1" name="min" value="">
 													<br>
 													<br>
-													<span>Nhập max</span>
-													<input type="number" style="width: 100%" min="1" max="10" step="0.1" name="max" value="">
+													<span style="margin-left: 20px">Nhập max</span>
+													<input type="number" style="width: 90%;margin-left: 20px" min="1" max="10" step="0.1" name="max" value="">
 													<br>
 													<br>
 													<br>

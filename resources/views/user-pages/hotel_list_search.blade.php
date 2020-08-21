@@ -39,11 +39,11 @@
 													<br>
 													<br>
 													<span>Nhập min</span>
-													<input type="number" style="width: 100%" min="1" max="10" step="0.1" name="min" value="">
+													<input  type="number" style="width: 80%" min="1" max="10" step="0.1" name="min" value="">
 													<br>
 													<br>
 													<span>Nhập max</span>
-													<input type="number" style="width: 100%" min="1" max="10" step="0.1" name="max" value="">
+													<input type="number" style="width: 80%" min="1" max="10" step="0.1" name="max" value="">
 													<br>
 													<br>
 													<br>

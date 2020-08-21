@@ -16,6 +16,14 @@
                         <div class="col-md-12">
                             <div class="box-inn-sp">
                                 <div class="inn-title">
+                                     @if(Session::has('thongbao'))
+                            <div class="alert alert-success">
+                                {{Session::get('thongbao')}}
+                            </div>
+                                   
+
+                            
+                        @endif
                                     <div><h4>Danh sách khách sạn cần duyệt</h4></div>
                                     <a href="{{route('hotel')}}" title=""><button class="btn-light">Trở vế</button></a>
                                     <div>

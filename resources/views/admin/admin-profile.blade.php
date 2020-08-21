@@ -56,7 +56,7 @@
                                         
                                         <div class="row">
                                             <div class="input-field col s12">
-                                                <span for="email">Địa chỉ</span>
+                                                <span for="">Địa chỉ</span>
                                                 <input  name="address_user" type="text" value="{{Auth::User()->address_user}}" class="validate">
                                             </div>
                                             
